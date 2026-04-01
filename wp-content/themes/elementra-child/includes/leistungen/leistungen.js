@@ -37,8 +37,10 @@
 			var s = services[index];
 			if (!s) return;
 
-			var html = '<h3 class="ste-leistungen__detail-title">' + escHtml(s.title) + '</h3>';
+			var html = '<div class="ste-leistungen__detail-main">';
+			html += '<h3 class="ste-leistungen__detail-title">' + escHtml(s.title) + '</h3>';
 			html += '<p class="ste-leistungen__detail-desc">' + escHtml(s.description) + '</p>';
+			html += '</div>';
 
 			if (s.tools && s.tools.length) {
 				html += '<div class="ste-leistungen__detail-tools">';
