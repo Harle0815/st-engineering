@@ -1,8 +1,11 @@
 /**
  * STE Leistungen – Interactive Services Section
  *
- * Bidirectional hover/click sync between service list and hotspot icons.
- * Detail panel is overlaid inside the locomotive graphic area.
+ * Interaction model:
+ *   - Hover on menu item or hotspot icon → immediately previews that service
+ *   - Mouse leaves the component → returns to the pinned (clicked) service
+ *   - Click on menu item or hotspot icon → pins that service
+ *   - Initial state: service 0 is pinned and active
  */
 (function ($) {
 	'use strict';
@@ -17,11 +20,11 @@
 		var $hotspots = $container.find('.ste-leistungen__hotspot');
 		var $detail   = $container.find('.ste-leistungen__detail');
 		var iconUrl   = $container.attr('data-icon-url') || '';
-		var locked    = true;
-		var current   = 0;
+		var pinned    = 0;   // index of the clicked/pinned service
+		var current   = -1;  // index currently shown (avoid no-op guard)
 
 		function activate(index) {
-			if (index === current && locked) return;
+			if (index === current) return;
 			current = index;
 
 			$items.removeClass('is-active');
@@ -76,45 +79,42 @@
 
 		// --- Event handlers ---
 
+		// Hover on menu item → preview that service
 		$items.on('mouseenter', function () {
-			if (locked) return;
 			activate(parseInt($(this).data('index'), 10));
 		});
 
+		// Hover on hotspot icon → preview that service
 		$hotspots.on('mouseenter', function () {
-			if (locked) return;
 			activate(parseInt($(this).data('index'), 10));
 		});
 
+		// Click on menu item → pin that service
 		$items.on('click keydown', function (e) {
 			if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) return;
 			e.preventDefault();
 			var idx = parseInt($(this).data('index'), 10);
-			if (locked && idx === current) {
-				locked = false;
-			} else {
-				locked = true;
-				activate(idx);
-			}
-		});
-
-		$hotspots.on('click', function (e) {
-			e.preventDefault();
-			var idx = parseInt($(this).data('index'), 10);
-			locked = true;
+			pinned = idx;
+			current = -1; // force re-activate even if same index
 			activate(idx);
 		});
 
+		// Click on hotspot icon → pin that service
+		$hotspots.on('click', function (e) {
+			e.preventDefault();
+			var idx = parseInt($(this).data('index'), 10);
+			pinned = idx;
+			current = -1;
+			activate(idx);
+		});
+
+		// Mouse leaves the entire component → return to pinned service
 		$container.on('mouseleave', function () {
-			if (!locked) {
-				activate(0);
-				locked = true;
-			}
+			activate(pinned);
 		});
 
 		// Initial state
 		activate(0);
-		locked = true;
 	}
 
 	$(function () {
