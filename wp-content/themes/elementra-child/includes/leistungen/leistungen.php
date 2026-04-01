@@ -117,7 +117,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.9.0';
+	$version  = '1.10.0';
 
 	wp_register_style(
 		'ste-leistungen',
