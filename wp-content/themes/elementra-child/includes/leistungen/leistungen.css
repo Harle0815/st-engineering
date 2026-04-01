@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.9.1
+   STE Leistungen – Interactive Services Section  v1.9.2
    ========================================================================== */
 
 .ste-leistungen {
@@ -151,8 +151,8 @@
 }
 
 .ste-leistungen__detail-main {
-	width: 50%;
-	max-width: 460px;
+	width: 62%;
+	max-width: 560px;
 }
 
 .ste-leistungen__detail-title {
@@ -279,7 +279,7 @@
 	height: 120px;
 	transform: translate(-50%, -50%);
 	/* Force circle — override theme button defaults */
-	border: 3px solid var(--ste-blue) !important;
+	border: 3px solid transparent !important;
 	border-radius: 50% !important;
 	background: transparent !important;
 	background-color: transparent !important;
@@ -354,13 +354,13 @@
 
 .ste-leistungen__hotspot-number {
 	position: absolute;
-	top: 2px;
-	right: 2px;
-	width: 26px;
-	height: 26px;
+	top: -4px;
+	right: -4px;
+	width: 32px;
+	height: 32px;
 	background: var(--ste-orange);
 	color: var(--ste-white);
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
 	border-radius: 50%;
 	display: flex;

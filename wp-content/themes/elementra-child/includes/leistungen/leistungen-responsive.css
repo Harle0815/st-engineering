@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.9.1
+   STE Leistungen – Responsive Styles  v1.9.2
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -41,8 +41,8 @@
 }
 
 .ste-leistungen__detail-main {
-	width: 55%;
-	max-width: 400px;
+	width: 58%;
+	max-width: 480px;
 }
 
 .ste-leistungen__detail-tools,
@@ -68,11 +68,11 @@
 }
 
 .ste-leistungen__hotspot-number {
-	width: 22px;
-	height: 22px;
-	font-size: 10px;
-	top: 0;
-	right: 0;
+	width: 26px;
+	height: 26px;
+	font-size: 12px;
+	top: -2px;
+	right: -2px;
 }
 
 /* --------------------------------------------------------------------------
@@ -141,11 +141,11 @@
 	}
 
 	.ste-leistungen__hotspot-number {
-		width: 18px;
-		height: 18px;
-		font-size: 9px;
-		top: -1px;
-		right: -1px;
+		width: 22px;
+		height: 22px;
+		font-size: 10px;
+		top: -2px;
+		right: -2px;
 	}
 
 	.ste-leistungen__detail-title {
