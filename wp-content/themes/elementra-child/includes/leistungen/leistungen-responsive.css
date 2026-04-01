@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles
+   STE Leistungen – Responsive Styles  v1.5.0
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -33,35 +33,37 @@
 
 .ste-leistungen__graphic {
 	width: 100%;
-	min-height: 500px;
+	min-height: 520px;
 }
 
 .ste-leistungen__detail {
 	width: 50%;
-	max-width: 360px;
+	max-width: 380px;
 }
 
 .ste-leistungen__loco-wrap {
-	left: 15%;
-	right: -20px;
+	left: 0;
+	right: -30px;
+	top: -10px;
+	bottom: -10px;
 }
 
 .ste-leistungen__hotspot {
-	width: 72px;
-	height: 72px;
+	width: 90px;
+	height: 90px;
 }
 
 .ste-leistungen__hotspot-icon {
-	width: 44px;
-	height: 44px;
+	width: 54px;
+	height: 54px;
 }
 
 .ste-leistungen__hotspot-number {
-	width: 20px;
-	height: 20px;
+	width: 22px;
+	height: 22px;
 	font-size: 10px;
-	top: -3px;
-	right: -3px;
+	top: 0;
+	right: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -85,7 +87,7 @@
 	}
 
 	.ste-leistungen__graphic {
-		min-height: 400px;
+		min-height: 420px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -103,7 +105,7 @@
 		right: auto;
 		top: auto;
 		bottom: auto;
-		min-height: 300px;
+		min-height: 320px;
 		order: 0;
 	}
 
@@ -112,21 +114,21 @@
 	}
 
 	.ste-leistungen__hotspot {
-		width: 56px;
-		height: 56px;
+		width: 64px;
+		height: 64px;
 	}
 
 	.ste-leistungen__hotspot-icon {
-		width: 34px;
-		height: 34px;
+		width: 40px;
+		height: 40px;
 	}
 
 	.ste-leistungen__hotspot-number {
 		width: 18px;
 		height: 18px;
 		font-size: 9px;
-		top: -3px;
-		right: -3px;
+		top: -1px;
+		right: -1px;
 	}
 
 	.ste-leistungen__detail-title {
@@ -160,17 +162,17 @@
 @media (max-width: 480px) {
 
 	.ste-leistungen__loco-wrap {
-		min-height: 220px;
+		min-height: 240px;
 	}
 
 	.ste-leistungen__hotspot {
-		width: 42px;
-		height: 42px;
+		width: 48px;
+		height: 48px;
 	}
 
 	.ste-leistungen__hotspot-icon {
-		width: 26px;
-		height: 26px;
+		width: 30px;
+		height: 30px;
 	}
 
 	.ste-leistungen__hotspot-number {
