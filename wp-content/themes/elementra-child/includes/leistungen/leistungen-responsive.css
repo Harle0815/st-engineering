@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.5.0
+   STE Leistungen – Responsive Styles  v1.6.0
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -37,8 +37,19 @@
 }
 
 .ste-leistungen__detail {
-	width: 50%;
-	max-width: 380px;
+	min-height: 480px;
+}
+
+.ste-leistungen__detail-main {
+	width: 55%;
+	max-width: 400px;
+}
+
+.ste-leistungen__detail-tools,
+.ste-leistungen__detail-refs {
+	right: 4%;
+	width: 42%;
+	max-width: 340px;
 }
 
 .ste-leistungen__loco-wrap {
@@ -49,8 +60,8 @@
 }
 
 .ste-leistungen__hotspot {
-	width: 90px;
-	height: 90px;
+	width: 90px !important;
+	height: 90px !important;
 }
 
 .ste-leistungen__hotspot-icon {
@@ -95,8 +106,22 @@
 	.ste-leistungen__detail {
 		position: static;
 		width: 100%;
-		max-width: none;
+		min-height: auto;
 		order: 1;
+	}
+
+	.ste-leistungen__detail-main {
+		width: 100%;
+		max-width: none;
+	}
+
+	/* Stack tools/refs below title on mobile */
+	.ste-leistungen__detail-tools,
+	.ste-leistungen__detail-refs {
+		position: static;
+		width: 100%;
+		max-width: none;
+		margin-top: 14px;
 	}
 
 	.ste-leistungen__loco-wrap {
@@ -114,8 +139,8 @@
 	}
 
 	.ste-leistungen__hotspot {
-		width: 64px;
-		height: 64px;
+		width: 64px !important;
+		height: 64px !important;
 	}
 
 	.ste-leistungen__hotspot-icon {
@@ -166,8 +191,8 @@
 	}
 
 	.ste-leistungen__hotspot {
-		width: 48px;
-		height: 48px;
+		width: 48px !important;
+		height: 48px !important;
 	}
 
 	.ste-leistungen__hotspot-icon {

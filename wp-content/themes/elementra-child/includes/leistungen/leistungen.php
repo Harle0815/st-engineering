@@ -27,7 +27,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erfassen, strukturieren und priorisieren technische und funktionale Anforderungen – als Grundlage für erfolgreiche Entwicklungsprojekte.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Straßen- & Stadtbahnen' ),
-			/* ---- Upper diagonal: top-right → down-left along locomotive roof ---- */
+			/* ---- Upper curve: top-right → down-left (3 icons) ---- */
 			'hotspot_x'   => 92,
 			'hotspot_y'   => 5,
 		),
@@ -38,8 +38,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir entwickeln innovative Fahrzeugkonzepte auf Basis der Kundenanforderungen mit Fokus auf Funktionalität, Sicherheit und Integration – von der Idee bis zur Umsetzung.',
 			'tools'       => array(),
 			'references'  => array(),
-			'hotspot_x'   => 82,
-			'hotspot_y'   => 16,
+			'hotspot_x'   => 79,
+			'hotspot_y'   => 17,
 		),
 		array(
 			'id'          => 'risikoanalyse',
@@ -48,8 +48,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir führen fundierte Risikoanalysen zur frühzeitigen Identifikation und Bewertung potenzieller Risiken durch, egal ob nach MIL-STD, SIRF oder einem anderen Verfahren – Strukturiert, nachvollziehbar und sauber dokumentiert.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			'hotspot_x'   => 71,
-			'hotspot_y'   => 28,
+			'hotspot_x'   => 65,
+			'hotspot_y'   => 30,
 		),
 		array(
 			'id'          => 'systemkonzepte',
@@ -58,8 +58,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir leiten ganzheitliche Systemkonzepte auf Basis des Fahrzeugkonzepts ab, bei denen besonders der Fokus auf die funktionale Integration von Zulieferteilen in das Gesamtfahrzeug liegt.',
 			'tools'       => array(),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			'hotspot_x'   => 60,
-			'hotspot_y'   => 40,
+			/* ---- Lower line: 5 icons (4–8) along lower locomotive path ---- */
+			'hotspot_x'   => 44,
+			'hotspot_y'   => 50,
 		),
 		array(
 			'id'          => 'schnittstellen',
@@ -68,9 +69,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erstellen Anforderungsspezifikationen für Komponenten, elektrische Verschaltungen und Softwarefunktionalitäten, sodass Klarheit im Engineering herrscht und mögliche Projektrisiken minimiert werden können.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Triebzug' ),
-			/* ---- Transition: bend point where upper meets lower path ---- */
-			'hotspot_x'   => 48,
-			'hotspot_y'   => 52,
+			'hotspot_x'   => 50,
+			'hotspot_y'   => 60,
 		),
 		array(
 			'id'          => 'schaltplanerstellung',
@@ -79,9 +79,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir setzen die Anforderungen an die elektrische Verschaltung fachgerecht in Schaltplänen mit Zuken E3 oder Engineering Base um – inklusive Kabelsatz- und Schaltschrankplanung und leiten die für die Produktion erforderliche Dokumentation daraus ab.',
 			'tools'       => array( 'ZUKEN E3 (Schematic, Formboard, Panel)', 'AUCOTEC Engineering Base' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen', 'Einzelkomponenten' ),
-			/* ---- Lower path: continuing down, curving back toward right ---- */
-			'hotspot_x'   => 52,
-			'hotspot_y'   => 65,
+			'hotspot_x'   => 57,
+			'hotspot_y'   => 70,
 		),
 		array(
 			'id'          => 'sicherheitsnachweis',
@@ -90,8 +89,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir dokumentieren gemäß den Vorgaben der CSM-Verordnung, sodass das am Ende eine schlüssige Nachweisführung aller sicherheitsrelevanter Anforderungen existiert, welche die Basis für das Vertrauen in die Produktsicherheit ist.',
 			'tools'       => array( 'Office', 'Isograph Reliability Workbench' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			'hotspot_x'   => 58,
-			'hotspot_y'   => 77,
+			'hotspot_x'   => 64,
+			'hotspot_y'   => 80,
 		),
 		array(
 			'id'          => 'aenderungsmanagement',
@@ -100,7 +99,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir begleiten die Produktionsphase als Ansprechpartner aus dem Engineering und unterstützen somit effizient im Fehler- und Änderungsmanagement – für eine reibungslose Umsetzung der Planung in die Realität.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug' ),
-			'hotspot_x'   => 64,
+			'hotspot_x'   => 72,
 			'hotspot_y'   => 90,
 		),
 	);
@@ -111,7 +110,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.5.0';
+	$version  = '1.6.0';
 
 	wp_register_style(
 		'ste-leistungen',
