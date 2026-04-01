@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.9.2
+   STE Leistungen – Interactive Services Section  v1.9.3
    ========================================================================== */
 
 .ste-leistungen {
@@ -58,8 +58,9 @@
 	margin-bottom: 1px;
 	border-left: 3px solid transparent;
 	cursor: pointer;
-	transition: background-color var(--ste-transition),
-	            border-color var(--ste-transition);
+	transition: background-color 0.2s ease,
+	            border-color 0.2s ease,
+	            color 0.2s ease;
 	user-select: none;
 	outline: none;
 	border-radius: 0 6px 6px 0;
@@ -291,9 +292,9 @@
 	margin: 0;
 	cursor: pointer;
 	pointer-events: auto;
-	transition: transform var(--ste-transition),
-	            border-color var(--ste-transition),
-	            box-shadow var(--ste-transition);
+	transition: transform 0.2s ease,
+	            border-color 0.2s ease,
+	            box-shadow 0.25s ease;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -319,19 +320,19 @@
 }
 
 .ste-leistungen__hotspot:hover {
-	transform: translate(-50%, -50%) scale(1.08);
+	transform: translate(-50%, -50%) scale(1.1);
 	border-color: var(--ste-orange) !important;
 	z-index: 4;
-	box-shadow: 0 0 0 5px rgba(240, 125, 0, 0.12),
-	            0 3px 14px rgba(240, 125, 0, 0.2) !important;
+	box-shadow: 0 0 0 5px rgba(240, 125, 0, 0.15),
+	            0 4px 16px rgba(240, 125, 0, 0.25) !important;
 }
 
 .ste-leistungen__hotspot.is-active {
-	transform: translate(-50%, -50%) scale(1.12);
+	transform: translate(-50%, -50%) scale(1.14);
 	border-color: var(--ste-orange) !important;
 	z-index: 4;
-	box-shadow: 0 0 0 7px rgba(240, 125, 0, 0.1),
-	            0 4px 18px rgba(240, 125, 0, 0.25) !important;
+	box-shadow: 0 0 0 8px rgba(240, 125, 0, 0.13),
+	            0 6px 22px rgba(240, 125, 0, 0.3) !important;
 }
 
 .ste-leistungen__hotspot.is-active .ste-leistungen__hotspot-bg {
