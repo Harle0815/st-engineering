@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.10.0
+   STE Leistungen – Responsive Styles  v1.10.1
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -46,28 +46,30 @@
 }
 
 .ste-leistungen__detail-tools {
-	right: 8%;
-	width: 34%;
-	max-width: 280px;
+	right: 16%;
+	top: 34%;
+	width: 30%;
+	max-width: 240px;
 }
 
 .ste-leistungen__detail-refs {
-	right: 2%;
+	right: 0;
+	top: 34%;
 }
 
 .ste-leistungen__stage {
 	left: 0;
-	right: -20px;
+	right: -10px;
 }
 
 .ste-leistungen__hotspot {
-	width: 76px !important;
-	height: 76px !important;
+	width: 66px !important;
+	height: 66px !important;
 }
 
 .ste-leistungen__hotspot-icon {
-	width: 66px;
-	height: 66px;
+	width: 58px;
+	height: 58px;
 }
 
 .ste-leistungen__hotspot-number {
@@ -134,13 +136,13 @@
 	}
 
 	.ste-leistungen__hotspot {
-		width: 64px !important;
-		height: 64px !important;
+		width: 56px !important;
+		height: 56px !important;
 	}
 
 	.ste-leistungen__hotspot-icon {
-		width: 54px;
-		height: 54px;
+		width: 48px;
+		height: 48px;
 	}
 
 	.ste-leistungen__hotspot-number {
@@ -213,13 +215,13 @@
 	}
 
 	.ste-leistungen__hotspot {
-		width: 48px !important;
-		height: 48px !important;
+		width: 42px !important;
+		height: 42px !important;
 	}
 
 	.ste-leistungen__hotspot-icon {
-		width: 40px;
-		height: 40px;
+		width: 36px;
+		height: 36px;
 	}
 
 	.ste-leistungen__hotspot-number {
