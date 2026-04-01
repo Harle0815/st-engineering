@@ -13,7 +13,7 @@
 
 	display: flex;
 	align-items: flex-start;
-	gap: 40px;
+	gap: 24px;
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 60px 20px;
@@ -23,33 +23,36 @@
 }
 
 /* --------------------------------------------------------------------------
-   Left sidebar: heading + list + detail
+   Left sidebar: heading + list (no detail card here)
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__sidebar {
-	flex: 0 0 380px;
-	max-width: 380px;
+	flex: 0 0 300px;
+	max-width: 300px;
 	position: sticky;
 	top: 100px;
+	z-index: 2;
 }
 
 .ste-leistungen__intro {
-	margin-bottom: 24px;
+	margin-bottom: 20px;
 }
 
 .ste-leistungen__heading {
-	font-size: 32px;
+	font-size: 28px;
 	font-weight: 700;
 	color: var(--ste-blue);
-	margin: 0 0 8px;
+	margin: 0 0 4px;
 	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
 }
 
 .ste-leistungen__subheading {
-	font-size: 16px;
+	font-size: 14px;
 	color: var(--ste-text);
 	margin: 0;
-	line-height: 1.5;
+	line-height: 1.4;
 }
 
 /* --------------------------------------------------------------------------
@@ -65,43 +68,43 @@
 .ste-leistungen__item {
 	display: flex;
 	align-items: baseline;
-	gap: 8px;
-	padding: 10px 14px;
-	margin-bottom: 2px;
+	gap: 6px;
+	padding: 8px 12px;
+	margin-bottom: 1px;
 	border-left: 3px solid transparent;
-	border-radius: 0 4px 4px 0;
 	cursor: pointer;
 	transition: background-color var(--ste-transition),
 	            border-color var(--ste-transition),
 	            color var(--ste-transition);
 	user-select: none;
 	outline: none;
+	border-radius: 0;
 }
 
 .ste-leistungen__item:hover {
-	background-color: var(--ste-light-blue);
+	background-color: rgba(218, 231, 241, 0.5);
 	border-left-color: var(--ste-orange);
 }
 
 .ste-leistungen__item.is-active {
-	background-color: var(--ste-light-blue);
+	background-color: rgba(218, 231, 241, 0.6);
 	border-left-color: var(--ste-orange);
 }
 
 .ste-leistungen__item:focus-visible {
-	box-shadow: 0 0 0 2px var(--ste-orange);
+	box-shadow: inset 0 0 0 2px var(--ste-orange);
 }
 
 .ste-leistungen__item-number {
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: 700;
 	color: var(--ste-orange);
 	flex-shrink: 0;
-	min-width: 20px;
+	min-width: 18px;
 }
 
 .ste-leistungen__item-title {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 600;
 	color: var(--ste-blue);
 	line-height: 1.3;
@@ -112,88 +115,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Detail panel
-   -------------------------------------------------------------------------- */
-
-.ste-leistungen__detail {
-	margin-top: 20px;
-	padding: 20px;
-	background-color: var(--ste-white);
-	border: 1px solid var(--ste-light-blue);
-	border-radius: 8px;
-	box-shadow: 0 2px 12px rgba(0, 50, 95, 0.08);
-	min-height: 160px;
-	transition: opacity var(--ste-transition);
-}
-
-.ste-leistungen__detail.is-updating {
-	opacity: 0.4;
-}
-
-.ste-leistungen__detail-title {
-	font-size: 18px;
-	font-weight: 700;
-	color: var(--ste-blue);
-	margin: 0 0 10px;
-	line-height: 1.3;
-}
-
-.ste-leistungen__detail-desc {
-	font-size: 14px;
-	line-height: 1.6;
-	color: var(--ste-text);
-	margin: 0 0 12px;
-}
-
-.ste-leistungen__detail-tools {
-	font-size: 13px;
-	color: var(--ste-text);
-	margin-bottom: 10px;
-	line-height: 1.5;
-}
-
-.ste-leistungen__detail-tools strong {
-	color: var(--ste-blue);
-	margin-right: 4px;
-}
-
-.ste-leistungen__detail-refs {
-	font-size: 13px;
-	color: var(--ste-text);
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	align-items: center;
-	line-height: 1.5;
-}
-
-.ste-leistungen__detail-refs strong {
-	color: var(--ste-blue);
-	margin-right: 4px;
-	flex-basis: 100%;
-}
-
-.ste-leistungen__ref {
-	display: inline-flex;
-	align-items: center;
-	gap: 5px;
-	background-color: var(--ste-light-blue);
-	padding: 4px 10px;
-	border-radius: 20px;
-	font-size: 12px;
-	font-weight: 500;
-	color: var(--ste-blue);
-	white-space: nowrap;
-}
-
-.ste-leistungen__ref-icon {
-	width: 16px;
-	height: 16px;
-	flex-shrink: 0;
-}
-
-/* --------------------------------------------------------------------------
-   Right column: locomotive graphic + hotspots
+   Right column: locomotive graphic composition
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__graphic {
@@ -205,56 +127,66 @@
 .ste-leistungen__loco-wrap {
 	position: relative;
 	width: 100%;
-	overflow: visible;
+	min-height: 500px;
 }
 
 .ste-leistungen__loco-img {
 	display: block;
 	width: 100%;
 	height: auto;
-	opacity: 0.15;
-	transition: opacity var(--ste-transition);
+	opacity: 0.12;
 }
 
 /* --------------------------------------------------------------------------
-   Hotspots
+   Hotspots – circular markers along the diagonal
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__hotspot {
 	position: absolute;
-	width: 70px;
-	height: 70px;
+	width: 72px;
+	height: 72px;
 	transform: translate(-50%, -50%);
-	border: 3px solid var(--ste-blue);
+	border: 2.5px solid var(--ste-blue);
 	border-radius: 50%;
-	background: var(--ste-white);
+	background: transparent;
 	padding: 0;
 	cursor: pointer;
 	transition: transform var(--ste-transition),
 	            border-color var(--ste-transition),
-	            box-shadow var(--ste-transition),
-	            background-color var(--ste-transition);
+	            box-shadow var(--ste-transition);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;
+	overflow: visible;
 	z-index: 2;
 	outline: none;
 }
 
+/* Circular background behind the transparent icon */
+.ste-leistungen__hotspot-bg {
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background: var(--ste-white);
+	z-index: 0;
+}
+
 .ste-leistungen__hotspot:hover {
-	transform: translate(-50%, -50%) scale(1.15);
+	transform: translate(-50%, -50%) scale(1.12);
 	border-color: var(--ste-orange);
-	box-shadow: 0 4px 20px rgba(240, 125, 0, 0.35);
-	z-index: 3;
+	box-shadow: 0 2px 16px rgba(240, 125, 0, 0.3);
+	z-index: 4;
 }
 
 .ste-leistungen__hotspot.is-active {
-	transform: translate(-50%, -50%) scale(1.2);
+	transform: translate(-50%, -50%) scale(1.18);
 	border-color: var(--ste-orange);
-	box-shadow: 0 4px 24px rgba(240, 125, 0, 0.4);
-	background-color: var(--ste-light-blue);
-	z-index: 3;
+	box-shadow: 0 3px 20px rgba(240, 125, 0, 0.35);
+	z-index: 4;
+}
+
+.ste-leistungen__hotspot.is-active .ste-leistungen__hotspot-bg {
+	background: var(--ste-light-blue);
 }
 
 .ste-leistungen__hotspot:focus-visible {
@@ -262,20 +194,22 @@
 }
 
 .ste-leistungen__hotspot-icon {
-	width: 48px;
-	height: 48px;
+	width: 44px;
+	height: 44px;
 	pointer-events: none;
+	position: relative;
+	z-index: 1;
 }
 
 .ste-leistungen__hotspot-number {
 	position: absolute;
-	top: -8px;
-	right: -8px;
-	width: 22px;
-	height: 22px;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 20px;
 	background: var(--ste-orange);
 	color: var(--ste-white);
-	font-size: 11px;
+	font-size: 10px;
 	font-weight: 700;
 	border-radius: 50%;
 	display: flex;
@@ -283,9 +217,113 @@
 	justify-content: center;
 	line-height: 1;
 	pointer-events: none;
+	z-index: 2;
 	transition: background-color var(--ste-transition);
 }
 
 .ste-leistungen__hotspot.is-active .ste-leistungen__hotspot-number {
 	background: var(--ste-blue);
+}
+
+/* --------------------------------------------------------------------------
+   Detail panel – overlaid inside the locomotive composition
+   -------------------------------------------------------------------------- */
+
+.ste-leistungen__detail {
+	position: absolute;
+	left: 5%;
+	top: 8%;
+	width: 48%;
+	max-width: 480px;
+	padding: 24px 28px;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border-left: 3px solid var(--ste-orange);
+	border-radius: 4px;
+	z-index: 5;
+	transition: opacity var(--ste-transition);
+}
+
+.ste-leistungen__detail.is-updating {
+	opacity: 0.3;
+}
+
+.ste-leistungen__detail-title {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--ste-blue);
+	margin: 0 0 10px;
+	line-height: 1.25;
+}
+
+.ste-leistungen__detail-desc {
+	font-size: 14px;
+	line-height: 1.6;
+	color: var(--ste-text);
+	margin: 0 0 14px;
+}
+
+.ste-leistungen__detail-tools {
+	font-size: 13px;
+	color: var(--ste-text);
+	margin-bottom: 14px;
+	line-height: 1.5;
+}
+
+.ste-leistungen__detail-tools strong {
+	display: block;
+	color: var(--ste-blue);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	margin-bottom: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   References – round icon markers with labels
+   -------------------------------------------------------------------------- */
+
+.ste-leistungen__detail-refs {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.ste-leistungen__detail-refs-label {
+	font-size: 12px;
+	font-weight: 700;
+	color: var(--ste-blue);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.ste-leistungen__ref {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.ste-leistungen__ref-icon-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: var(--ste-white);
+	border: 2px solid var(--ste-blue);
+	flex-shrink: 0;
+}
+
+.ste-leistungen__ref-icon {
+	width: 20px;
+	height: 20px;
+}
+
+.ste-leistungen__ref-label {
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--ste-blue);
+	line-height: 1.3;
 }

@@ -27,8 +27,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erfassen, strukturieren und priorisieren technische und funktionale Anforderungen – als Grundlage für erfolgreiche Entwicklungsprojekte.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Straßen- & Stadtbahnen' ),
-			'hotspot_x'   => 88,
-			'hotspot_y'   => 8,
+			'hotspot_x'   => 91,
+			'hotspot_y'   => 6,
 		),
 		array(
 			'id'          => 'fahrzeugkonzepte',
@@ -37,8 +37,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir entwickeln innovative Fahrzeugkonzepte auf Basis der Kundenanforderungen mit Fokus auf Funktionalität, Sicherheit und Integration – von der Idee bis zur Umsetzung.',
 			'tools'       => array(),
 			'references'  => array(),
-			'hotspot_x'   => 78,
-			'hotspot_y'   => 20,
+			'hotspot_x'   => 80,
+			'hotspot_y'   => 18,
 		),
 		array(
 			'id'          => 'risikoanalyse',
@@ -47,8 +47,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir führen fundierte Risikoanalysen zur frühzeitigen Identifikation und Bewertung potenzieller Risiken durch, egal ob nach MIL-STD, SIRF oder einem anderen Verfahren – Strukturiert, nachvollziehbar und sauber dokumentiert.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			'hotspot_x'   => 65,
-			'hotspot_y'   => 35,
+			'hotspot_x'   => 68,
+			'hotspot_y'   => 31,
 		),
 		array(
 			'id'          => 'systemkonzepte',
@@ -57,8 +57,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir leiten ganzheitliche Systemkonzepte auf Basis des Fahrzeugkonzepts ab, bei denen besonders der Fokus auf die funktionale Integration von Zulieferteilen in das Gesamtfahrzeug liegt.',
 			'tools'       => array(),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			'hotspot_x'   => 52,
-			'hotspot_y'   => 50,
+			'hotspot_x'   => 55,
+			'hotspot_y'   => 45,
 		),
 		array(
 			'id'          => 'schnittstellen',
@@ -67,8 +67,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erstellen Anforderungsspezifikationen für Komponenten, elektrische Verschaltungen und Softwarefunktionalitäten, sodass Klarheit im Engineering herrscht und mögliche Projektrisiken minimiert werden können.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Triebzug' ),
-			'hotspot_x'   => 39,
-			'hotspot_y'   => 63,
+			'hotspot_x'   => 42,
+			'hotspot_y'   => 58,
 		),
 		array(
 			'id'          => 'schaltplanerstellung',
@@ -77,8 +77,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir setzen die Anforderungen an die elektrische Verschaltung fachgerecht in Schaltplänen mit Zuken E3 oder Engineering Base um – inklusive Kabelsatz- und Schaltschrankplanung und leiten die für die Produktion erforderliche Dokumentation daraus ab.',
 			'tools'       => array( 'ZUKEN E3 (Schematic, Formboard, Panel)', 'AUCOTEC Engineering Base' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen', 'Einzelkomponenten' ),
-			'hotspot_x'   => 26,
-			'hotspot_y'   => 76,
+			'hotspot_x'   => 29,
+			'hotspot_y'   => 71,
 		),
 		array(
 			'id'          => 'sicherheitsnachweis',
@@ -87,8 +87,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir dokumentieren gemäß den Vorgaben der CSM-Verordnung, sodass das am Ende eine schlüssige Nachweisführung aller sicherheitsrelevanter Anforderungen existiert, welche die Basis für das Vertrauen in die Produktsicherheit ist.',
 			'tools'       => array( 'Office', 'Isograph Reliability Workbench' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			'hotspot_x'   => 13,
-			'hotspot_y'   => 88,
+			'hotspot_x'   => 16,
+			'hotspot_y'   => 84,
 		),
 		array(
 			'id'          => 'aenderungsmanagement',
@@ -97,8 +97,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir begleiten die Produktionsphase als Ansprechpartner aus dem Engineering und unterstützen somit effizient im Fehler- und Änderungsmanagement – für eine reibungslose Umsetzung der Planung in die Realität.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug' ),
-			'hotspot_x'   => 3,
-			'hotspot_y'   => 96,
+			'hotspot_x'   => 5,
+			'hotspot_y'   => 95,
 		),
 	);
 }
@@ -108,7 +108,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.0.3';
+	$version  = '1.1.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -164,9 +164,9 @@ function ste_leistungen_render( $atts ) {
 
 	ob_start();
 	?>
-	<div class="ste-leistungen" id="ste-leistungen">
+	<div class="ste-leistungen" id="ste-leistungen" data-icon-url="<?php echo esc_url( $icon_url ); ?>">
 
-		<!-- Left column: service list + detail panel -->
+		<!-- Left column: service list only -->
 		<div class="ste-leistungen__sidebar">
 			<div class="ste-leistungen__intro">
 				<h2 class="ste-leistungen__heading">Leistungen</h2>
@@ -185,36 +185,13 @@ function ste_leistungen_render( $atts ) {
 					</li>
 				<?php endforeach; ?>
 			</ul>
-
-			<!-- Detail panel -->
-			<div class="ste-leistungen__detail" aria-live="polite">
-				<h3 class="ste-leistungen__detail-title"><?php echo esc_html( $services[0]['title_plain'] ); ?></h3>
-				<p class="ste-leistungen__detail-desc"><?php echo esc_html( $services[0]['description'] ); ?></p>
-				<?php if ( ! empty( $services[0]['tools'] ) ) : ?>
-					<div class="ste-leistungen__detail-tools">
-						<strong>Tools:</strong>
-						<span><?php echo esc_html( implode( ', ', $services[0]['tools'] ) ); ?></span>
-					</div>
-				<?php endif; ?>
-				<?php if ( ! empty( $services[0]['references'] ) ) : ?>
-					<div class="ste-leistungen__detail-refs">
-						<strong>Referenzen:</strong>
-						<?php foreach ( $services[0]['references'] as $ref ) : ?>
-							<span class="ste-leistungen__ref">
-								<img src="<?php echo esc_url( $icon_url ); ?>" alt="" class="ste-leistungen__ref-icon" width="18" height="18" />
-								<?php echo esc_html( $ref ); ?>
-							</span>
-						<?php endforeach; ?>
-					</div>
-				<?php endif; ?>
-			</div>
 		</div>
 
-		<!-- Right column: locomotive graphic + hotspots -->
+		<!-- Right column: locomotive graphic + hotspots + detail overlay -->
 		<div class="ste-leistungen__graphic">
 			<div class="ste-leistungen__loco-wrap">
 				<img src="<?php echo esc_url( $loco_url ); ?>"
-				     alt="Locomotive service overview"
+				     alt=""
 				     class="ste-leistungen__loco-img"
 				     loading="lazy" />
 
@@ -226,6 +203,7 @@ function ste_leistungen_render( $atts ) {
 					        style="left: <?php echo esc_attr( $service['hotspot_x'] ); ?>%; top: <?php echo esc_attr( $service['hotspot_y'] ); ?>%;"
 					        aria-label="<?php echo esc_attr( $service['title_plain'] ); ?>"
 					        type="button">
+						<span class="ste-leistungen__hotspot-bg"></span>
 						<img src="<?php echo esc_url( $icon_url ); ?>"
 						     alt=""
 						     class="ste-leistungen__hotspot-icon"
@@ -234,6 +212,31 @@ function ste_leistungen_render( $atts ) {
 						<span class="ste-leistungen__hotspot-number"><?php echo esc_html( $index + 1 ); ?></span>
 					</button>
 				<?php endforeach; ?>
+
+				<!-- Detail overlay inside the graphic -->
+				<div class="ste-leistungen__detail" aria-live="polite">
+					<h3 class="ste-leistungen__detail-title"><?php echo esc_html( $services[0]['title_plain'] ); ?></h3>
+					<p class="ste-leistungen__detail-desc"><?php echo esc_html( $services[0]['description'] ); ?></p>
+					<?php if ( ! empty( $services[0]['tools'] ) ) : ?>
+						<div class="ste-leistungen__detail-tools">
+							<strong>Tools:</strong>
+							<span><?php echo esc_html( implode( ', ', $services[0]['tools'] ) ); ?></span>
+						</div>
+					<?php endif; ?>
+					<?php if ( ! empty( $services[0]['references'] ) ) : ?>
+						<div class="ste-leistungen__detail-refs">
+							<span class="ste-leistungen__detail-refs-label">Referenzen</span>
+							<?php foreach ( $services[0]['references'] as $ref ) : ?>
+								<span class="ste-leistungen__ref">
+									<span class="ste-leistungen__ref-icon-wrap">
+										<img src="<?php echo esc_url( $icon_url ); ?>" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />
+									</span>
+									<span class="ste-leistungen__ref-label"><?php echo esc_html( $ref ); ?></span>
+								</span>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
 
