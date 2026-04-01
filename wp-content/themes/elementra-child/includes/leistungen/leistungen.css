@@ -20,6 +20,7 @@
 	font-family: inherit;
 	color: var(--ste-text);
 	position: relative;
+	background: transparent;
 }
 
 /* --------------------------------------------------------------------------
@@ -27,8 +28,8 @@
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__sidebar {
-	flex: 0 0 280px;
-	max-width: 280px;
+	flex: 0 0 260px;
+	max-width: 260px;
 	position: sticky;
 	top: 100px;
 	z-index: 2;
@@ -93,32 +94,28 @@
 }
 
 /* --------------------------------------------------------------------------
-   Composition area: grid with content left, locomotive right
+   Composition area: content left, large locomotive right
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__graphic {
 	flex: 1;
 	min-width: 0;
 	display: grid;
-	grid-template-columns: minmax(280px, 42%) 1fr;
-	gap: 16px;
+	grid-template-columns: minmax(240px, 35%) 1fr;
+	gap: 20px;
 	align-items: start;
 }
 
 /* --------------------------------------------------------------------------
-   Detail / content column (left side of composition)
+   Detail / content column (center white area)
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__detail {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 18px;
 	padding: 10px 0;
 	z-index: 2;
-}
-
-.ste-leistungen__detail-main {
-	/* title + description wrapper */
 }
 
 .ste-leistungen__detail-title {
@@ -144,7 +141,6 @@
 	padding: 14px 16px;
 	border: 1px solid var(--ste-light-blue);
 	border-radius: 4px;
-	background: var(--ste-white);
 }
 
 .ste-leistungen__detail-tools strong {
@@ -165,7 +161,6 @@
 	padding: 14px 16px;
 	border: 1px solid var(--ste-light-blue);
 	border-radius: 4px;
-	background: var(--ste-white);
 }
 
 .ste-leistungen__detail-refs-label {
@@ -208,16 +203,14 @@
 }
 
 /* --------------------------------------------------------------------------
-   Locomotive column (right side of composition)
+   Locomotive column – large, no added background, no box
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__loco-wrap {
 	position: relative;
 	width: 100%;
-	min-height: 520px;
-	background: var(--ste-light-blue);
-	border-radius: 12px;
-	overflow: hidden;
+	min-height: 580px;
+	overflow: visible;
 }
 
 .ste-leistungen__loco-img {
@@ -225,19 +218,18 @@
 	width: 100%;
 	height: auto;
 	opacity: 1;
-	mix-blend-mode: multiply;
 }
 
 /* --------------------------------------------------------------------------
-   Hotspots – large circular markers on the locomotive path
+   Hotspots – large circular markers on the locomotive curve
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__hotspot {
 	position: absolute;
-	width: 88px;
-	height: 88px;
+	width: 96px;
+	height: 96px;
 	transform: translate(-50%, -50%);
-	border: 3px solid var(--ste-orange);
+	border: 3px solid var(--ste-blue);
 	border-radius: 50%;
 	background: transparent;
 	padding: 0;
@@ -265,26 +257,26 @@
 }
 
 .ste-leistungen__hotspot:hover {
-	transform: translate(-50%, -50%) scale(1.1);
-	border-color: var(--ste-orange-hover);
+	transform: translate(-50%, -50%) scale(1.08);
+	border-color: var(--ste-orange);
 	z-index: 4;
 }
 
 .ste-leistungen__hotspot:hover .ste-leistungen__hotspot-bg {
-	box-shadow: 0 0 0 6px rgba(240, 125, 0, 0.15),
-	            0 4px 16px rgba(240, 125, 0, 0.25);
+	box-shadow: 0 0 0 5px rgba(240, 125, 0, 0.12),
+	            0 3px 14px rgba(240, 125, 0, 0.2);
 }
 
 .ste-leistungen__hotspot.is-active {
-	transform: translate(-50%, -50%) scale(1.15);
+	transform: translate(-50%, -50%) scale(1.12);
 	border-color: var(--ste-orange);
 	z-index: 4;
 }
 
 .ste-leistungen__hotspot.is-active .ste-leistungen__hotspot-bg {
 	background: var(--ste-light-blue);
-	box-shadow: 0 0 0 8px rgba(240, 125, 0, 0.12),
-	            0 4px 20px rgba(240, 125, 0, 0.3);
+	box-shadow: 0 0 0 7px rgba(240, 125, 0, 0.1),
+	            0 4px 18px rgba(240, 125, 0, 0.25);
 }
 
 .ste-leistungen__hotspot:focus-visible {
@@ -292,8 +284,8 @@
 }
 
 .ste-leistungen__hotspot-icon {
-	width: 52px;
-	height: 52px;
+	width: 56px;
+	height: 56px;
 	pointer-events: none;
 	position: relative;
 	z-index: 1;
@@ -301,10 +293,10 @@
 
 .ste-leistungen__hotspot-number {
 	position: absolute;
-	top: -4px;
-	right: -4px;
-	width: 22px;
-	height: 22px;
+	top: -3px;
+	right: -3px;
+	width: 24px;
+	height: 24px;
 	background: var(--ste-orange);
 	color: var(--ste-white);
 	font-size: 11px;
@@ -322,9 +314,3 @@
 .ste-leistungen__hotspot.is-active .ste-leistungen__hotspot-number {
 	background: var(--ste-blue);
 }
-
-/* --------------------------------------------------------------------------
-   Unused intro styles (removed from markup, kept for safety)
-   -------------------------------------------------------------------------- */
-
-.ste-leistungen__intro { display: none; }
