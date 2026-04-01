@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.8.0
+   STE Leistungen – Interactive Services Section  v1.9.0
    ========================================================================== */
 
 .ste-leistungen {
@@ -110,21 +110,25 @@
 }
 
 /* --------------------------------------------------------------------------
-   Layer 1 (bottom): Locomotive background
+   Stage: shared aspect-ratio container for locomotive + icon overlay.
+   Both layers fill the same box, so percentage coordinates from the SVG
+   viewBox (386.53 × 205.17) map 1:1 without distortion.
    -------------------------------------------------------------------------- */
 
-.ste-leistungen__loco-wrap {
+.ste-leistungen__stage {
 	position: absolute;
-	top: -20px;
+	top: 0;
 	left: -5%;
 	right: -60px;
-	bottom: -20px;
+	aspect-ratio: 386.53 / 205.17;
 	overflow: visible;
 	pointer-events: none;
 	z-index: 1;
 }
 
 .ste-leistungen__loco-img {
+	position: absolute;
+	inset: 0;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -249,17 +253,14 @@
 }
 
 /* --------------------------------------------------------------------------
-   Layer 3 (top): Icon layer – always above locomotive AND text panels.
-   Matches loco-wrap position exactly so hotspot % coordinates
+   Layer 3 (top): Icon layer – lives inside .ste-leistungen__stage,
+   fills the same box as the locomotive img so hotspot % coordinates
    map 1:1 to SVG anchor points.
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__icon-layer {
 	position: absolute;
-	top: -20px;
-	left: -5%;
-	right: -60px;
-	bottom: -20px;
+	inset: 0;
 	overflow: visible;
 	pointer-events: none;
 	z-index: 10;
