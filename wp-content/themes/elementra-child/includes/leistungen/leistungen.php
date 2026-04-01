@@ -117,7 +117,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.8.0';
+	$version  = '1.9.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -168,7 +168,7 @@ function ste_leistungen_render( $atts ) {
 		}, $services ),
 	) );
 
-	$icon_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/icon_1.svg';
+	$icon_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/icon_service.svg';
 	$loco_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/Zugspitze_gs_hb_p.svg';
 
 	ob_start();
@@ -221,32 +221,33 @@ function ste_leistungen_render( $atts ) {
 				<?php endif; ?>
 			</div>
 
-			<!-- Locomotive background: SVG only -->
-			<div class="ste-leistungen__loco-wrap">
+			<!-- Stage: shared aspect-ratio container for locomotive + icons -->
+			<div class="ste-leistungen__stage">
+				<!-- Locomotive background: SVG only -->
 				<img src="<?php echo esc_url( $loco_url ); ?>"
 				     alt=""
 				     class="ste-leistungen__loco-img"
 				     loading="lazy" />
-			</div>
 
-			<!-- Icon layer: always above locomotive AND text panels -->
-			<div class="ste-leistungen__icon-layer">
-				<?php foreach ( $services as $index => $service ) : ?>
-					<button class="ste-leistungen__hotspot<?php echo 0 === $index ? ' is-active' : ''; ?>"
-					        data-index="<?php echo esc_attr( $index ); ?>"
-					        data-service="<?php echo esc_attr( $service['id'] ); ?>"
-					        style="left: <?php echo esc_attr( $service['hotspot_x'] ); ?>%; top: <?php echo esc_attr( $service['hotspot_y'] ); ?>%;"
-					        aria-label="<?php echo esc_attr( $service['title_plain'] ); ?>"
-					        type="button">
-						<span class="ste-leistungen__hotspot-bg"></span>
-						<img src="<?php echo esc_url( $icon_url ); ?>"
-						     alt=""
-						     class="ste-leistungen__hotspot-icon"
-						     width="60"
-						     height="60" />
-						<span class="ste-leistungen__hotspot-number"><?php echo esc_html( $index + 1 ); ?></span>
-					</button>
-				<?php endforeach; ?>
+				<!-- Icon layer: always above locomotive AND text panels -->
+				<div class="ste-leistungen__icon-layer">
+					<?php foreach ( $services as $index => $service ) : ?>
+						<button class="ste-leistungen__hotspot<?php echo 0 === $index ? ' is-active' : ''; ?>"
+						        data-index="<?php echo esc_attr( $index ); ?>"
+						        data-service="<?php echo esc_attr( $service['id'] ); ?>"
+						        style="left: <?php echo esc_attr( $service['hotspot_x'] ); ?>%; top: <?php echo esc_attr( $service['hotspot_y'] ); ?>%;"
+						        aria-label="<?php echo esc_attr( $service['title_plain'] ); ?>"
+						        type="button">
+							<span class="ste-leistungen__hotspot-bg"></span>
+							<img src="<?php echo esc_url( $icon_url ); ?>"
+							     alt=""
+							     class="ste-leistungen__hotspot-icon"
+							     width="60"
+							     height="60" />
+							<span class="ste-leistungen__hotspot-number"><?php echo esc_html( $index + 1 ); ?></span>
+						</button>
+					<?php endforeach; ?>
+				</div>
 			</div>
 
 		</div>
