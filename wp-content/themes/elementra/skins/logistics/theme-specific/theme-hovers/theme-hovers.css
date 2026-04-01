@@ -1,0 +1,164 @@
+/* Images (post featured) hovers
+----------------------------------------------------- */
+.post_featured[class*="hover_"] {
+  position: relative;
+  -webkit-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.post_featured:not(.post_featured_bg)[class*="hover_"] {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.post_featured[class*="hover_"],
+.post_featured[class*="hover_"] * {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.post_featured .mask {
+  content: ' ';
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateZ(0) scale(1.005, 1.005);
+  -ms-transform: translateZ(0) scale(1.005, 1.005);
+  transform: translateZ(0) scale(1.005, 1.005);
+}
+
+.post_featured .post_link {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.post_featured .post_info {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: none;
+  opacity: 0;
+}
+
+/* Hover: Default */
+.post_featured.hover_default:hover .mask {
+  opacity: 0;
+}
+.post_featured.hover_default img,
+.post_featured.hover_default .post_thumb {
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  -ms-transition: -ms-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+}
+.post_featured.hover_default:hover > img, .post_featured.hover_default:hover .post_thumb, .post_featured.hover_default:hover .trx_addons_secondary_image {
+  -webkit-transform: scale(1.07, 1.07);
+  -ms-transform: scale(1.07, 1.07);
+  transform: scale(1.07, 1.07);
+}
+.post_featured.hover_default .cover-link {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Hover: Dots */
+.post_featured.hover_dots:hover .mask {
+  opacity: 1;
+}
+.post_featured.hover_dots img,
+.post_featured.hover_dots .post_thumb {
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  -ms-transition: -ms-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+}
+.post_featured.hover_dots:hover > img, .post_featured.hover_dots:hover .post_thumb, .post_featured.hover_dots:hover .trx_addons_secondary_image {
+  -webkit-transform: scale(1.07, 1.07);
+  -ms-transform: scale(1.07, 1.07);
+  transform: scale(1.07, 1.07);
+}
+.post_featured.hover_dots .icons {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.post_featured.hover_dots .icons span {
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: var(--theme-color-link);
+}
+.post_featured.hover_dots:hover .icons span {
+  opacity: 1;
+  display: inline-block;
+}
+.post_featured.hover_dots:hover .icons span:first-child {
+  margin-left: -13px;
+}
+.post_featured.hover_dots:hover .icons span + span + span {
+  margin-left: 13px;
+}
+
+

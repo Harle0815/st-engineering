@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+  /* Elementor */
+  :root {
+    --theme-var-elm_gap_narrow: 8px;
+    --theme-var-elm_gap_default: 10px;
+    --theme-var-elm_gap_extended: var(--theme-var-grid_gap);
+    --theme-var-elm_gap_wide: 30px;
+    --theme-var-elm_gap_wider: 40px;
+    --theme-var-elm_add_page_margins: var( --theme-var-elm_gap_extended );
+  }
+}
+
+

@@ -1,0 +1,100 @@
+:root {
+  --trx-addons-ai-helper-stt-button-abs-margin: var(--trx-addons-ai-helper-chat-button-abs-margin, 4px);
+  --trx-addons-ai-helper-stt-button-width: var(--trx-addons-ai-helper-chat-attachment-button-width, 2.3em);
+  --trx-addons-ai-helper-stt-button-border-radius: var(--trx-addons-ai-helper-chat-attachment-button-border-radius, 6px);
+}
+
+.trx_addons_ai_helper_stt_button {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  position: absolute;
+  z-index: 1;
+  top: var(--trx-addons-ai-helper-stt-button-abs-margin);
+  right: auto;
+  bottom: var(--trx-addons-ai-helper-stt-button-abs-margin);
+  left: var(--trx-addons-ai-helper-stt-button-abs-margin);
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: var(--trx-addons-ai-helper-stt-button-border-radius);
+  -ms-border-radius: var(--trx-addons-ai-helper-stt-button-border-radius);
+  border-radius: var(--trx-addons-ai-helper-stt-button-border-radius);
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  -ms-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  width: var(--trx-addons-ai-helper-stt-button-width);
+  color: inherit;
+  cursor: pointer;
+}
+.trx_addons_ai_helper_stt_button:hover, .trx_addons_ai_helper_stt_button:focus {
+  color: #23282d;
+}
+.trx_addons_ai_helper_stt_button.trx_addons_ai_helper_stt_button_active, .trx_addons_ai_helper_stt_button.trx_addons_loading_icon, .trx_addons_ai_helper_stt_button.trx_addons_loading {
+  color: #f04c49;
+}
+.trx_addons_ai_helper_stt_button.trx_addons_ai_helper_stt_button_active:before {
+  content: '\e8e6';
+  font-family: "trx_addons_icons";
+  animation: pulseAnimation 1.5s linear infinite;
+}
+
+.trx_addons_ai_helper_stt_wave {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: auto;
+  right: var(--trx-addons-ai-helper-stt-button-abs-margin);
+  bottom: var(--trx-addons-ai-helper-stt-button-abs-margin);
+  left: calc( var(--trx-addons-ai-helper-stt-button-abs-margin) + var(--trx-addons-ai-helper-stt-button-width) );
+  height: var(--trx-addons-ai-helper-stt-button-width);
+}
+
+.trx_addons_ai_helper_stt_active input[type="text"] {
+  color: transparent;
+}
+.trx_addons_ai_helper_stt_active input[type="text"]::placeholder {
+  color: transparent;
+}
+.trx_addons_ai_helper_stt_active .trx_addons_ai_helper_stt_wave {
+  display: block;
+  background-image: url("../../../../images/wave.gif");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.75, 0.75);
+    -ms-transform: scale(0.75, 0.75);
+    transform: scale(0.75, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+

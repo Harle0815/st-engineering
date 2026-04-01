@@ -1,0 +1,341 @@
+/*
+Theme Name: ELEMENTRA
+Description: Used to style the TinyMCE editor.
+*/
+
+@import "../../../css/_mixins.scss";
+@import "../../../css/_theme-vars.scss";
+@import "_skin-vars.scss";
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Body
+ * 2.0 - Typography
+ * 3.0 - Elements
+ * 4.0 - Alignment
+ * 5.0 - Caption
+ * 6.0 - Gallery
+ * 7.0 - Audio / Video
+ * 8.0 - RTL
+ * 9.0 - Media Queries
+ */
+
+
+/**
+ * 1.0 Body
+ */
+
+.mce-content-body {
+	color: var(--theme-color-text);
+	font-family: var(--theme-font-p_font-family);
+	@include font(var(--theme-font-p_font-size), var(--theme-font-p_line-height), var(--theme-font-p_font-weight), var(--theme-font-p_font-style));
+	letter-spacing: var(--theme-font-p_letter-spacing);
+	text-transform: var(--theme-font-p_text-transform);
+	vertical-align: baseline;
+	margin: 1.5em 1.8em;
+
+	/**
+	 * 2.0 Typography
+	 */
+	h1 { font-family: var(--theme-font-h1_font-family); @include font(var(--theme-font-h1_font-size), var(--theme-font-h1_line-height), var(--theme-font-h1_font-weight), var(--theme-font-h1_font-style)); letter-spacing: var(--theme-font-h1_letter-spacing); text-transform: var(--theme-font-h1_text-transform); margin-top: var(--theme-font-h1_margin-top); margin-bottom: var(--theme-font-h1_margin-bottom); }
+	h2 { font-family: var(--theme-font-h2_font-family); @include font(var(--theme-font-h2_font-size), var(--theme-font-h2_line-height), var(--theme-font-h2_font-weight), var(--theme-font-h2_font-style)); letter-spacing: var(--theme-font-h2_letter-spacing); text-transform: var(--theme-font-h2_text-transform); margin-top: var(--theme-font-h2_margin-top); margin-bottom: var(--theme-font-h2_margin-bottom); }
+	h3 { font-family: var(--theme-font-h3_font-family); @include font(var(--theme-font-h3_font-size), var(--theme-font-h3_line-height), var(--theme-font-h3_font-weight), var(--theme-font-h3_font-style)); letter-spacing: var(--theme-font-h3_letter-spacing); text-transform: var(--theme-font-h3_text-transform); margin-top: var(--theme-font-h3_margin-top); margin-bottom: var(--theme-font-h3_margin-bottom); }
+	h4 { font-family: var(--theme-font-h4_font-family); @include font(var(--theme-font-h4_font-size), var(--theme-font-h4_line-height), var(--theme-font-h4_font-weight), var(--theme-font-h4_font-style)); letter-spacing: var(--theme-font-h4_letter-spacing); text-transform: var(--theme-font-h4_text-transform); margin-top: var(--theme-font-h4_margin-top); margin-bottom: var(--theme-font-h4_margin-bottom); }
+	h5 { font-family: var(--theme-font-h5_font-family); @include font(var(--theme-font-h5_font-size), var(--theme-font-h5_line-height), var(--theme-font-h5_font-weight), var(--theme-font-h5_font-style)); letter-spacing: var(--theme-font-h5_letter-spacing); text-transform: var(--theme-font-h5_text-transform); margin-top: var(--theme-font-h5_margin-top); margin-bottom: var(--theme-font-h5_margin-bottom); }
+	h6 { font-family: var(--theme-font-h6_font-family); @include font(var(--theme-font-h6_font-size), var(--theme-font-h6_line-height), var(--theme-font-h6_font-weight), var(--theme-font-h6_font-style)); letter-spacing: var(--theme-font-h6_letter-spacing); text-transform: var(--theme-font-h6_text-transform); margin-top: var(--theme-font-h6_margin-top); margin-bottom: var(--theme-font-h6_margin-bottom); }
+
+	p, ul, ol, dl, blockquote, address { margin: 0 0 var(--theme-font-p_margin-bottom); }
+	li > ol, li > ul, dl > dd { margin-bottom: 0; }
+	li > p { margin-bottom: 0; }
+	li > p + p { margin-top: 0.5em; }
+	ol, ul {
+		padding-left: 1.2em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		&, a {
+			color: var(--theme-color-title);
+		}
+		a:hover {
+			color: var(--theme-color-link);
+		}
+	}
+
+	.mce-item-table {
+		&, td, th, caption {
+			border: none;
+		}
+	}
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		> p {
+			margin: 0 !important;
+		}
+		td, th {
+			border: none;
+			padding: 0.6rem;
+		}
+		th {
+			color: var(--theme-color-alt_title);
+			background-color: var(--theme-color-alt_bg_color);
+			b, strong {
+				color: var(--theme-color-alt_title);
+			}
+			a {
+				color: var(--theme-color-alt_link);
+				&:hover {
+					color: var(--theme-color-alt_hover);
+				}
+			}
+		}
+		caption {
+			margin-bottom: 0.5em;
+			text-align: center;
+		}
+		> tbody > tr:nth-child(2n+1) > td {
+			background-color: var(--theme-color-bg_color_2);
+		}
+		> tbody > tr:nth-child(2n) > td {
+			background-color: var(--theme-color-bg_color);
+		}
+	}
+
+	blockquote {
+		background-color: var(--theme-color-bg_color_2);
+		position: relative;
+		text-align: left;
+		overflow: hidden;
+		padding: 2.2em 1.8em;
+		@include border-radius(var(--theme-var-global-border-radius, 0));
+		p {
+			margin: 0;
+			+ p { margin-top: 0.5em; }
+		}
+		& > cite,
+		& > p > cite {
+			display: block;
+			margin-top: 1.2em;
+		}
+		&, p {
+			color: var(--theme-color-title);
+		}
+		a {
+			color: var(--theme-color-link);
+			&:hover {
+				color: var(--theme-color-hover);
+			}
+		}
+	}
+
+	b, strong {
+		font-weight: bold;
+	}
+	dfn, em, i {
+		font-style: italic;
+	}
+	pre, code, kbd, tt, var, samp {
+		font-family: "Courier New", Courier, monospace;
+		font-size: 1em;
+		letter-spacing: 0;
+	}
+	pre {
+		overflow: auto;
+		max-width: 100%;
+		white-space: pre-wrap;
+	}
+
+	abbr, acronym {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+	mark, ins {
+		background-color: transparent;
+		text-decoration: none;
+	}
+	sup, sub {
+		font-size: 75%;
+		height: 0;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+	sup { bottom: 1ex; }
+	sub { top: .5ex; }
+	small {	font-size: 80%; }
+	big {	font-size: 120%; }
+
+
+	/**
+	 * 3.0 Elements
+	 */
+
+	hr {
+		height: 0;
+		border: none;
+		border-top: 1px solid var(--theme-color-bd_color);
+		margin-top: 2.5em;
+		margin-bottom: 2.5em;
+	}
+	ul, ol {
+		margin: 0 0 1.5em 0;
+		padding-left: 1.2em;
+	}
+	dt, b, strong {
+		font-weight: bold;
+	}
+	dd {
+		margin-left: 1.5em;
+	}
+	img {
+		height: auto;
+		max-width: 100%;
+		vertical-align: top;
+	}
+	figure {
+		margin: 0 0 1em;
+	}
+	a {
+		color: var(--theme-color-link);
+		text-decoration: none;
+		&:hover {
+			color: var(--theme-color-hover);
+		}
+	}
+
+
+	/**
+	 * 4.0 Alignment
+	 */
+
+	.alignleft {
+		float: left;
+		margin: 0.5em 1.5em 1em 0;
+	}
+	.alignright {
+		float: right;
+		margin: 0.5em 0 1em 1.5em;
+	}
+	.aligncenter {
+		clear: both;
+		display: inline-block;
+		margin: 0.5em auto;
+	}
+
+
+	/**
+	 * 5.0 Caption
+	 */
+
+	.wp-caption {
+		background: transparent;
+		border: none;
+		color: var(--theme-color-meta);
+		margin: 0 0 var(--theme-font-p_margin-bottom) 0;
+		max-width: 100%;
+		padding: 0;
+		text-align: inherit;
+		&.alignleft {
+			margin: 0.5em 1.5em 1em 0;
+		}
+		&.alignright {
+			margin: 0.5em 0 1em 1.5em;
+		}
+		&.aligncenter {
+			margin: 0.5em auto;
+		}
+	}
+	.wp-caption .wp-caption-text,
+	.wp-caption-dd {
+		@include font(0.9375em, var(--theme-font-p_line-height));
+		padding: 10px 0 0;
+		margin: 0;
+	}
+	dl.wp-caption dt.wp-caption-dt img {
+		margin-bottom: 0;
+	}
+
+
+	/**
+	 * 6.0 Gallery
+	 */
+
+	.gallery {
+		padding: 0;
+	}
+	.gallery-item {
+		@include flex;
+		@include flex-direction(column);
+		@include flex-align-items(center);
+		@include flex-justify-content(flex-start);
+		width: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-bottom: 1em;
+	}	
+	.gallery-columns-2 .gallery-item {	width: 50%; }
+	.gallery-columns-3 .gallery-item {	width: 33.33%; }
+	.gallery-columns-4 .gallery-item {	width: 25%; }
+	.gallery-columns-5 .gallery-item {	width: 20%; }
+	.gallery-columns-6 .gallery-item {	width: 16.66%; }
+	.gallery-columns-7 .gallery-item {	width: 14.28%; }
+	.gallery-columns-8 .gallery-item {	width: 12.5%; }
+	.gallery-columns-9 .gallery-item {	width: 11.11%; }
+	.gallery .gallery-caption {
+		color: var(--theme-color-meta);
+		display: block;
+		@include font(0.9375em, var(--theme-font-p_line-height));
+		padding: 10px 0 0;
+		margin: 0;
+		text-align: left;
+	}
+	.gallery-columns-6 .gallery-caption,
+	.gallery-columns-7 .gallery-caption,
+	.gallery-columns-8 .gallery-caption,
+	.gallery-columns-9 .gallery-caption {
+		display: none;
+	}
+
+
+	/**
+	 * 7.0 Audio / Video
+	 */
+
+	.wpview-wrap {
+		margin-bottom: 0.5em;
+	}
+	.wp-audio-playlist {
+		margin: 0;
+	}
+
+
+	/**
+	 * 8.0 RTL
+	 */
+
+	&.rtl {
+		font-family: Arial, Tahoma, sans-serif;
+	}
+}
+
+
+/**
+ * 9.0 Media Queries
+ */
+
+@media screen and (max-width: 740px) {
+	.mce-content-body {
+		max-width: 100%;
+		img, .wp-caption {
+			width: auto !important;
+		}
+		.wp-caption {
+			&.alignleft,
+			&.alignright {
+				max-width: 50%;
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+
+//@mixin theme--lg() {
+@media #{$media_lg} {
+	.post_header_wrap_style_style-1 {
+		margin-bottom: 2.5em;
+		.post_header  {
+			margin-bottom: 2.5em;
+			.post_meta_other {
+				margin-top: 1.2em;
+			}
+			.post_meta_categories {
+				margin-bottom: 1.2em;
+			}
+		}
+	}
+}
+
+//@mixin theme--md() {
+@media #{$media_md} {
+	/* Single post header */
+	.post_header_wrap_style_style-1 {
+		.post_featured.post_featured_bg {
+			height: 30rem;
+		}
+	}
+}
+
+//@mixin theme--sm() {
+@media #{$media_sm} {
+	/* Single post header */
+	.post_header_wrap_style_style-1 {
+		margin-bottom: 2em;
+		.post_featured.post_featured_bg {
+			height: 20rem;
+		}
+		.post_header  {
+			margin-bottom: 2em;
+			.post_meta_other {
+				margin-top: 1em;
+			}
+			.post_meta_categories {
+				margin-bottom: 1em;
+			}
+		}
+	} 
+}
+
+//@mixin theme--xs() {
+@media #{$media_xs} {}

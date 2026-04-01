@@ -1,0 +1,107 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+/* Images (post featured) hovers
+----------------------------------------------------- */
+.post_featured[class*="hover_"] {
+	position: relative;
+	@include transition-all(0.35s, ease-in-out);
+}
+// Next two rules need for images with width less then content area - in that case the hover mask is wider then image
+.post_featured:not(.post_featured_bg)[class*="hover_"] {
+	display: inline-block;
+	vertical-align: top;
+}
+.post_featured[class*="hover_"],
+.post_featured[class*="hover_"] * {
+	@include border-box;
+}
+// Uncomment this if you want to stretch images to the block's width
+//.post_featured[class*="hover_"] img {
+//	@include box(100%, auto);
+//}
+.post_featured .mask {
+	content: ' ';
+	@include abs-cover(4);
+	opacity: 0;
+	pointer-events: none;
+	@include transition-all(0.5s);
+	@include transform(translateZ(0) scale(1.005, 1.005));
+}
+.post_featured .post_link {
+	@include abs-cover(-1);
+}
+.post_featured .post_info {
+	@include abs-cover(6);
+	@include flex;
+	@include flex-align-items(center);
+	@include flex-justify-content(center);
+	@include transition-all(0.5s);
+	display: none;
+	opacity: 0;
+}
+
+
+/* Hover: Default */
+.post_featured.hover_default {
+	&:hover .mask {
+		opacity: 0;
+	}
+	img,
+	.post_thumb {
+		will-change: transform;
+		@include transition-property(transform);
+		@include transition-all(0.5s);
+		@include scale(1.01, 1.01);
+	}
+	&:hover > img,
+	&:hover .post_thumb,
+	&:hover .trx_addons_secondary_image {
+		@include scale(1.07, 1.07);
+	}
+	.cover-link {
+		@include abs-cover(10);
+	}
+}
+
+/* Hover: Dots */
+.post_featured.hover_dots {
+	&:hover .mask {
+		opacity: 1;
+	}
+	img,
+	.post_thumb {
+		will-change: transform;
+		@include transition-property(transform);
+		@include transition-all(0.5s);
+		@include scale(1.01, 1.01);
+	}
+	&:hover > img,
+	&:hover .post_thumb,
+	&:hover .trx_addons_secondary_image {
+		@include scale(1.07, 1.07);
+	}
+	.icons {
+		@include abs-cover(6);
+		span {
+			display: inline-block;
+			opacity: 0;
+			@include abs-cc(5);
+			@include box(6px, 6px);
+			@include border-round;
+			@include transition-all(.5s);
+			background-color: var(--theme-color-link);
+		}
+	}
+	&:hover .icons span {
+		opacity: 1;
+		display: inline-block;
+		&:first-child {
+			margin-left: -13px;
+		}
+		+span+span {
+			margin-left: 13px;
+		}
+	}
+}

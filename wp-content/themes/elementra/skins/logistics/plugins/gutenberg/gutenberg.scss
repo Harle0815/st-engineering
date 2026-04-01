@@ -1,0 +1,22 @@
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+/* Gutenberg: skin-specific */
+
+// Sidebar holder for the editor
+.editor-post-sidebar-holder {
+	background-color: var(--theme-color-bg_color_2);
+    &:before {
+		color: var(--theme-color-text_light);
+    }
+}
+
+// Widgets block editor
+// WordPress 6.5-
+body.editor-styles-wrapper[data-widget-area-id],
+// WordPress 6.5+
+.editor-styles-wrapper[data-widget-area-id] {
+	max-width: 100%;
+	background-color: transparent;
+}

@@ -1,0 +1,15 @@
+/* Gutenberg: skin-specific */
+.editor-post-sidebar-holder {
+  background-color: var(--theme-color-bg_color_2);
+}
+.editor-post-sidebar-holder:before {
+  color: var(--theme-color-text_light);
+}
+
+body.editor-styles-wrapper[data-widget-area-id],
+.editor-styles-wrapper[data-widget-area-id] {
+  max-width: 100%;
+  background-color: transparent;
+}
+
+

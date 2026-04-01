@@ -1,0 +1,130 @@
+// @required
+
+
+// Skin-specific mixins
+//---------------------------------
+
+// Categories, Navigation
+@mixin theme_nav_cat_styles {
+	@include font(0.875rem,  1.1875rem, 500);
+	text-transform: uppercase;
+	letter-spacing: 0.07rem;
+}
+@mixin theme_nav_cat_styles_on_plate {
+	@include font(13px, 16px, 500);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+// Buttons
+@mixin theme_button_template {
+	-webkit-appearance: none;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	@include border-box;
+	/* white-space: nowrap; Allow button text to wrap */
+	height: auto;
+	max-width: 100%;
+}
+@mixin theme_button_disabled($important: '') {
+	@if $important != '' {
+		color: var(--theme-color-title) $important;
+		border-color: var(--theme-color-meta) $important;
+		background: var(--theme-color-meta) $important;
+	} @else {
+		color: var(--theme-color-title);
+		border-color: var(--theme-color-meta);
+		background: var(--theme-color-meta);
+	}
+}
+@mixin theme_button_colors($important: '') {
+	@if $important != '' {
+		color: var(--theme-font-button_color, var(--theme-color-bg_color)) $important;
+		border-color: var(--theme-font-button_border-color, var(--theme-color-link)) $important;
+		background-color: var(--theme-font-button_background-color, var(--theme-color-link)) $important;
+	} @else {
+		color: var(--theme-font-button_color, var(--theme-color-bg_color));
+		border-color: var(--theme-font-button_border-color, var(--theme-color-link));
+		background-color: var(--theme-font-button_background-color, var(--theme-color-link));
+	}
+}
+@mixin theme_button_colors_hover($important: '') {
+	@if $important != '' {
+		color: var(--theme-font-button_color-hover, var(--theme-color-bg_color)) $important;
+		border-color: var(--theme-font-button_border-color-hover, var(--theme-color-hover)) $important;
+		background-color: var(--theme-font-button_background-color-hover, var(--theme-color-hover)) $important;
+	} @else {
+		color: var(--theme-font-button_color-hover, var(--theme-color-bg_color));
+		border-color: var(--theme-font-button_border-color-hover, var(--theme-color-hover));
+		background-color: var(--theme-font-button_background-color-hover, var(--theme-color-hover));
+	}
+}
+@mixin theme_button_color_visited($important: '') {
+	@if $important != '' {
+		color: var(--theme-font-button_color, var(--theme-color-bg_color)) $important;
+	} @else {
+		color: var(--theme-font-button_color, var(--theme-color-bg_color));
+	}
+}
+// Text fields
+@mixin theme_field_colors {
+	color: var(--theme-font-input_color, var(--theme-color-text));
+	border-color: var(--theme-font-input_border-color, var(--theme-color-bd_color));
+	background-color: var(--theme-font-input_background-color, var(--theme-color-bg_color));
+}
+@mixin theme_field_colors_hover {
+	color: var(--theme-font-input_color-focus, var(--theme-color-title));
+	border-color: var(--theme-font-input_border-color-focus, var(--theme-color-meta));
+	background-color: var(--theme-font-input_background-color-focus, var(--theme-color-bg_color));
+}
+
+
+// Scrollbar decoration (reassignment)
+//------------------------------------------
+
+@mixin thick-scrollbar($w: 16px) {
+	// Firefox
+	// scrollbar-width: thin;
+	scrollbar-color: var(--theme-color-bd_color) var(--theme-color-bg_color_2);
+
+	// WebKit-based browsers
+	&::-webkit-scrollbar {
+		width: $w;
+	}
+	&::-webkit-scrollbar-track {
+		background: var(--theme-color-bg_color_2);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--theme-color-bd_color);
+		border: 2px solid var(--theme-color-bg_color_2);
+	}
+}
+
+@mixin thin-scrollbar($w: 8px) {
+	// Firefox
+	scrollbar-width: thin;
+	scrollbar-color: var(--theme-color-bd_color) var(--theme-color-bg_color_2);
+
+	// WebKit-based browsers
+	&::-webkit-scrollbar {
+		width: $w;
+	}
+	&::-webkit-scrollbar-track {
+		background: var(--theme-color-bg_color_2);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--theme-color-bd_color);
+		border: 1px solid var(--theme-color-bg_color_2);
+		@include border-radius(6px);
+	}
+}
+
+
+// Decorative background for select dropdown corner
+//------------------------------------------
+@mixin select-corner-bg ($position: center, $size: 18px) {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='15' cy='15' r='15' fill='rgba(255, 255, 255, 0.3)'/%3E%3Cpath d='M9 13l6 6 6-6' stroke='rgba(0, 0, 0, 1)' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-position: $position;
+	background-size: $size;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAMA,yBAAoB;EACnB,eAAe;EACf,KAAM;IACL,0BAA0B,CAAC,IAAI;IAC/B,2BAA2B,CAAC,KAAK;IACjC,4BAA4B,CAAC,0BAA0B;IACvD,wBAAwB,CAAC,KAAK;IAC9B,yBAAyB,CAAC,KAAK;IAE/B,gCAAgC,CAAC,oCAAoC",
+"sources": ["elementor-responsive.scss"],
+"names": [],
+"file": "elementor-responsive.css"
+}

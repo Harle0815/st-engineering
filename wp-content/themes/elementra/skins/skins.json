@@ -1,0 +1,19 @@
+{
+    "default": {
+        "title": "Default",
+        "description": "",
+        "version": "2.0",
+        "category": "business",
+        "demo_url": "//elementra.themerex.net/"
+    },
+    "logistics": {
+        "title": "Logistics",
+        "version": "1.4",
+        "category": "business",
+        "demo_url": "//logistics.elementra.themerex.net/",
+        "uploaded": "2025-04-21",
+        "updated": "2026-03-12",
+        "checked": "2026-03-18 12:51:54",
+        "keywords": "logistics, delivery company, shipping service, transportation, courier, warehouse, freight forwarding"
+    }
+}

@@ -1,0 +1,106 @@
+/* Blog layout: Classic 
+------------------------- */
+
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_theme-vars.scss";
+@import "../../css/_skin-vars.scss";
+
+.posts_container.columns_wrap {
+	@include flex;
+	@include flex-wrap(wrap);
+	&.classic_1 {
+		[class*="column-"] + [class*="column-"] {
+			margin-top: var(--theme-var-grid_gap);
+		}
+	}
+	.post_layout_classic {
+		display: inline-block;
+		vertical-align: top;
+		@include box(100%, 100%);
+		@include border-box;
+	}
+}
+.post_layout_classic {
+	position: relative;
+	border-color: var(--theme-color-bd_color);
+	.post_featured {
+		margin-bottom: 1.7em;
+		&[class*="hover_"] {
+			display: block;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.post_header + .post_meta {
+		margin-top: 1em;
+	}
+	.post_meta + .post_content {
+		margin-top: 1em;
+	}
+	.post_meta {
+		.socials_share.socials_type_drop .social_items {
+			border-color: var(--theme-color-bd_color);
+			background-color: var(--theme-color-bg_color);
+			@include border-radius(calc(var(--theme-var-global-border-radius-small, 0)* 0.6));
+			&:before {
+				border-bottom-color: var(--theme-color-bd_color);
+				border-left-color: var(--theme-color-bd_color);
+				background-color: var(--theme-color-bg_color);
+			}
+			.social_icon {
+				span {
+					margin-right: 0.5em;
+				}
+				i {
+					font-style: normal;
+				}
+			} 
+		}
+	}
+	.post_category {
+		margin-bottom: 0.8em;
+		.post_meta {
+			margin-top: 0;
+			.post_meta_item.post_categories {
+				margin: 0;
+				@include theme_nav_cat_styles;
+				color: var(--theme-color-title);
+				a,
+				a:hover,
+				a:focus {
+					color: var(--theme-color-title);
+				}
+			}
+		}
+	}
+	.post_title {
+		margin: 0;
+	}
+	blockquote {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+.post_layout_classic_2,
+.post_layout_classic_3 {
+	.post_featured {
+		margin-bottom: 1.4em;
+	}
+	.post_title {
+		font-family: var(--theme-font-h4_font-family);
+		@include font( var(--theme-font-h4_font-size), var(--theme-font-h4_line-height), var(--theme-font-h4_font-weight), var(--theme-font-h4_font-style) );
+		text-decoration: var(--theme-font-h4_text-decoration);
+ 		text-transform: var(--theme-font-h4_text-transform);
+		letter-spacing: var(--theme-font-h4_letter-spacing);
+	}
+	.post_category {
+		margin-bottom: 0.55em;
+	}
+	.post_header + .post_meta {
+		margin-top: 0.55em;
+	}
+	.post_meta + .post_content {
+		margin-top: 0.7em;
+	}
+}
