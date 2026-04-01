@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.10.1
+   STE Leistungen – Interactive Services Section  v1.10.2
    ========================================================================== */
 
 .ste-leistungen {
@@ -136,6 +136,8 @@
 	object-fit: fill;
 	opacity: 1;
 	pointer-events: none;
+	transform: scale(0.92);
+	transform-origin: center center;
 }
 
 /* --------------------------------------------------------------------------
@@ -152,8 +154,8 @@
 }
 
 .ste-leistungen__detail-main {
-	width: 54%;
-	max-width: 520px;
+	width: 46%;
+	max-width: 440px;
 }
 
 .ste-leistungen__detail-title {
@@ -169,14 +171,14 @@
 	line-height: 1.7;
 	color: var(--ste-text);
 	margin: 0;
-	max-width: 88%;
+	max-width: 82%;
 }
 
 /* Tools box – positioned in white zone between locomotive lines */
 .ste-leistungen__detail-tools {
 	position: absolute;
-	top: 38%;
-	right: 22%;
+	top: 46%;
+	right: 30%;
 	width: 24%;
 	max-width: 260px;
 	font-size: 14px;
@@ -203,8 +205,8 @@
 /* References block – vertical icon column, labels as hover tooltips */
 .ste-leistungen__detail-refs {
 	position: absolute;
-	top: 38%;
-	right: 0;
+	top: 30%;
+	right: 6%;
 	pointer-events: auto;
 	display: flex;
 	flex-direction: column;
