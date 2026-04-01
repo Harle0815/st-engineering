@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.9.3
+   STE Leistungen – Interactive Services Section  v1.9.4
    ========================================================================== */
 
 .ste-leistungen {
@@ -152,8 +152,8 @@
 }
 
 .ste-leistungen__detail-main {
-	width: 62%;
-	max-width: 560px;
+	width: 54%;
+	max-width: 520px;
 }
 
 .ste-leistungen__detail-title {
@@ -169,6 +169,7 @@
 	line-height: 1.7;
 	color: var(--ste-text);
 	margin: 0;
+	max-width: 88%;
 }
 
 /* Tools box – center-right white zone between locomotive lines */
