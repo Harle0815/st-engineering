@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.10.3
+   STE Leistungen – Interactive Services Section  v1.10.4
    ========================================================================== */
 
 .ste-leistungen {
@@ -136,8 +136,6 @@
 	object-fit: fill;
 	opacity: 1;
 	pointer-events: none;
-	transform: scale(0.92);
-	transform-origin: center center;
 }
 
 /* --------------------------------------------------------------------------
