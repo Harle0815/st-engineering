@@ -33,12 +33,17 @@
 
 .ste-leistungen__graphic {
 	width: 100%;
-	grid-template-columns: 1fr 1fr;
-	gap: 16px;
+	min-height: 500px;
+}
+
+.ste-leistungen__detail {
+	width: 50%;
+	max-width: 360px;
 }
 
 .ste-leistungen__loco-wrap {
-	min-height: 400px;
+	left: 15%;
+	right: -20px;
 }
 
 .ste-leistungen__hotspot {
@@ -80,17 +85,30 @@
 	}
 
 	.ste-leistungen__graphic {
-		grid-template-columns: 1fr;
-		gap: 12px;
+		min-height: 400px;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.ste-leistungen__detail {
+		position: static;
+		width: 100%;
+		max-width: none;
 		order: 1;
 	}
 
 	.ste-leistungen__loco-wrap {
+		position: relative;
+		left: auto;
+		right: auto;
+		top: auto;
+		bottom: auto;
+		min-height: 300px;
 		order: 0;
-		min-height: 280px;
+	}
+
+	.ste-leistungen__loco-img {
+		object-position: center top;
 	}
 
 	.ste-leistungen__hotspot {
