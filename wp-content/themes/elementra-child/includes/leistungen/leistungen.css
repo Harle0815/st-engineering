@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.6.0
+   STE Leistungen – Interactive Services Section  v1.7.1
    ========================================================================== */
 
 .ste-leistungen {
@@ -99,7 +99,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Composition area: locomotive as large background, content floats in front
+   Composition area
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__graphic {
@@ -110,8 +110,32 @@
 }
 
 /* --------------------------------------------------------------------------
-   Detail / content – spans full graphic width.
-   Title+desc stay left; tools+refs are positioned center-right.
+   Layer 1 (bottom): Locomotive background
+   -------------------------------------------------------------------------- */
+
+.ste-leistungen__loco-wrap {
+	position: absolute;
+	top: -20px;
+	left: -5%;
+	right: -60px;
+	bottom: -20px;
+	overflow: visible;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.ste-leistungen__loco-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center center;
+	opacity: 1;
+	pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Layer 2 (middle): Detail / content – title+desc left, tools+refs right
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__detail {
@@ -142,13 +166,13 @@
 	margin: 0;
 }
 
-/* Tools box – positioned in center-right white zone between locomotive lines */
+/* Tools box – center-right white zone between locomotive lines */
 .ste-leistungen__detail-tools {
 	position: absolute;
-	top: 36%;
-	right: 8%;
-	width: 38%;
-	max-width: 380px;
+	top: 28%;
+	right: 3%;
+	width: 36%;
+	max-width: 370px;
 	font-size: 13px;
 	color: var(--ste-text);
 	line-height: 1.55;
@@ -172,10 +196,10 @@
 /* References box – below tools, also in center-right zone */
 .ste-leistungen__detail-refs {
 	position: absolute;
-	top: 56%;
-	right: 8%;
-	width: 38%;
-	max-width: 380px;
+	top: 46%;
+	right: 3%;
+	width: 36%;
+	max-width: 370px;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -226,10 +250,12 @@
 }
 
 /* --------------------------------------------------------------------------
-   Locomotive – very large, extends deep into center almost to the menu
+   Layer 3 (top): Icon layer – always above locomotive AND text panels.
+   Matches loco-wrap position exactly so hotspot % coordinates
+   map 1:1 to SVG anchor points.
    -------------------------------------------------------------------------- */
 
-.ste-leistungen__loco-wrap {
+.ste-leistungen__icon-layer {
 	position: absolute;
 	top: -20px;
 	left: -5%;
@@ -237,25 +263,13 @@
 	bottom: -20px;
 	overflow: visible;
 	pointer-events: none;
-}
-
-.ste-leistungen__loco-wrap > * {
-	pointer-events: auto;
-}
-
-.ste-leistungen__loco-img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	object-position: center center;
-	opacity: 1;
+	z-index: 10;
 }
 
 /* --------------------------------------------------------------------------
    Hotspots – large PURELY circular markers.
-   All square-producing properties are overridden with !important
-   to defeat any WordPress theme button styles.
+   Positioned by center using translate(-50%, -50%).
+   All square-producing properties overridden with !important.
    -------------------------------------------------------------------------- */
 
 .ste-leistungen__hotspot {
@@ -275,6 +289,7 @@
 	padding: 0 !important;
 	margin: 0;
 	cursor: pointer;
+	pointer-events: auto;
 	transition: transform var(--ste-transition),
 	            border-color var(--ste-transition),
 	            box-shadow var(--ste-transition);
