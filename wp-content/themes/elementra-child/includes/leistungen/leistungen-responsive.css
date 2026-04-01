@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.6.0
+   STE Leistungen – Responsive Styles  v1.7.0
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -47,12 +47,13 @@
 
 .ste-leistungen__detail-tools,
 .ste-leistungen__detail-refs {
-	right: 4%;
-	width: 42%;
+	right: 2%;
+	width: 40%;
 	max-width: 340px;
 }
 
-.ste-leistungen__loco-wrap {
+.ste-leistungen__loco-wrap,
+.ste-leistungen__icon-layer {
 	left: 0;
 	right: -30px;
 	top: -10px;
@@ -124,7 +125,8 @@
 		margin-top: 14px;
 	}
 
-	.ste-leistungen__loco-wrap {
+	.ste-leistungen__loco-wrap,
+	.ste-leistungen__icon-layer {
 		position: relative;
 		left: auto;
 		right: auto;
@@ -135,6 +137,7 @@
 	}
 
 	.ste-leistungen__loco-img {
+		object-fit: contain;
 		object-position: center top;
 	}
 
@@ -186,7 +189,8 @@
 
 @media (max-width: 480px) {
 
-	.ste-leistungen__loco-wrap {
+	.ste-leistungen__loco-wrap,
+	.ste-leistungen__icon-layer {
 		min-height: 240px;
 	}
 

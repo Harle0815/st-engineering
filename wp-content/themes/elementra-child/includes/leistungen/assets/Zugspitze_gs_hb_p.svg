@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Production locomotive path: Zugspitze_gs_hb_p.svg -->
+  <!-- Curved band from top-right, sweeping down-left, then horizontal along the bottom-right -->
+  <defs>
+    <linearGradient id="loco-band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DAE7F1" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#DAE7F1" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <!-- The locomotive shape: a wide curved band/ribbon -->
+  <path d="
+    M 870,0
+    Q 820,5  750,45
+    Q 650,100 520,190
+    Q 380,290 270,390
+    Q 180,475 120,530
+    Q 80,560  50,575
+    L 0,585
+    L 0,600
+    L 1000,600
+    L 1000,555
+    L 200,555
+    Q 150,555 120,545
+    Q 80,530  70,505
+    Q 60,475  80,440
+    Q 100,380 160,320
+    Q 250,230 380,160
+    Q 520,80  680,30
+    Q 780,5   870,0
+    Z
+  "
+  fill="url(#loco-band)" />
+  <!-- Thin border lines along edges for definition -->
+  <path d="
+    M 870,0
+    Q 820,5  750,45
+    Q 650,100 520,190
+    Q 380,290 270,390
+    Q 180,475 120,530
+    Q 80,560  50,575
+    L 0,585
+  "
+  fill="none" stroke="#B8CEDF" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="
+    M 870,0
+    Q 780,5   680,30
+    Q 520,80  380,160
+    Q 250,230 160,320
+    Q 100,380 80,440
+    Q 60,475  70,505
+    Q 80,530  120,545
+    Q 150,555 200,555
+    L 1000,555
+  "
+  fill="none" stroke="#B8CEDF" stroke-width="1.5" stroke-opacity="0.5"/>
+  <!-- ============================================================
+       Embedded anchor points for icon placement (8 service icons).
+       These define the exact CENTER position for each circular icon.
+       Upper curve: icons 1-4 (top-right → bottom-left along arc)
+       Lower line:  icons 5-8 (left → right along horizontal base)
+       ============================================================ -->
+  <g id="icon-anchors" fill="#00325f" opacity="0">
+    <!-- Upper curve anchors -->
+    <circle id="anchor-1" cx="810" cy="60"  r="8" data-label="Anforderungsmanagement"/>
+    <circle id="anchor-2" cx="580" cy="145" r="8" data-label="Fahrzeugkonzepte"/>
+    <circle id="anchor-3" cx="375" cy="250" r="8" data-label="Risikoanalyse"/>
+    <circle id="anchor-4" cx="210" cy="390" r="8" data-label="Systemkonzepte"/>
+    <!-- Lower line anchors -->
+    <circle id="anchor-5" cx="95"  cy="555" r="8" data-label="Schnittstellen"/>
+    <circle id="anchor-6" cx="320" cy="555" r="8" data-label="Schaltplanerstellung"/>
+    <circle id="anchor-7" cx="540" cy="555" r="8" data-label="Sicherheitsnachweis"/>
+    <circle id="anchor-8" cx="800" cy="555" r="8" data-label="Aenderungsmanagement"/>
+  </g>
+</svg>
