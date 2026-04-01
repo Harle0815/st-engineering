@@ -110,7 +110,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.7.1';
+	$version  = '1.7.2';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -162,7 +162,7 @@ function ste_leistungen_render( $atts ) {
 	) );
 
 	$icon_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/icon_service.svg';
-	$loco_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/Zugspitze_gs_hb_p.svg';
+	$loco_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/Zugspitze_gs_hb.svg';
 
 	ob_start();
 	?>
