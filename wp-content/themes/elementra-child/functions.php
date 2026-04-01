@@ -26,4 +26,7 @@ return true;
 
 add_filter( 'auto_plugin_update_send_email', '__return_false' );
 
+// Interactive Leistungen section (shortcode: [ste_leistungen])
+require_once get_stylesheet_directory() . '/includes/leistungen/leistungen.php';
+
 ?>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Placeholder: replace with actual Zugspitze_gs_hb.svg from https://augenklang.com/stedd/wp-content/uploads/2026/04/Zugspitze_gs_hb.svg -->
+  <defs>
+    <linearGradient id="loco-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAE7F1;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#00325f;stop-opacity:0.08"/>
+    </linearGradient>
+  </defs>
+  <!-- Locomotive silhouette placeholder -->
+  <path d="M50,700 L50,500 Q50,450 100,400 L300,250 Q350,220 400,200 L600,140 Q650,125 700,120 L900,110 Q1000,105 1050,120 L1100,140 Q1150,160 1170,200 L1180,250 Q1190,350 1180,400 L1170,500 Q1165,600 1150,650 L1140,700 Z"
+        fill="url(#loco-grad)" stroke="#00325f" stroke-width="2" stroke-opacity="0.2"/>
+  <!-- Rail line -->
+  <line x1="0" y1="720" x2="1200" y2="720" stroke="#00325f" stroke-width="3" stroke-opacity="0.15"/>
+</svg>
