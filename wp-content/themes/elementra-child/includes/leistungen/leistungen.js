@@ -2,6 +2,7 @@
  * STE Leistungen – Interactive Services Section
  *
  * Bidirectional hover/click sync between service list and hotspot icons.
+ * Detail panel is overlaid inside the locomotive graphic area.
  */
 (function ($) {
 	'use strict';
@@ -15,7 +16,8 @@
 		var $items    = $container.find('.ste-leistungen__item');
 		var $hotspots = $container.find('.ste-leistungen__hotspot');
 		var $detail   = $container.find('.ste-leistungen__detail');
-		var locked    = true;  // start locked on first item
+		var iconUrl   = $container.attr('data-icon-url') || '';
+		var locked    = true;
 		var current   = 0;
 
 		function activate(index) {
@@ -40,21 +42,22 @@
 
 			if (s.tools && s.tools.length) {
 				html += '<div class="ste-leistungen__detail-tools">';
-				html += '<strong>Tools:</strong> ';
+				html += '<strong>Tools</strong>';
 				html += '<span>' + escHtml(s.tools.join(', ')) + '</span>';
 				html += '</div>';
 			}
 
 			if (s.references && s.references.length) {
-				var iconUrl = $container.find('.ste-leistungen__ref-icon').first().attr('src') || '';
 				html += '<div class="ste-leistungen__detail-refs">';
-				html += '<strong>Referenzen:</strong>';
+				html += '<span class="ste-leistungen__detail-refs-label">Referenzen</span>';
 				for (var i = 0; i < s.references.length; i++) {
 					html += '<span class="ste-leistungen__ref">';
+					html += '<span class="ste-leistungen__ref-icon-wrap">';
 					if (iconUrl) {
-						html += '<img src="' + iconUrl + '" alt="" class="ste-leistungen__ref-icon" width="18" height="18" />';
+						html += '<img src="' + iconUrl + '" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />';
 					}
-					html += escHtml(s.references[i]);
+					html += '</span>';
+					html += '<span class="ste-leistungen__ref-label">' + escHtml(s.references[i]) + '</span>';
 					html += '</span>';
 				}
 				html += '</div>';
@@ -71,19 +74,16 @@
 
 		// --- Event handlers ---
 
-		// List item: hover
 		$items.on('mouseenter', function () {
 			if (locked) return;
 			activate(parseInt($(this).data('index'), 10));
 		});
 
-		// Hotspot: hover
 		$hotspots.on('mouseenter', function () {
 			if (locked) return;
 			activate(parseInt($(this).data('index'), 10));
 		});
 
-		// List item: click
 		$items.on('click keydown', function (e) {
 			if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) return;
 			e.preventDefault();
@@ -96,7 +96,6 @@
 			}
 		});
 
-		// Hotspot: click
 		$hotspots.on('click', function (e) {
 			e.preventDefault();
 			var idx = parseInt($(this).data('index'), 10);
@@ -104,7 +103,6 @@
 			activate(idx);
 		});
 
-		// Mouse leave container: if not locked, revert to first
 		$container.on('mouseleave', function () {
 			if (!locked) {
 				activate(0);
@@ -112,19 +110,17 @@
 			}
 		});
 
-		// Initial state: first item active
+		// Initial state
 		activate(0);
 		locked = true;
 	}
 
-	// Init on DOM ready
 	$(function () {
 		$('.ste-leistungen').each(function () {
 			initLeistungen($(this));
 		});
 	});
 
-	// Re-init for Elementor lazy-load / AJAX content
 	$(document).on('action.init_hidden_elements', function (e, container) {
 		var $el = $(container).find('.ste-leistungen');
 		if ($el.length) {
