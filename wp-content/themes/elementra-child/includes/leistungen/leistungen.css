@@ -1,8 +1,10 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.13.1
+   STE Leistungen – Interactive Services Section  v1.14.0
    Mirrored layout using slim pre-mirrored SVG asset (Zugspitze_hb_p_s.svg).
    Description on the left, Tools + Referenzen stacked to its right inside
    the white interior of the locomotive. Icon number badges removed.
+   Content block is vertically centred in the white zone; when Tools has
+   nothing to show (`.no-tools`), Referenzen re-centres upward.
    ========================================================================== */
 
 .ste-leistungen {
@@ -36,7 +38,7 @@
 	position: sticky;
 	top: 100px;
 	z-index: 6;
-	margin-top: 60px;
+	margin-top: 30px;
 	background: var(--ste-menu-bg);
 	border: 1px solid var(--ste-light-blue);
 	border-radius: 12px;
@@ -160,7 +162,7 @@
 /* Description sits in the left half of the locomotive's white interior */
 .ste-leistungen__detail-main {
 	position: absolute;
-	top: 24%;
+	top: 30%;
 	left: 13%;
 	width: 26%;
 	max-width: 300px;
@@ -185,7 +187,7 @@
 /* Tools box – sits to the right of the description, upper section */
 .ste-leistungen__detail-tools {
 	position: absolute;
-	top: 28%;
+	top: 34%;
 	left: 40%;
 	width: 18%;
 	max-width: 230px;
@@ -214,7 +216,7 @@
    Label sits above the icons via a full-width flex line. */
 .ste-leistungen__detail-refs {
 	position: absolute;
-	top: 58%;
+	top: 64%;
 	left: 40%;
 	pointer-events: auto;
 	display: flex;
@@ -237,6 +239,12 @@
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
 	text-align: left;
+}
+
+/* When the active service has no Tools, Referenzen re-centres upward into
+   the space Tools would have occupied. */
+.ste-leistungen__detail.no-tools .ste-leistungen__detail-refs {
+	top: 44%;
 }
 
 .ste-leistungen__ref {
