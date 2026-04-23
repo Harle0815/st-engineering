@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.13.0
+   STE Leistungen – Interactive Services Section  v1.13.1
    Mirrored layout using slim pre-mirrored SVG asset (Zugspitze_hb_p_s.svg).
    Description on the left, Tools + Referenzen stacked to its right inside
    the white interior of the locomotive. Icon number badges removed.
@@ -36,6 +36,7 @@
 	position: sticky;
 	top: 100px;
 	z-index: 6;
+	margin-top: 60px;
 	background: var(--ste-menu-bg);
 	border: 1px solid var(--ste-light-blue);
 	border-radius: 12px;
@@ -160,7 +161,7 @@
 .ste-leistungen__detail-main {
 	position: absolute;
 	top: 24%;
-	left: 18%;
+	left: 13%;
 	width: 26%;
 	max-width: 300px;
 	pointer-events: auto;
@@ -185,9 +186,9 @@
 .ste-leistungen__detail-tools {
 	position: absolute;
 	top: 28%;
-	left: 46%;
-	width: 16%;
-	max-width: 210px;
+	left: 40%;
+	width: 18%;
+	max-width: 230px;
 	font-size: 14px;
 	color: var(--ste-text);
 	line-height: 1.6;
@@ -213,8 +214,8 @@
    Label sits above the icons via a full-width flex line. */
 .ste-leistungen__detail-refs {
 	position: absolute;
-	top: 52%;
-	left: 46%;
+	top: 58%;
+	left: 40%;
 	pointer-events: auto;
 	display: flex;
 	flex-direction: row;
