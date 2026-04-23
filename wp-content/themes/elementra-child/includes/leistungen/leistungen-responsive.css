@@ -1,5 +1,6 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.10.2
+   STE Leistungen – Responsive Styles  v1.11.0
+   Mirrored layout variant: tools/refs sit on the left on tablet.
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -46,20 +47,22 @@
 }
 
 .ste-leistungen__detail-tools {
-	right: 22%;
+	left: 22%;
+	right: auto;
 	top: 42%;
 	width: 28%;
 	max-width: 220px;
 }
 
 .ste-leistungen__detail-refs {
-	right: 4%;
+	left: 4%;
+	right: auto;
 	top: 28%;
 }
 
 .ste-leistungen__stage {
-	left: 0;
-	right: -10px;
+	left: -10px;
+	right: 0;
 }
 
 .ste-leistungen__hotspot {
