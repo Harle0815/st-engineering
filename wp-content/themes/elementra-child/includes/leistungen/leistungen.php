@@ -27,10 +27,10 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erfassen, strukturieren und priorisieren technische und funktionale Anforderungen – als Grundlage für erfolgreiche Entwicklungsprojekte.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Straßen- & Stadtbahnen' ),
-			/* Upper curve (4 icons): from SVG hotspot circles, viewBox 386.53×205.17 */
-			/* hotspot-1: cx=313.45 cy=17.45 → 313.45/386.53, 17.45/205.17 */
-			'hotspot_x'   => 81.0976,
-			'hotspot_y'   => 8.5055,
+			/* Upper curve (4 icons) — mirrored: viewBox 386.53×205.17, x = (W - original_cx) */
+			/* hotspot-1 mirrored: cx=73.08 cy=17.45 → 73.08/386.53, 17.45/205.17 */
+			'hotspot_x'   => 18.9067,
+			'hotspot_y'   => 8.5051,
 		),
 		array(
 			'id'          => 'fahrzeugkonzepte',
@@ -39,9 +39,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir entwickeln innovative Fahrzeugkonzepte auf Basis der Kundenanforderungen mit Fokus auf Funktionalität, Sicherheit und Integration – von der Idee bis zur Umsetzung.',
 			'tools'       => array(),
 			'references'  => array(),
-			/* hotspot-2: cx=215.44 cy=34.98 → 215.44/386.53, 34.98/205.17 */
-			'hotspot_x'   => 55.7277,
-			'hotspot_y'   => 17.0488,
+			/* hotspot-2 mirrored: cx=171.09 cy=34.98 → 171.09/386.53, 34.98/205.17 */
+			'hotspot_x'   => 44.2631,
+			'hotspot_y'   => 17.0493,
 		),
 		array(
 			'id'          => 'risikoanalyse',
@@ -50,9 +50,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir führen fundierte Risikoanalysen zur frühzeitigen Identifikation und Bewertung potenzieller Risiken durch, egal ob nach MIL-STD, SIRF oder einem anderen Verfahren – Strukturiert, nachvollziehbar und sauber dokumentiert.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			/* hotspot-3: cx=133.43 cy=76.14 → 133.43/386.53, 76.14/205.17 */
-			'hotspot_x'   => 34.5193,
-			'hotspot_y'   => 37.1108,
+			/* hotspot-3 mirrored: cx=253.10 cy=76.14 → 253.10/386.53, 76.14/205.17 */
+			'hotspot_x'   => 65.4800,
+			'hotspot_y'   => 37.1107,
 		),
 		array(
 			'id'          => 'systemkonzepte',
@@ -61,9 +61,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir leiten ganzheitliche Systemkonzepte auf Basis des Fahrzeugkonzepts ab, bei denen besonders der Fokus auf die funktionale Integration von Zulieferteilen in das Gesamtfahrzeug liegt.',
 			'tools'       => array(),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			/* hotspot-4: cx=66.34 cy=129.39 → 66.34/386.53, 129.39/205.17 */
-			'hotspot_x'   => 17.1612,
-			'hotspot_y'   => 63.0678,
+			/* hotspot-4 mirrored: cx=320.19 cy=129.39 → 320.19/386.53, 129.39/205.17 */
+			'hotspot_x'   => 82.8370,
+			'hotspot_y'   => 63.0648,
 		),
 		array(
 			'id'          => 'schnittstellen',
@@ -72,9 +72,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erstellen Anforderungsspezifikationen für Komponenten, elektrische Verschaltungen und Softwarefunktionalitäten, sodass Klarheit im Engineering herrscht und mögliche Projektrisiken minimiert werden können.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Triebzug' ),
-			/* Lower line (4 icons): hotspot-5: cx=50.99 cy=188.32 → 50.99/386.53, 188.32/205.17 */
-			'hotspot_x'   => 13.1923,
-			'hotspot_y'   => 91.7923,
+			/* Lower line (4 icons) — mirrored: hotspot-5: cx=335.54 cy=188.32 → 335.54/386.53, 188.32/205.17 */
+			'hotspot_x'   => 86.8083,
+			'hotspot_y'   => 91.7873,
 		),
 		array(
 			'id'          => 'schaltplanerstellung',
@@ -83,9 +83,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir setzen die Anforderungen an die elektrische Verschaltung fachgerecht in Schaltplänen mit Zuken E3 oder Engineering Base um – inklusive Kabelsatz- und Schaltschrankplanung und leiten die für die Produktion erforderliche Dokumentation daraus ab.',
 			'tools'       => array( 'ZUKEN E3 (Schematic, Formboard, Panel)', 'AUCOTEC Engineering Base' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen', 'Einzelkomponenten' ),
-			/* hotspot-6: cx=146.28 cy=188.32 → 146.28/386.53, 188.32/205.17 */
-			'hotspot_x'   => 37.8417,
-			'hotspot_y'   => 91.7923,
+			/* hotspot-6 mirrored: cx=240.25 cy=188.32 → 240.25/386.53, 188.32/205.17 */
+			'hotspot_x'   => 62.1556,
+			'hotspot_y'   => 91.7873,
 		),
 		array(
 			'id'          => 'sicherheitsnachweis',
@@ -94,9 +94,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir dokumentieren gemäß den Vorgaben der CSM-Verordnung, sodass das am Ende eine schlüssige Nachweisführung aller sicherheitsrelevanter Anforderungen existiert, welche die Basis für das Vertrauen in die Produktsicherheit ist.',
 			'tools'       => array( 'Office', 'Isograph Reliability Workbench' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			/* hotspot-7: cx=240.60 cy=188.32 → 240.60/386.53, 188.32/205.17 */
-			'hotspot_x'   => 62.2433,
-			'hotspot_y'   => 91.7923,
+			/* hotspot-7 mirrored: cx=145.93 cy=188.32 → 145.93/386.53, 188.32/205.17 */
+			'hotspot_x'   => 37.7539,
+			'hotspot_y'   => 91.7873,
 		),
 		array(
 			'id'          => 'aenderungsmanagement',
@@ -105,9 +105,9 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir begleiten die Produktionsphase als Ansprechpartner aus dem Engineering und unterstützen somit effizient im Fehler- und Änderungsmanagement – für eine reibungslose Umsetzung der Planung in die Realität.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug' ),
-			/* hotspot-8: cx=339.59 cy=188.32 → 339.59/386.53, 188.32/205.17 */
-			'hotspot_x'   => 87.8610,
-			'hotspot_y'   => 91.7923,
+			/* hotspot-8 mirrored: cx=46.94 cy=188.32 → 46.94/386.53, 188.32/205.17 */
+			'hotspot_x'   => 12.1439,
+			'hotspot_y'   => 91.7873,
 		),
 	);
 }
@@ -117,7 +117,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.10.0';
+	$version  = '1.11.0';
 
 	wp_register_style(
 		'ste-leistungen',
