@@ -1,7 +1,7 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.12.0
-   Mirrored layout variant (pre-mirrored SVG master). Tools/refs live on the
-   left on tablet, pushed closer to the edge to match the new composition.
+   STE Leistungen – Responsive Styles  v1.13.0
+   Description on the left, Tools + Referenzen stacked on its right inside
+   the locomotive white interior. Number badges removed.
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -43,22 +43,24 @@
 }
 
 .ste-leistungen__detail-main {
-	width: 44%;
-	max-width: 380px;
+	top: 22%;
+	left: 16%;
+	width: 28%;
+	max-width: 320px;
 }
 
 .ste-leistungen__detail-tools {
-	left: 14%;
+	left: 46%;
 	right: auto;
-	top: 42%;
-	width: 28%;
-	max-width: 220px;
+	top: 26%;
+	width: 18%;
+	max-width: 200px;
 }
 
 .ste-leistungen__detail-refs {
-	left: 1.5%;
+	left: 46%;
 	right: auto;
-	top: 30%;
+	top: 52%;
 }
 
 .ste-leistungen__stage {
@@ -74,14 +76,6 @@
 .ste-leistungen__hotspot-icon {
 	width: 58px;
 	height: 58px;
-}
-
-.ste-leistungen__hotspot-number {
-	width: 26px;
-	height: 26px;
-	font-size: 12px;
-	top: -2px;
-	right: -2px;
 }
 
 /* --------------------------------------------------------------------------
@@ -118,6 +112,9 @@
 	}
 
 	.ste-leistungen__detail-main {
+		position: static;
+		top: auto;
+		left: auto;
 		width: 100%;
 		max-width: none;
 	}
@@ -147,14 +144,6 @@
 	.ste-leistungen__hotspot-icon {
 		width: 48px;
 		height: 48px;
-	}
-
-	.ste-leistungen__hotspot-number {
-		width: 22px;
-		height: 22px;
-		font-size: 10px;
-		top: -2px;
-		right: -2px;
 	}
 
 	.ste-leistungen__detail-title {
@@ -226,10 +215,6 @@
 	.ste-leistungen__hotspot-icon {
 		width: 36px;
 		height: 36px;
-	}
-
-	.ste-leistungen__hotspot-number {
-		display: none;
 	}
 
 	.ste-leistungen__item-title {
