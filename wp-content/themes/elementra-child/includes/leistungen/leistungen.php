@@ -118,7 +118,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.13.1';
+	$version  = '1.14.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -196,7 +196,16 @@ function ste_leistungen_render( $atts ) {
 		<div class="ste-leistungen__graphic">
 
 			<!-- Content column: title, description, tools, references -->
-			<div class="ste-leistungen__detail" aria-live="polite">
+			<?php
+				$detail_classes = array( 'ste-leistungen__detail' );
+				if ( empty( $services[0]['tools'] ) ) {
+					$detail_classes[] = 'no-tools';
+				}
+				if ( empty( $services[0]['references'] ) ) {
+					$detail_classes[] = 'no-refs';
+				}
+			?>
+			<div class="<?php echo esc_attr( implode( ' ', $detail_classes ) ); ?>" aria-live="polite">
 				<div class="ste-leistungen__detail-main">
 					<h3 class="ste-leistungen__detail-title"><?php echo esc_html( $services[0]['title_plain'] ); ?></h3>
 					<p class="ste-leistungen__detail-desc"><?php echo esc_html( $services[0]['description'] ); ?></p>
