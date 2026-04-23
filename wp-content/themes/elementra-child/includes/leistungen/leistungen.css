@@ -1,6 +1,7 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.11.0
-   Mirrored layout: locomotive flow starts top-left, icon 1 on the left.
+   STE Leistungen – Interactive Services Section  v1.12.0
+   Mirrored layout using pre-mirrored SVG asset (Zugspitze_hb_p.svg).
+   No CSS transform on the locomotive – the SVG is already the correct shape.
    ========================================================================== */
 
 .ste-leistungen {
@@ -128,8 +129,8 @@
 	z-index: 10;
 }
 
-/* Locomotive is mirrored horizontally so the path flows from top-left
-   down to the lower line; hotspot coordinates are pre-mirrored in PHP. */
+/* Locomotive asset is already the mirrored master (Zugspitze_hb_p.svg).
+   No CSS transform is applied – hotspot percentages map 1:1 to its viewBox. */
 .ste-leistungen__loco-img {
 	position: absolute;
 	inset: 0;
@@ -139,7 +140,6 @@
 	object-fit: fill;
 	opacity: 1;
 	pointer-events: none;
-	transform: scaleX(-1);
 }
 
 /* --------------------------------------------------------------------------
@@ -156,9 +156,10 @@
 }
 
 .ste-leistungen__detail-main {
-	width: 46%;
-	max-width: 440px;
+	width: 42%;
+	max-width: 420px;
 	margin-left: auto;
+	padding-right: 1%;
 }
 
 .ste-leistungen__detail-title {
@@ -181,7 +182,7 @@
 .ste-leistungen__detail-tools {
 	position: absolute;
 	top: 46%;
-	left: 30%;
+	left: 20%;
 	width: 24%;
 	max-width: 260px;
 	font-size: 14px;
@@ -208,8 +209,8 @@
 /* References block – vertical icon column, labels as hover tooltips (left side after mirror) */
 .ste-leistungen__detail-refs {
 	position: absolute;
-	top: 30%;
-	left: 10%;
+	top: 32%;
+	left: 3%;
 	pointer-events: auto;
 	display: flex;
 	flex-direction: column;

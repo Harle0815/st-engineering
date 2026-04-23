@@ -1,6 +1,7 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.11.0
-   Mirrored layout variant: tools/refs sit on the left on tablet.
+   STE Leistungen – Responsive Styles  v1.12.0
+   Mirrored layout variant (pre-mirrored SVG master). Tools/refs live on the
+   left on tablet, pushed closer to the edge to match the new composition.
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -47,7 +48,7 @@
 }
 
 .ste-leistungen__detail-tools {
-	left: 22%;
+	left: 14%;
 	right: auto;
 	top: 42%;
 	width: 28%;
@@ -55,9 +56,9 @@
 }
 
 .ste-leistungen__detail-refs {
-	left: 4%;
+	left: 1.5%;
 	right: auto;
-	top: 28%;
+	top: 30%;
 }
 
 .ste-leistungen__stage {
