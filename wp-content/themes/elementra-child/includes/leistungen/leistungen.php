@@ -23,7 +23,8 @@ function ste_leistungen_get_services() {
 		array(
 			'id'          => 'anforderungsmanagement',
 			'title'       => 'Anforderungs&shy;management',
-			'title_plain' => 'Anforderungsmanagement',
+			/* U+00AD soft hyphen: browser only renders it when a break is needed. */
+			'title_plain' => "Anforderungs\u{00AD}management",
 			'description' => 'Wir erfassen, strukturieren und priorisieren technische und funktionale Anforderungen – als Grundlage für erfolgreiche Entwicklungsprojekte.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Straßen- & Stadtbahnen' ),
@@ -101,7 +102,7 @@ function ste_leistungen_get_services() {
 		array(
 			'id'          => 'aenderungsmanagement',
 			'title'       => 'Änderungs&shy;management & Baubetreuung',
-			'title_plain' => 'Änderungsmanagement & Baubetreuung',
+			'title_plain' => "Änderungs\u{00AD}management & Baubetreuung",
 			'description' => 'Wir begleiten die Produktionsphase als Ansprechpartner aus dem Engineering und unterstützen somit effizient im Fehler- und Änderungsmanagement – für eine reibungslose Umsetzung der Planung in die Realität.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug' ),
@@ -117,7 +118,7 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.13.0';
+	$version  = '1.13.1';
 
 	wp_register_style(
 		'ste-leistungen',
