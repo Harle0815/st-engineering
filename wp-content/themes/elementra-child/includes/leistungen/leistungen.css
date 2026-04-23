@@ -1,7 +1,8 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.12.0
-   Mirrored layout using pre-mirrored SVG asset (Zugspitze_hb_p.svg).
-   No CSS transform on the locomotive – the SVG is already the correct shape.
+   STE Leistungen – Interactive Services Section  v1.13.0
+   Mirrored layout using slim pre-mirrored SVG asset (Zugspitze_hb_p_s.svg).
+   Description on the left, Tools + Referenzen stacked to its right inside
+   the white interior of the locomotive. Icon number badges removed.
    ========================================================================== */
 
 .ste-leistungen {
@@ -129,7 +130,7 @@
 	z-index: 10;
 }
 
-/* Locomotive asset is already the mirrored master (Zugspitze_hb_p.svg).
+/* Locomotive asset is already the mirrored master (Zugspitze_hb_p_s.svg).
    No CSS transform is applied – hotspot percentages map 1:1 to its viewBox. */
 .ste-leistungen__loco-img {
 	position: absolute;
@@ -155,11 +156,14 @@
 	pointer-events: none;
 }
 
+/* Description sits in the left half of the locomotive's white interior */
 .ste-leistungen__detail-main {
-	width: 42%;
-	max-width: 420px;
-	margin-left: auto;
-	padding-right: 1%;
+	position: absolute;
+	top: 24%;
+	left: 18%;
+	width: 26%;
+	max-width: 300px;
+	pointer-events: auto;
 }
 
 .ste-leistungen__detail-title {
@@ -175,20 +179,19 @@
 	line-height: 1.7;
 	color: var(--ste-text);
 	margin: 0;
-	max-width: 82%;
 }
 
-/* Tools box – positioned in white zone between locomotive lines (left side after mirror) */
+/* Tools box – sits to the right of the description, upper section */
 .ste-leistungen__detail-tools {
 	position: absolute;
-	top: 46%;
-	left: 20%;
-	width: 24%;
-	max-width: 260px;
+	top: 28%;
+	left: 46%;
+	width: 16%;
+	max-width: 210px;
 	font-size: 14px;
 	color: var(--ste-text);
 	line-height: 1.6;
-	padding: 18px 16px;
+	padding: 16px 14px;
 	pointer-events: auto;
 	border: 1px solid var(--ste-light-blue);
 	border-radius: 4px;
@@ -206,17 +209,19 @@
 	margin-bottom: 6px;
 }
 
-/* References block – vertical icon column, labels as hover tooltips (left side after mirror) */
+/* References block – horizontal icon row under the Tools block.
+   Label sits above the icons via a full-width flex line. */
 .ste-leistungen__detail-refs {
 	position: absolute;
-	top: 32%;
-	left: 3%;
+	top: 52%;
+	left: 46%;
 	pointer-events: auto;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 10px;
-	padding: 10px 10px 14px;
+	padding: 10px 12px 12px;
 	border: 1px solid var(--ste-light-blue);
 	border-radius: 6px;
 	background: var(--ste-white);
@@ -224,12 +229,13 @@
 }
 
 .ste-leistungen__detail-refs-label {
+	flex-basis: 100%;
 	font-size: 10px;
 	font-weight: 700;
 	color: var(--ste-blue);
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
-	text-align: center;
+	text-align: left;
 }
 
 .ste-leistungen__ref {
@@ -262,12 +268,13 @@
 	height: 50px;
 }
 
-/* Label hidden by default — shown as tooltip on hover (appears right of icon, refs are on the left after mirror) */
+/* Label hidden by default — shown as tooltip on hover (appears above the icon,
+   which is the right direction for a horizontal row). */
 .ste-leistungen__ref-label {
 	position: absolute;
-	left: calc(100% + 10px);
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: calc(100% + 8px);
+	left: 50%;
+	transform: translateX(-50%);
 	white-space: nowrap;
 	font-size: 12px;
 	font-weight: 600;
@@ -283,15 +290,15 @@
 	z-index: 20;
 }
 
-/* Tooltip arrow – points left toward the icon */
+/* Tooltip arrow – points down toward the icon */
 .ste-leistungen__ref-label::after {
 	content: '';
 	position: absolute;
-	right: 100%;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
 	border: 5px solid transparent;
-	border-right-color: var(--ste-blue);
+	border-top-color: var(--ste-blue);
 }
 
 /* Show tooltip on hover */
@@ -397,28 +404,4 @@
 	z-index: 1;
 	border-radius: 50% !important;
 	object-fit: contain;
-}
-
-.ste-leistungen__hotspot-number {
-	position: absolute;
-	top: -4px;
-	right: -4px;
-	width: 32px;
-	height: 32px;
-	background: var(--ste-orange);
-	color: var(--ste-white);
-	font-size: 14px;
-	font-weight: 700;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	line-height: 1;
-	pointer-events: none;
-	z-index: 2;
-	transition: background-color var(--ste-transition);
-}
-
-.ste-leistungen__hotspot.is-active .ste-leistungen__hotspot-number {
-	background: var(--ste-blue);
 }
