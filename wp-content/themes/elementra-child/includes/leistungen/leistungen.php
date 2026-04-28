@@ -192,7 +192,7 @@ function ste_leistungen_resolve_icon_url( $filename ) {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.17.0';
+	$version  = '1.18.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -206,7 +206,7 @@ function ste_leistungen_register_assets() {
 		$base_url . '/leistungen-responsive.css',
 		array( 'ste-leistungen' ),
 		$version,
-		'(max-width: 1200px)'
+		'(max-width: 1440px)'
 	);
 
 	wp_register_script(
