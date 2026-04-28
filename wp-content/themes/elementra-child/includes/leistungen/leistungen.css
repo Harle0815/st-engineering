@@ -1,11 +1,12 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.15.0
-   Mirrored layout using outline pre-mirrored SVG asset (Zugspitze_hb_p_ss_o.svg).
+   STE Leistungen – Interactive Services Section  v1.16.0
+   Mirrored layout using pre-mirrored SVG asset (Zugspitze_hb_p_ss_b.svg).
    Per-service hotspot icons and per-reference Fahrzeuge icons.
    Description on the left, Tools + Referenzen stacked to its right inside
-   the white interior of the locomotive. Icon number badges removed.
-   Content block is vertically centred in the white zone; when Tools has
-   nothing to show (`.no-tools`), Referenzen re-centres upward.
+   the white interior of the locomotive – no card frames around them.
+   Icon number badges removed. Content block is vertically centred in the
+   white zone; when Tools has nothing to show (`.no-tools`), Referenzen
+   re-centres upward.
    ========================================================================== */
 
 .ste-leistungen {
@@ -186,7 +187,7 @@
 	margin: 0;
 }
 
-/* Tools box – sits to the right of the description, upper section */
+/* Tools – sits to the right of the description, upper section. No box. */
 .ste-leistungen__detail-tools {
 	position: absolute;
 	top: 34%;
@@ -196,12 +197,8 @@
 	font-size: 14px;
 	color: var(--ste-text);
 	line-height: 1.6;
-	padding: 16px 14px;
+	padding: 0;
 	pointer-events: auto;
-	border: 1px solid var(--ste-light-blue);
-	border-radius: 4px;
-	background: var(--ste-white);
-	box-shadow: 0 1px 6px rgba(0, 50, 95, 0.06);
 }
 
 .ste-leistungen__detail-tools strong {
@@ -214,7 +211,7 @@
 	margin-bottom: 6px;
 }
 
-/* References block – horizontal icon row under the Tools block.
+/* Referenzen – horizontal icon row under the Tools block. No box.
    Label sits above the icons via a full-width flex line. */
 .ste-leistungen__detail-refs {
 	position: absolute;
@@ -226,16 +223,13 @@
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 10px;
-	padding: 10px 12px 12px;
-	border: 1px solid var(--ste-light-blue);
-	border-radius: 6px;
-	background: var(--ste-white);
-	box-shadow: 0 1px 6px rgba(0, 50, 95, 0.06);
+	padding: 0;
 }
 
 .ste-leistungen__detail-refs-label {
 	flex-basis: 100%;
-	font-size: 10px;
+	/* Match the Tools label size (set on .ste-leistungen__detail-tools strong) */
+	font-size: 12px;
 	font-weight: 700;
 	color: var(--ste-blue);
 	text-transform: uppercase;

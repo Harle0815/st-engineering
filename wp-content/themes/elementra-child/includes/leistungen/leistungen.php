@@ -42,7 +42,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir entwickeln innovative Fahrzeugkonzepte auf Basis der Kundenanforderungen mit Fokus auf Funktionalität, Sicherheit und Integration – von der Idee bis zur Umsetzung.',
 			'tools'       => array(),
 			'references'  => array(),
-			'icon'        => '2-3--Fahrzeugkonzepte.svg',
+			'icon'        => '2-4--Fahrzeugkonzepte.svg',
 			/* hotspot-2: cx=170.71 cy=34.98 → 170.71/386.53, 34.98/205.17 */
 			'hotspot_x'   => 44.1647,
 			'hotspot_y'   => 17.0493,
@@ -66,7 +66,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir leiten ganzheitliche Systemkonzepte auf Basis des Fahrzeugkonzepts ab, bei denen besonders der Fokus auf die funktionale Integration von Zulieferteilen in das Gesamtfahrzeug liegt.',
 			'tools'       => array(),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
-			'icon'        => '5-2--Systemkonzepte.svg',
+			'icon'        => '4-2--Schnittstellenanalyse.svg',
 			/* hotspot-4: cx=319.81 cy=129.39 → 319.81/386.53, 129.39/205.17 */
 			'hotspot_x'   => 82.7387,
 			'hotspot_y'   => 63.0648,
@@ -78,7 +78,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erstellen Anforderungsspezifikationen für Komponenten, elektrische Verschaltungen und Softwarefunktionalitäten, sodass Klarheit im Engineering herrscht und mögliche Projektrisiken minimiert werden können.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Triebzug' ),
-			'icon'        => '4-2--Schnittstellenanalyse.svg',
+			'icon'        => '6-7--SpezifikationenKomponenten.svg',
 			/* Lower line (4 icons): hotspot-5: cx=335.16 cy=188.32 → 335.16/386.53, 188.32/205.17 */
 			'hotspot_x'   => 86.7100,
 			'hotspot_y'   => 91.7873,
@@ -90,7 +90,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir setzen die Anforderungen an die elektrische Verschaltung fachgerecht in Schaltplänen mit Zuken E3 oder Engineering Base um – inklusive Kabelsatz- und Schaltschrankplanung und leiten die für die Produktion erforderliche Dokumentation daraus ab.',
 			'tools'       => array( 'ZUKEN E3 (Schematic, Formboard, Panel)', 'AUCOTEC Engineering Base' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen', 'Einzelkomponenten' ),
-			'icon'        => '6-5--SpezifikationenKomponenten.svg',
+			'icon'        => '7-2--Schaltplanerstellung.svg',
 			/* hotspot-6: cx=239.87 cy=188.32 → 239.87/386.53, 188.32/205.17 */
 			'hotspot_x'   => 62.0573,
 			'hotspot_y'   => 91.7873,
@@ -158,7 +158,7 @@ function ste_leistungen_resolve_icon_url( $filename ) {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.15.0';
+	$version  = '1.16.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -222,7 +222,7 @@ function ste_leistungen_render( $atts ) {
 		'services' => $services_for_js,
 	) );
 
-	$loco_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/Zugspitze_hb_p_ss_o.svg';
+	$loco_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/Zugspitze_hb_p_ss_b.svg';
 
 	ob_start();
 	?>
