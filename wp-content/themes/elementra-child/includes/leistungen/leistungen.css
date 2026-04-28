@@ -1,12 +1,13 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.17.0
+   STE Leistungen – Interactive Services Section  v1.18.0
    Mirrored layout using pre-mirrored SVG asset (Zugspitze_hb_p_ss_b.svg).
    Per-service hotspot icons. Referenzen always renders the canonical 4
    vehicle icons; inactive ones are greyed out per active service.
    Description on the left, Tools + Referenzen stacked to its right inside
    the white interior of the locomotive – no card frames around them.
-   Icon number badges removed. When the active service has no Tools
-   (`.no-tools`), Referenzen shifts ~40 px down for breathing room.
+   Icon number badges removed. Sidebar is no longer sticky on desktop.
+   Referenzen vertical position is fixed for all services (no conditional
+   shift when Tools is hidden).
    ========================================================================== */
 
 .ste-leistungen {
@@ -37,8 +38,6 @@
 .ste-leistungen__sidebar {
 	flex: 0 0 280px;
 	max-width: 280px;
-	position: sticky;
-	top: 100px;
 	z-index: 6;
 	margin-top: 30px;
 	background: var(--ste-menu-bg);
@@ -204,7 +203,7 @@
 .ste-leistungen__detail-tools strong {
 	display: block;
 	color: var(--ste-blue);
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -229,7 +228,7 @@
 .ste-leistungen__detail-refs-label {
 	flex-basis: 100%;
 	/* Match the Tools label size (set on .ste-leistungen__detail-tools strong) */
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
 	color: var(--ste-blue);
 	text-transform: uppercase;
@@ -237,11 +236,8 @@
 	text-align: left;
 }
 
-/* When the active service has no Tools, push Referenzen ~40 px down so it
-   sits clear of the upper service icons / locomotive curve. */
-.ste-leistungen__detail.no-tools .ste-leistungen__detail-refs {
-	transform: translateY(40px);
-}
+/* Referenzen vertical position is fixed (uses Anforderungsmanagement /
+   has-tools position) regardless of whether the active service has Tools. */
 
 /* Inactive references: rendered greyed-out but still visible.
    Tooltip behaviour on hover stays intact. */
