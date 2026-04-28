@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-5506.02,-2348.96)">
+        <g id="_9--Aenderungsmanagement-Baubetreuung" serif:id="9--Aenderungsmanagement&amp;Baubetreuung">
+        </g>
+        <g id="_8--Sicherheitsnachweis" serif:id="8--Sicherheitsnachweis">
+        </g>
+        <g id="_7--Schaltplanerstellung-Kabeldesign" serif:id="7--Schaltplanerstellung&amp;Kabeldesign">
+        </g>
+        <g id="_6--SpezifikatioFuerKomponenten-Software" serif:id="6--SpezifikatioFuerKomponenten&amp;Software">
+        </g>
+        <g id="_6-7--Spezifikationen-für-Komponenten" serif:id="6-7--Spezifikationen für Komponenten" transform="matrix(0.390625,0,4.93038e-32,0.694444,5506.02,2348.96)">
+            <rect x="0" y="0" width="2560" height="1440" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="0" y="0" width="2560" height="1440"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(0.874169,0,0,0.874169,293.288,48.6213)">
+                    <g id="Gerät" transform="matrix(0.989474,0,2.68689e-47,0.989474,517.248,-81.9525)">
+                        <g id="Dachgerät--1">
+                            <g id="Gerät1" serif:id="Gerät">
+                                <g transform="matrix(3.68745,0,1.2094e-46,2.07419,-4302.91,-2448.98)">
+                                    <path d="M1455,1580.51L1651,1454.59L1651,1550L1455,1683.87L1455,1580.51Z" style="fill:none;stroke:rgb(15,49,87);stroke-width:23.41px;"/>
+                                </g>
+                                <g transform="matrix(3.68745,0,1.2094e-46,2.07419,-4302.91,-2448.98)">
+                                    <path d="M1455,1580.51L1276.92,1500.04L1276.92,1591.36L1455,1683.87L1455,1580.51Z" style="fill:none;stroke:rgb(15,49,87);stroke-width:23.41px;"/>
+                                </g>
+                                <g transform="matrix(3.68745,0,1.2094e-46,2.07419,-4302.91,-2448.98)">
+                                    <path d="M1276.92,1500.04L1479,1389.55L1651,1454.59L1455,1580.51L1276.92,1500.04Z" style="fill:none;stroke:rgb(15,49,87);stroke-width:23.41px;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(2.56,0,-1.81754e-31,1.44,-14095.4,-3382.5)">
+                        <path d="M6118.02,3008.86C6118.02,3008.86 6101.8,3017.83 6089.05,3024.88C6079.72,3030.04 6068.37,3029.96 6059.11,3024.65C6054.7,3022.12 6049.87,3019.35 6045.45,3016.82C6042.34,3015.03 6040.41,3011.74 6040.36,3008.16C6040.32,3004.58 6042.17,3001.24 6045.24,2999.38C6053.44,2994.4 6062.02,2989.2 6062.02,2989.2" style="fill:none;stroke:rgb(15,49,87);stroke-width:33.37px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8;"/>
+                    </g>
+                    <g transform="matrix(2.56,0,-1.81754e-31,1.44,-14614,-3525.29)">
+                        <path d="M6118.02,3008.86C6118.02,3008.86 6101.8,3017.83 6089.05,3024.88C6079.72,3030.04 6068.37,3029.96 6059.11,3024.65C6054.7,3022.12 6049.87,3019.35 6045.45,3016.82C6042.34,3015.03 6040.41,3011.74 6040.36,3008.16C6040.32,3004.58 6042.17,3001.24 6045.24,2999.38C6053.44,2994.4 6062.02,2989.2 6062.02,2989.2" style="fill:none;stroke:rgb(15,49,87);stroke-width:33.37px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8;"/>
+                    </g>
+                </g>
+                <g transform="matrix(0.446599,0,-3.17074e-32,0.251212,-1618.55,898.397)">
+                    <g transform="matrix(798.298,0,0,798.298,7933.83,1400.66)">
+                    </g>
+                    <text x="5713.96px" y="1400.66px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:798.298px;fill:rgb(238,121,0);">01001</text>
+                </g>
+                <g transform="matrix(4.56882,0,-3.24375e-31,2.56996,-27948.6,-4180.23)">
+                    <path d="M6310,1973.65L6280,2025.61L6280,2025.65L6220,2025.65L6220.03,2025.65L6190.03,1973.69L6190,1973.67L6190,1973.65L6220,1921.69L6220,1921.65L6280,1921.65L6279.97,1921.65L6309.97,1973.61L6310,1973.63" style="fill:white;stroke:rgb(238,121,0);stroke-width:16.34px;stroke-miterlimit:1;"/>
+                </g>
+                <g transform="matrix(4.77493,0,-3.39008e-31,2.6859,-29093.6,-4323.1)">
+                    <circle cx="6220" cy="1941.65" r="28" style="fill:white;stroke:rgb(238,121,0);stroke-width:15.64px;stroke-miterlimit:1;"/>
+                </g>
+                <g id="LOGO--Grenze" transform="matrix(2.56,0,0,1.44,3.63798e-12,-2102.4)">
+                    <path d="M500,1460C775.958,1460 1000,1684.04 1000,1960C1000,2235.96 775.958,2460 500,2460C224.042,2460 0,2235.96 0,1960C0,1684.04 224.042,1460 500,1460ZM500,1500C246.119,1500 40,1706.12 40,1960C40,2213.88 246.119,2420 500,2420C753.881,2420 960,2213.88 960,1960C960,1706.12 753.881,1500 500,1500Z" style="fill:rgb(15,49,87);"/>
+                </g>
+                <g transform="matrix(4.59225,0,-3.26038e-31,2.58314,-26764.2,-3675.63)">
+                    <g transform="matrix(0.557461,-0,-6.80425e-48,0.557461,5828.13,1422.93)">
+                        <path d="M338.623,309.804L222.173,420.236L249.074,262.021L338.623,309.804Z" style="fill:rgb(238,121,0);"/>
+                        <path d="M329.827,112.236L262.213,218.487L329.827,218.487C329.827,218.487 305.206,264.628 279.513,312.777" style="fill:none;stroke:rgb(238,121,0);stroke-width:29.17px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:8;"/>
+                    </g>
+                </g>
+                <g transform="matrix(1.38706,0,-1.81754e-31,1.44,-7124.37,-3451.04)">
+                    <path d="M5881.95,3019.04L5870.42,3019.04L5870.42,3006.54L5881.95,3019.04ZM5881.95,3019.04L5881.96,3006.54L5893.49,3006.54L5893.49,3019.04L5881.95,3019.04ZM5972.28,3006.54L5972.28,3019.04L5922.94,3019.04L5922.94,3006.54L5972.28,3006.54ZM6051.06,3006.54L6051.06,3019.04L6001.73,3019.04L6001.73,3006.54L6051.06,3006.54ZM6129.85,3006.54L6129.85,3019.04L6080.52,3019.04L6080.52,3006.54L6129.85,3006.54Z" style="fill:rgb(238,121,0);"/>
+                </g>
+                <g transform="matrix(1.88702,0,-1.81754e-31,1.44,-10191.9,-3940.64)">
+                    <path d="M5881.95,3019.04L5881.96,3006.54L5890.44,3006.54L5890.44,3019.04L5881.95,3019.04ZM5881.95,3019.04L5873.48,3019.04L5873.48,3006.54L5881.95,3019.04ZM5949.52,3006.54L5949.52,3019.04L5912.87,3019.04L5912.87,3006.54L5949.52,3006.54ZM6008.61,3006.54L6008.61,3019.04L5971.96,3019.04L5971.96,3006.54L6008.61,3006.54ZM6067.7,3006.54L6067.7,3019.04L6031.05,3019.04L6031.05,3006.54L6067.7,3006.54ZM6126.79,3006.54L6126.79,3019.04L6090.14,3019.04L6090.14,3006.54L6126.79,3006.54Z" style="fill:rgb(238,121,0);"/>
+                </g>
+                <g transform="matrix(1.38706,-1.22356e-15,-3.72083e-15,0.827234,-6310.22,-1592.95)">
+                    <path d="M5870.83,3002.26L5882.37,2991.38L5882.37,3002.26L5870.83,3002.26ZM5870.83,3002.26L5859.3,3002.26L5859.3,2980.5L5870.83,3002.26ZM5882.37,3096.26L5859.3,3096.26L5859.3,3043.17L5882.37,3043.17L5882.37,3096.26ZM5882.37,3190.26L5870.83,3190.26L5859.3,3190.26L5859.3,3137.17L5882.37,3137.17L5882.37,3190.26Z" style="fill:rgb(238,121,0);"/>
+                </g>
+            </g>
+        </g>
+        <g id="_5--Systemkonzepte-Integration" serif:id="5--Systemkonzepte&amp;Integration">
+        </g>
+        <g id="_5--Systemkonzepte-Integration1" serif:id="5--Systemkonzepte&amp;Integration">
+        </g>
+        <g id="_4--Schnittstellenanalyse" serif:id="4--Schnittstellenanalyse">
+        </g>
+        <g id="_3--Risikoanalyse" serif:id="3--Risikoanalyse">
+        </g>
+        <g id="_3--Risikoanalyse1" serif:id="3--Risikoanalyse">
+        </g>
+        <g id="_2--EntwicklungVonFahrzeugkonzepten" serif:id="2--EntwicklungVonFahrzeugkonzepten">
+        </g>
+        <g id="_2--EntwicklungVonFahrzeugkonzepten1" serif:id="2--EntwicklungVonFahrzeugkonzepten">
+        </g>
+        <g id="_1--Anforderungsmanagement" serif:id="1--Anforderungsmanagement">
+        </g>
+    </g>
+</svg>

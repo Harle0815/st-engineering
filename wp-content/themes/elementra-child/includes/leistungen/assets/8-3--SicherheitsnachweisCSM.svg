@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1;">
+    <g transform="matrix(1,0,0,1,-7700,-1.81899e-12)">
+        <g id="_9--Aenderungsmanagement-Baubetreuung" serif:id="9--Aenderungsmanagement&amp;Baubetreuung">
+        </g>
+        <g id="_8-3--SicherheitsnachweisGemaessCSM" serif:id="8-3--SicherheitsnachweisGemaessCSM" transform="matrix(0.390625,0,0,0.694444,7700,1.81899e-12)">
+            <g id="_8--Sicherheitsnachweis" serif:id="8--Sicherheitsnachweis">
+                <rect id="_8-3--SicherheitsnachweisGemaessCSM1" serif:id="8-3--SicherheitsnachweisGemaessCSM" x="0" y="0" width="2560" height="1440" style="fill:none;"/>
+                <clipPath id="_clip1">
+                    <rect id="_8-3--SicherheitsnachweisGemaessCSM2" serif:id="8-3--SicherheitsnachweisGemaessCSM" x="0" y="0" width="2560" height="1440"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <g id="LOGO--Grenze" transform="matrix(2.56,0,0,1.44,2.63276,-2102.4)">
+                        <path d="M500,1460C775.958,1460 1000,1684.04 1000,1960C1000,2235.96 775.958,2460 500,2460C224.042,2460 0,2235.96 0,1960C0,1684.04 224.042,1460 500,1460ZM500,1500C246.119,1500 40,1706.12 40,1960C40,2213.88 246.119,2420 500,2420C753.881,2420 960,2213.88 960,1960C960,1706.12 753.881,1500 500,1500Z" style="fill:rgb(15,49,87);"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,1.44,-19686.4,-3254.4)">
+                        <path d="M8320,2360C8325.3,2360 8330.39,2362.11 8334.14,2365.86C8337.89,2369.61 8340,2374.7 8340,2380L8340,2540C8340,2545.3 8337.89,2550.39 8334.14,2554.14C8330.39,2557.89 8325.3,2560 8320,2560L8060,2560C8054.7,2560 8049.61,2557.89 8045.86,2554.14C8042.11,2550.39 8040,2545.3 8040,2540L8040,2380C8040,2374.7 8042.11,2369.61 8045.86,2365.86C8049.61,2362.11 8054.7,2360 8060,2360L8320,2360ZM8077.5,2397.5L8077.5,2522.5L8302.5,2522.5L8302.5,2397.5L8077.5,2397.5Z" style="fill:rgb(238,121,0);"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,1.44,-20197.2,-2462.4)">
+                        <path d="M8320,2360C8325.3,2360 8330.39,2362.11 8334.14,2365.86C8337.89,2369.61 8340,2374.7 8340,2380L8340,2540C8340,2545.3 8337.89,2550.39 8334.14,2554.14C8330.39,2557.89 8325.3,2560 8320,2560L8060,2560C8054.7,2560 8049.61,2557.89 8045.86,2554.14C8042.11,2550.39 8040,2545.3 8040,2540L8040,2380C8040,2374.7 8042.11,2369.61 8045.86,2365.86C8049.61,2362.11 8054.7,2360 8060,2360L8320,2360ZM8060.83,2380.83L8060.83,2539.17L8319.17,2539.17L8319.17,2380.83L8060.83,2380.83Z" style="fill:rgb(15,49,87);"/>
+                    </g>
+                    <g transform="matrix(2.56,7.82125e-15,1.66308e-14,1.15163,-19686.4,-2480.2)">
+                        <path d="M8190,2510L8190,2580" style="fill:none;stroke:rgb(238,121,0);stroke-width:23.01px;"/>
+                    </g>
+                    <g transform="matrix(5.12,0,0,2.14116,-41676.8,-5305.94)">
+                        <path d="M8390,2841.23C8351.66,2841.23 8340,2861.41 8340,2861.41L8340,2800.88C8340,2712.65 8390,2700 8390,2700C8390,2700 8440,2712.65 8440,2800.88L8440,2861.41C8440,2861.41 8428.34,2841.23 8390,2841.23ZM8358.75,2820.65C8367.17,2817.87 8377.47,2816.01 8390,2816.01C8402.53,2816.01 8412.84,2817.87 8421.25,2820.65L8421.25,2800.88C8421.25,2748.62 8398.79,2731.2 8390,2726.38C8381.21,2731.2 8358.75,2748.62 8358.75,2800.88L8358.75,2820.65Z" style="fill:rgb(238,121,0);"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,1.344,-19737.6,-2855.04)">
+                        <path d="M8290,2910C8290,2854.81 8334.81,2810 8390,2810C8445.19,2810 8490,2854.81 8490,2910L8490,3035L8290,3035L8290,2910ZM8327.5,2910L8327.5,2994.82L8452.5,2994.82L8452.5,2910C8452.5,2876.19 8423.81,2850.18 8390,2850.18C8356.19,2850.18 8327.5,2876.19 8327.5,2910Z" style="fill:rgb(238,121,0);"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,1.44,-19686.4,-3110.4)">
+                        <path d="M8190,2770L7990,2770L7990,2810" style="fill:none;stroke:rgb(15,49,87);stroke-width:20.83px;stroke-linejoin:round;"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,1.44,-19686.4,-3110.4)">
+                        <path d="M7990,2770L7730,2770" style="fill:none;stroke:rgb(15,49,87);stroke-width:20.83px;stroke-linejoin:round;"/>
+                    </g>
+                    <g transform="matrix(2.304,0,0,1.8,-17587.4,-4258.8)">
+                        <path d="M8188.97,2790L8188.97,2854L8388.97,2854L8388.97,2886" style="fill:none;stroke:rgb(238,121,0);stroke-width:19.13px;stroke-linejoin:round;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="_7--Schaltplanerstellung-Kabeldesign" serif:id="7--Schaltplanerstellung&amp;Kabeldesign">
+        </g>
+        <g id="_6--SpezifikatioFuerKomponenten-Software" serif:id="6--SpezifikatioFuerKomponenten&amp;Software">
+        </g>
+        <g id="_5--Systemkonzepte-Integration" serif:id="5--Systemkonzepte&amp;Integration">
+        </g>
+        <g id="_5--Systemkonzepte-Integration1" serif:id="5--Systemkonzepte&amp;Integration">
+        </g>
+        <g id="_4--Schnittstellenanalyse" serif:id="4--Schnittstellenanalyse">
+        </g>
+        <g id="_3--Risikoanalyse" serif:id="3--Risikoanalyse">
+        </g>
+        <g id="_3--Risikoanalyse1" serif:id="3--Risikoanalyse">
+        </g>
+        <g id="_2--EntwicklungVonFahrzeugkonzepten" serif:id="2--EntwicklungVonFahrzeugkonzepten">
+        </g>
+        <g id="_2--EntwicklungVonFahrzeugkonzepten1" serif:id="2--EntwicklungVonFahrzeugkonzepten">
+        </g>
+        <g id="_1--Anforderungsmanagement" serif:id="1--Anforderungsmanagement">
+        </g>
+    </g>
+</svg>

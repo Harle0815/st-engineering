@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1;">
+    <g transform="matrix(1,0,0,1,-6600,-2.27374e-12)">
+        <g id="_9--Aenderungsmanagement-Baubetreuung" serif:id="9--Aenderungsmanagement&amp;Baubetreuung">
+        </g>
+        <g id="_8--Sicherheitsnachweis" serif:id="8--Sicherheitsnachweis">
+        </g>
+        <g id="_7-2--Schaltplanerstellung-Kabeldesign" serif:id="7-2--Schaltplanerstellung&amp;Kabeldesign" transform="matrix(0.390625,0,0,0.694444,6600,2.27374e-12)">
+            <g id="_7--Schaltplanerstellung-Kabeldesign" serif:id="7--Schaltplanerstellung&amp;Kabeldesign">
+                <rect id="_7-2--Schaltplanerstellung-Kabeldesign1" serif:id="7-2--Schaltplanerstellung&amp;Kabeldesign" x="0" y="0" width="2560" height="1440" style="fill:none;"/>
+                <clipPath id="_clip1">
+                    <rect id="_7-2--Schaltplanerstellung-Kabeldesign2" serif:id="7-2--Schaltplanerstellung&amp;Kabeldesign" x="0" y="0" width="2560" height="1440"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <g id="LOGO--Grenze" transform="matrix(2.56,0,0,1.44,7.27596e-12,-2102.4)">
+                        <path d="M500,1460C775.958,1460 1000,1684.04 1000,1960C1000,2235.96 775.958,2460 500,2460C224.042,2460 0,2235.96 0,1960C0,1684.04 224.042,1460 500,1460ZM500,1500C246.119,1500 40,1706.12 40,1960C40,2213.88 246.119,2420 500,2420C753.881,2420 960,2213.88 960,1960C960,1706.12 753.881,1500 500,1500Z" style="fill:rgb(15,49,87);"/>
+                    </g>
+                    <g id="Plus" transform="matrix(1,0,0,1,-128,-2.27374e-13)">
+                        <g transform="matrix(2.84444,0,0,2.88,-18858.7,-3456)">
+                            <path d="M6900,1300L7080,1300" style="fill:none;stroke:rgb(238,121,0);stroke-width:23.18px;"/>
+                        </g>
+                        <g transform="matrix(5.12,0,0,1.44,-34816,-1584)">
+                            <path d="M7000,1200L7000,1400" style="fill:none;stroke:rgb(238,121,0);stroke-width:23.72px;"/>
+                        </g>
+                        <g transform="matrix(2.56,0,0,1.44,-16768,-1627.2)">
+                            <path d="M6950,1480L6950,1580L7330,1580C7341.05,1580 7350,1588.95 7350,1600C7350,1644.94 7350,1750 7350,1750" style="fill:none;stroke:rgb(15,49,87);stroke-width:37.5px;stroke-linejoin:round;"/>
+                        </g>
+                    </g>
+                    <g transform="matrix(3.072,0,0,1.728,-20454.4,-1995.84)">
+                        <circle cx="6950" cy="1530" r="50" style="fill:rgb(15,49,87);"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,1.16158,-16896,-1129.22)">
+                        <path d="M6950,1730L6950,1530" style="fill:none;stroke:rgb(15,49,87);stroke-width:41.28px;stroke-linecap:butt;stroke-linejoin:round;"/>
+                    </g>
+                    <g transform="matrix(3.33229,0,0,1.512,-22263.4,-1247.76)">
+                        <path d="M6950,1730L6950,1577.62" style="fill:none;stroke:rgb(15,49,87);stroke-width:24.66px;stroke-linecap:butt;stroke-linejoin:round;"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,0.9,-15872,-261)">
+                        <path d="M6950,1746L6950,1582.29C6950,1553.84 6943.23,1526.45 6931.07,1505.69C6890.74,1436.86 6800,1282 6800,1282" style="fill:none;stroke:rgb(15,49,87);stroke-width:44.97px;stroke-linejoin:round;"/>
+                    </g>
+                    <g transform="matrix(1.57627e-16,1.44,-2.07652,7.11263e-17,4845.07,-9036)">
+                        <path d="M6943.75,1680L6956.25,1680L6956.25,1696.67L6943.75,1696.67L6943.75,1680ZM6943.75,1630L6956.25,1630L6956.25,1646.67L6943.75,1646.67L6943.75,1630ZM6943.75,1580L6956.25,1580L6956.25,1596.67L6943.75,1596.67L6943.75,1580ZM6943.75,1530L6956.25,1530L6956.25,1546.67L6943.75,1546.67L6943.75,1530Z" style="fill:rgb(15,49,87);"/>
+                    </g>
+                    <g transform="matrix(2.56,0,0,1.2,-16896,-1176)">
+                        <path d="M7080,1700C7085.3,1700 7090.39,1702.53 7094.14,1707.03C7097.89,1711.53 7100,1717.63 7100,1724L7100,1916C7100,1922.37 7097.89,1928.47 7094.14,1932.97C7090.39,1937.47 7085.3,1940 7080,1940L6820,1940C6814.7,1940 6809.61,1937.47 6805.86,1932.97C6802.11,1928.47 6800,1922.37 6800,1916L6800,1724C6800,1717.63 6802.11,1711.53 6805.86,1707.03C6809.61,1702.53 6814.7,1700 6820,1700L7080,1700ZM6837.5,1745L6837.5,1895L7062.5,1895L7062.5,1745L6837.5,1745Z" style="fill:rgb(15,49,87);"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="_6--SpezifikatioFuerKomponenten-Software" serif:id="6--SpezifikatioFuerKomponenten&amp;Software">
+        </g>
+        <g id="_5--Systemkonzepte-Integration" serif:id="5--Systemkonzepte&amp;Integration">
+        </g>
+        <g id="_5--Systemkonzepte-Integration1" serif:id="5--Systemkonzepte&amp;Integration">
+        </g>
+        <g id="_4--Schnittstellenanalyse" serif:id="4--Schnittstellenanalyse">
+        </g>
+        <g id="_3--Risikoanalyse" serif:id="3--Risikoanalyse">
+        </g>
+        <g id="_3--Risikoanalyse1" serif:id="3--Risikoanalyse">
+        </g>
+        <g id="_2--EntwicklungVonFahrzeugkonzepten" serif:id="2--EntwicklungVonFahrzeugkonzepten">
+        </g>
+        <g id="_2--EntwicklungVonFahrzeugkonzepten1" serif:id="2--EntwicklungVonFahrzeugkonzepten">
+        </g>
+        <g id="_1--Anforderungsmanagement" serif:id="1--Anforderungsmanagement">
+        </g>
+    </g>
+</svg>
