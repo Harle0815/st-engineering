@@ -40,9 +40,7 @@
 			if (!s) return;
 
 			var hasTools = !!(s.tools && s.tools.length);
-			var hasRefs  = !!(s.references && s.references.length);
 			$detail.toggleClass('no-tools', !hasTools);
-			$detail.toggleClass('no-refs',  !hasRefs);
 
 			var html = '<div class="ste-leistungen__detail-main">';
 			html += '<h3 class="ste-leistungen__detail-title">' + escHtml(s.title) + '</h3>';
@@ -56,22 +54,24 @@
 				html += '</div>';
 			}
 
-			if (hasRefs) {
-				html += '<div class="ste-leistungen__detail-refs">';
-				html += '<span class="ste-leistungen__detail-refs-label">Referenzen</span>';
-				for (var i = 0; i < s.references.length; i++) {
-					var ref = s.references[i];
-					html += '<span class="ste-leistungen__ref">';
-					html += '<span class="ste-leistungen__ref-icon-wrap">';
-					if (ref.icon) {
-						html += '<img src="' + escAttr(ref.icon) + '" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />';
-					}
-					html += '</span>';
-					html += '<span class="ste-leistungen__ref-label">' + escHtml(ref.name) + '</span>';
-					html += '</span>';
+			// Always render the canonical 4 references; greyed out if not in the
+			// active service's reference list.
+			var refs = s.references || [];
+			html += '<div class="ste-leistungen__detail-refs">';
+			html += '<span class="ste-leistungen__detail-refs-label">Referenzen</span>';
+			for (var i = 0; i < refs.length; i++) {
+				var ref = refs[i];
+				var refClass = ref.active ? 'is-active' : 'is-inactive';
+				html += '<span class="ste-leistungen__ref ' + refClass + '">';
+				html += '<span class="ste-leistungen__ref-icon-wrap">';
+				if (ref.icon) {
+					html += '<img src="' + escAttr(ref.icon) + '" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />';
 				}
-				html += '</div>';
+				html += '</span>';
+				html += '<span class="ste-leistungen__ref-label">' + escHtml(ref.name) + '</span>';
+				html += '</span>';
 			}
+			html += '</div>';
 
 			$detail.html(html);
 		}

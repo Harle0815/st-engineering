@@ -136,6 +136,40 @@ function ste_leistungen_get_reference_icon_map() {
 }
 
 /**
+ * Canonical 4 reference vehicles that are always rendered in the
+ * Referenzen row. Order is the visual order. Per-service references
+ * outside this set (e.g. "Einzelkomponenten") are not represented here.
+ */
+function ste_leistungen_get_canonical_references() {
+	return array(
+		'Hybrid-Rangierlokomotiven',
+		'Doppelstock-Triebzug',
+		'Straßen- & Stadtbahnen',
+		'Triebzug',
+	);
+}
+
+/**
+ * Build the canonical 4 references for a given service, each with name,
+ * icon URL and an active flag (true if the service's data lists it).
+ */
+function ste_leistungen_build_canonical_refs_for( $service_refs ) {
+	$canonical = ste_leistungen_get_canonical_references();
+	$icons     = ste_leistungen_get_reference_icon_map();
+	$service_refs = is_array( $service_refs ) ? $service_refs : array();
+	$out = array();
+	foreach ( $canonical as $name ) {
+		$icon_file = isset( $icons[ $name ] ) ? $icons[ $name ] : '';
+		$out[] = array(
+			'name'   => $name,
+			'icon'   => ste_leistungen_resolve_icon_url( $icon_file ),
+			'active' => in_array( $name, $service_refs, true ),
+		);
+	}
+	return $out;
+}
+
+/**
  * Resolve an icon filename to a public URL. Falls back to icon_service.svg
  * when the file doesn't exist (so a typo or missing asset never breaks the
  * markup with a broken image).
@@ -158,7 +192,7 @@ function ste_leistungen_resolve_icon_url( $filename ) {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.16.0';
+	$version  = '1.17.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -195,25 +229,16 @@ function ste_leistungen_render( $atts ) {
 	wp_enqueue_script( 'ste-leistungen' );
 
 	$services = ste_leistungen_get_services();
-	$ref_icons = ste_leistungen_get_reference_icon_map();
 
-	// Resolve per-service icon URL and per-reference icon URLs (with fallback)
-	$services_for_js = array_map( function( $s ) use ( $ref_icons ) {
-		$refs_resolved = array();
-		foreach ( $s['references'] as $ref_name ) {
-			$icon_file = isset( $ref_icons[ $ref_name ] ) ? $ref_icons[ $ref_name ] : '';
-			$refs_resolved[] = array(
-				'name' => $ref_name,
-				'icon' => ste_leistungen_resolve_icon_url( $icon_file ),
-			);
-		}
+	// Resolve per-service icon URL and the canonical 4 references (with active flag)
+	$services_for_js = array_map( function( $s ) {
 		return array(
 			'id'          => $s['id'],
 			'title'       => $s['title_plain'],
 			'description' => $s['description'],
 			'tools'       => $s['tools'],
 			'icon'        => ste_leistungen_resolve_icon_url( $s['icon'] ),
-			'references'  => $refs_resolved,
+			'references'  => ste_leistungen_build_canonical_refs_for( $s['references'] ),
 		);
 	}, $services );
 
@@ -253,9 +278,7 @@ function ste_leistungen_render( $atts ) {
 				if ( empty( $services[0]['tools'] ) ) {
 					$detail_classes[] = 'no-tools';
 				}
-				if ( empty( $services[0]['references'] ) ) {
-					$detail_classes[] = 'no-refs';
-				}
+				$initial_canonical_refs = ste_leistungen_build_canonical_refs_for( $services[0]['references'] );
 			?>
 			<div class="<?php echo esc_attr( implode( ' ', $detail_classes ) ); ?>" aria-live="polite">
 				<div class="ste-leistungen__detail-main">
@@ -268,23 +291,17 @@ function ste_leistungen_render( $atts ) {
 						<span><?php echo esc_html( implode( ', ', $services[0]['tools'] ) ); ?></span>
 					</div>
 				<?php endif; ?>
-				<?php if ( ! empty( $services[0]['references'] ) ) : ?>
-					<div class="ste-leistungen__detail-refs">
-						<span class="ste-leistungen__detail-refs-label">Referenzen</span>
-						<?php foreach ( $services[0]['references'] as $ref_name ) : ?>
-							<?php
-								$ref_icon_file = isset( $ref_icons[ $ref_name ] ) ? $ref_icons[ $ref_name ] : '';
-								$ref_icon_url  = ste_leistungen_resolve_icon_url( $ref_icon_file );
-							?>
-							<span class="ste-leistungen__ref">
-								<span class="ste-leistungen__ref-icon-wrap">
-									<img src="<?php echo esc_url( $ref_icon_url ); ?>" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />
-								</span>
-								<span class="ste-leistungen__ref-label"><?php echo esc_html( $ref_name ); ?></span>
+				<div class="ste-leistungen__detail-refs">
+					<span class="ste-leistungen__detail-refs-label">Referenzen</span>
+					<?php foreach ( $initial_canonical_refs as $ref ) : ?>
+						<span class="ste-leistungen__ref <?php echo $ref['active'] ? 'is-active' : 'is-inactive'; ?>">
+							<span class="ste-leistungen__ref-icon-wrap">
+								<img src="<?php echo esc_url( $ref['icon'] ); ?>" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />
 							</span>
-						<?php endforeach; ?>
-					</div>
-				<?php endif; ?>
+							<span class="ste-leistungen__ref-label"><?php echo esc_html( $ref['name'] ); ?></span>
+						</span>
+					<?php endforeach; ?>
+				</div>
 			</div>
 
 			<!-- Stage: shared aspect-ratio container for locomotive + icons -->
