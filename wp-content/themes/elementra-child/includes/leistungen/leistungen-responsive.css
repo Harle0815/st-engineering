@@ -1,9 +1,10 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.16.0
+   STE Leistungen – Responsive Styles  v1.17.0
    Description on the left, Tools + Referenzen stacked on its right inside
    the locomotive white interior (no card frames). Number badges removed.
-   Content block vertically centred; Referenzen re-centres when Tools
-   is hidden.
+   Referenzen always renders all 4 canonical vehicles; inactive icons are
+   greyed out. When the active service has no Tools, Referenzen shifts
+   ~40 px down via the base CSS rule.
    Loaded with media="(max-width: 1200px)"
    ========================================================================== */
 
@@ -68,7 +69,7 @@
 }
 
 .ste-leistungen__detail.no-tools .ste-leistungen__detail-refs {
-	top: 42%;
+	transform: translateY(40px);
 }
 
 .ste-leistungen__stage {
@@ -134,6 +135,11 @@
 		width: 100%;
 		max-width: none;
 		margin-top: 14px;
+	}
+
+	/* The desktop no-tools translate doesn't apply when stacked */
+	.ste-leistungen__detail.no-tools .ste-leistungen__detail-refs {
+		transform: none;
 	}
 
 	.ste-leistungen__stage {
