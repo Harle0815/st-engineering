@@ -19,7 +19,6 @@
 		var $items    = $container.find('.ste-leistungen__item');
 		var $hotspots = $container.find('.ste-leistungen__hotspot');
 		var $detail   = $container.find('.ste-leistungen__detail');
-		var iconUrl   = $container.attr('data-icon-url') || '';
 		var pinned    = 0;   // index of the clicked/pinned service
 		var current   = -1;  // index currently shown (avoid no-op guard)
 
@@ -61,13 +60,14 @@
 				html += '<div class="ste-leistungen__detail-refs">';
 				html += '<span class="ste-leistungen__detail-refs-label">Referenzen</span>';
 				for (var i = 0; i < s.references.length; i++) {
+					var ref = s.references[i];
 					html += '<span class="ste-leistungen__ref">';
 					html += '<span class="ste-leistungen__ref-icon-wrap">';
-					if (iconUrl) {
-						html += '<img src="' + iconUrl + '" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />';
+					if (ref.icon) {
+						html += '<img src="' + escAttr(ref.icon) + '" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />';
 					}
 					html += '</span>';
-					html += '<span class="ste-leistungen__ref-label">' + escHtml(s.references[i]) + '</span>';
+					html += '<span class="ste-leistungen__ref-label">' + escHtml(ref.name) + '</span>';
 					html += '</span>';
 				}
 				html += '</div>';
@@ -80,6 +80,10 @@
 			var div = document.createElement('div');
 			div.appendChild(document.createTextNode(str));
 			return div.innerHTML;
+		}
+
+		function escAttr(str) {
+			return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 		}
 
 		// --- Event handlers ---

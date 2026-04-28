@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.14.0
+   STE Leistungen – Responsive Styles  v1.15.0
    Description on the left, Tools + Referenzen stacked on its right inside
    the locomotive white interior. Number badges removed. Content block
    vertically centred; Referenzen re-centres when Tools is hidden.
@@ -42,6 +42,7 @@
 
 .ste-leistungen__detail {
 	min-height: 480px;
+	margin-top: 0;
 }
 
 .ste-leistungen__detail-main {

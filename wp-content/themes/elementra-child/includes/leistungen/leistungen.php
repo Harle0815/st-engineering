@@ -16,7 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Service data for the 8 Leistungen.
  *
  * Each entry: id, title, description, tools (optional), references (optional),
- * hotspot_x/hotspot_y (percentage coordinates on the locomotive graphic).
+ * icon (per-service SVG file name in /assets), hotspot_x/hotspot_y
+ * (percentage coordinates on the locomotive graphic).
  */
 function ste_leistungen_get_services() {
 	return array(
@@ -28,7 +29,8 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erfassen, strukturieren und priorisieren technische und funktionale Anforderungen – als Grundlage für erfolgreiche Entwicklungsprojekte.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Straßen- & Stadtbahnen' ),
-			/* Coordinates from Zugspitze_hb_p_s.svg (manually mirrored master), viewBox 386.53×205.17 */
+			'icon'        => '1-1--Anforderungsmanagement.svg',
+			/* Coordinates from Zugspitze_hb_p_ss_o.svg (manually mirrored master), viewBox 386.53×205.17 */
 			/* hotspot-1: cx=72.69 cy=17.45 → 72.69/386.53, 17.45/205.17 */
 			'hotspot_x'   => 18.8058,
 			'hotspot_y'   => 8.5051,
@@ -40,6 +42,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir entwickeln innovative Fahrzeugkonzepte auf Basis der Kundenanforderungen mit Fokus auf Funktionalität, Sicherheit und Integration – von der Idee bis zur Umsetzung.',
 			'tools'       => array(),
 			'references'  => array(),
+			'icon'        => '2-3--Fahrzeugkonzepte.svg',
 			/* hotspot-2: cx=170.71 cy=34.98 → 170.71/386.53, 34.98/205.17 */
 			'hotspot_x'   => 44.1647,
 			'hotspot_y'   => 17.0493,
@@ -51,6 +54,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir führen fundierte Risikoanalysen zur frühzeitigen Identifikation und Bewertung potenzieller Risiken durch, egal ob nach MIL-STD, SIRF oder einem anderen Verfahren – Strukturiert, nachvollziehbar und sauber dokumentiert.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
+			'icon'        => '3-7--Risikoanalyse.svg',
 			/* hotspot-3: cx=252.72 cy=76.14 → 252.72/386.53, 76.14/205.17 */
 			'hotspot_x'   => 65.3817,
 			'hotspot_y'   => 37.1107,
@@ -62,6 +66,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir leiten ganzheitliche Systemkonzepte auf Basis des Fahrzeugkonzepts ab, bei denen besonders der Fokus auf die funktionale Integration von Zulieferteilen in das Gesamtfahrzeug liegt.',
 			'tools'       => array(),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
+			'icon'        => '5-2--Systemkonzepte.svg',
 			/* hotspot-4: cx=319.81 cy=129.39 → 319.81/386.53, 129.39/205.17 */
 			'hotspot_x'   => 82.7387,
 			'hotspot_y'   => 63.0648,
@@ -73,6 +78,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir erstellen Anforderungsspezifikationen für Komponenten, elektrische Verschaltungen und Softwarefunktionalitäten, sodass Klarheit im Engineering herrscht und mögliche Projektrisiken minimiert werden können.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
 			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Triebzug' ),
+			'icon'        => '4-2--Schnittstellenanalyse.svg',
 			/* Lower line (4 icons): hotspot-5: cx=335.16 cy=188.32 → 335.16/386.53, 188.32/205.17 */
 			'hotspot_x'   => 86.7100,
 			'hotspot_y'   => 91.7873,
@@ -84,6 +90,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir setzen die Anforderungen an die elektrische Verschaltung fachgerecht in Schaltplänen mit Zuken E3 oder Engineering Base um – inklusive Kabelsatz- und Schaltschrankplanung und leiten die für die Produktion erforderliche Dokumentation daraus ab.',
 			'tools'       => array( 'ZUKEN E3 (Schematic, Formboard, Panel)', 'AUCOTEC Engineering Base' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen', 'Einzelkomponenten' ),
+			'icon'        => '6-5--SpezifikationenKomponenten.svg',
 			/* hotspot-6: cx=239.87 cy=188.32 → 239.87/386.53, 188.32/205.17 */
 			'hotspot_x'   => 62.0573,
 			'hotspot_y'   => 91.7873,
@@ -95,6 +102,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir dokumentieren gemäß den Vorgaben der CSM-Verordnung, sodass das am Ende eine schlüssige Nachweisführung aller sicherheitsrelevanter Anforderungen existiert, welche die Basis für das Vertrauen in die Produktsicherheit ist.',
 			'tools'       => array( 'Office', 'Isograph Reliability Workbench' ),
 			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
+			'icon'        => '8-3--SicherheitsnachweisCSM.svg',
 			/* hotspot-7: cx=145.55 cy=188.32 → 145.55/386.53, 188.32/205.17 */
 			'hotspot_x'   => 37.6556,
 			'hotspot_y'   => 91.7873,
@@ -106,6 +114,7 @@ function ste_leistungen_get_services() {
 			'description' => 'Wir begleiten die Produktionsphase als Ansprechpartner aus dem Engineering und unterstützen somit effizient im Fehler- und Änderungsmanagement – für eine reibungslose Umsetzung der Planung in die Realität.',
 			'tools'       => array(),
 			'references'  => array( 'Doppelstock-Triebzug' ),
+			'icon'        => '9-5--Änderungsmanagement.svg',
 			/* hotspot-8: cx=46.56 cy=188.32 → 46.56/386.53, 188.32/205.17 */
 			'hotspot_x'   => 12.0456,
 			'hotspot_y'   => 91.7873,
@@ -114,11 +123,42 @@ function ste_leistungen_get_services() {
 }
 
 /**
+ * Reference name → icon file map (rolling stock icons).
+ */
+function ste_leistungen_get_reference_icon_map() {
+	return array(
+		'Hybrid-Rangierlokomotiven' => 'Fahrzeuge-1--Lokomotive.svg',
+		'Doppelstock-Triebzug'      => 'Fahrzeuge-2--Doppelstock.svg',
+		'Triebzug'                  => 'Fahrzeuge-3--Highspeed.svg',
+		'Straßen- & Stadtbahnen'    => 'Fahrzeuge-4--LRV.svg',
+		'Einzelkomponenten'         => '6-5--SpezifikationenKomponenten.svg',
+	);
+}
+
+/**
+ * Resolve an icon filename to a public URL. Falls back to icon_service.svg
+ * when the file doesn't exist (so a typo or missing asset never breaks the
+ * markup with a broken image).
+ */
+function ste_leistungen_resolve_icon_url( $filename ) {
+	static $base_dir = null;
+	static $base_url = null;
+	if ( null === $base_dir ) {
+		$base_dir = trailingslashit( get_stylesheet_directory() ) . 'includes/leistungen/assets/';
+		$base_url = trailingslashit( get_stylesheet_directory_uri() ) . 'includes/leistungen/assets/';
+	}
+	if ( $filename && file_exists( $base_dir . $filename ) ) {
+		return $base_url . $filename;
+	}
+	return $base_url . 'icon_service.svg';
+}
+
+/**
  * Register assets (styles and scripts) so they can be enqueued on demand.
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.14.0';
+	$version  = '1.15.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -155,26 +195,38 @@ function ste_leistungen_render( $atts ) {
 	wp_enqueue_script( 'ste-leistungen' );
 
 	$services = ste_leistungen_get_services();
+	$ref_icons = ste_leistungen_get_reference_icon_map();
+
+	// Resolve per-service icon URL and per-reference icon URLs (with fallback)
+	$services_for_js = array_map( function( $s ) use ( $ref_icons ) {
+		$refs_resolved = array();
+		foreach ( $s['references'] as $ref_name ) {
+			$icon_file = isset( $ref_icons[ $ref_name ] ) ? $ref_icons[ $ref_name ] : '';
+			$refs_resolved[] = array(
+				'name' => $ref_name,
+				'icon' => ste_leistungen_resolve_icon_url( $icon_file ),
+			);
+		}
+		return array(
+			'id'          => $s['id'],
+			'title'       => $s['title_plain'],
+			'description' => $s['description'],
+			'tools'       => $s['tools'],
+			'icon'        => ste_leistungen_resolve_icon_url( $s['icon'] ),
+			'references'  => $refs_resolved,
+		);
+	}, $services );
 
 	// Pass data to JS
 	wp_localize_script( 'ste-leistungen', 'steLeistungenData', array(
-		'services' => array_map( function( $s ) {
-			return array(
-				'id'          => $s['id'],
-				'title'       => $s['title_plain'],
-				'description' => $s['description'],
-				'tools'       => $s['tools'],
-				'references'  => $s['references'],
-			);
-		}, $services ),
+		'services' => $services_for_js,
 	) );
 
-	$icon_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/icon_service.svg';
-	$loco_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/Zugspitze_hb_p_s.svg';
+	$loco_url = get_stylesheet_directory_uri() . '/includes/leistungen/assets/Zugspitze_hb_p_ss_o.svg';
 
 	ob_start();
 	?>
-	<div class="ste-leistungen" id="ste-leistungen" data-icon-url="<?php echo esc_url( $icon_url ); ?>">
+	<div class="ste-leistungen" id="ste-leistungen">
 
 		<!-- Left column: service list only -->
 		<div class="ste-leistungen__sidebar">
@@ -219,12 +271,16 @@ function ste_leistungen_render( $atts ) {
 				<?php if ( ! empty( $services[0]['references'] ) ) : ?>
 					<div class="ste-leistungen__detail-refs">
 						<span class="ste-leistungen__detail-refs-label">Referenzen</span>
-						<?php foreach ( $services[0]['references'] as $ref ) : ?>
+						<?php foreach ( $services[0]['references'] as $ref_name ) : ?>
+							<?php
+								$ref_icon_file = isset( $ref_icons[ $ref_name ] ) ? $ref_icons[ $ref_name ] : '';
+								$ref_icon_url  = ste_leistungen_resolve_icon_url( $ref_icon_file );
+							?>
 							<span class="ste-leistungen__ref">
 								<span class="ste-leistungen__ref-icon-wrap">
-									<img src="<?php echo esc_url( $icon_url ); ?>" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />
+									<img src="<?php echo esc_url( $ref_icon_url ); ?>" alt="" class="ste-leistungen__ref-icon" width="24" height="24" />
 								</span>
-								<span class="ste-leistungen__ref-label"><?php echo esc_html( $ref ); ?></span>
+								<span class="ste-leistungen__ref-label"><?php echo esc_html( $ref_name ); ?></span>
 							</span>
 						<?php endforeach; ?>
 					</div>
@@ -242,6 +298,7 @@ function ste_leistungen_render( $atts ) {
 				<!-- Icon layer: always above locomotive AND text panels -->
 				<div class="ste-leistungen__icon-layer">
 					<?php foreach ( $services as $index => $service ) : ?>
+						<?php $hotspot_icon_url = ste_leistungen_resolve_icon_url( $service['icon'] ); ?>
 						<button class="ste-leistungen__hotspot<?php echo 0 === $index ? ' is-active' : ''; ?>"
 						        data-index="<?php echo esc_attr( $index ); ?>"
 						        data-service="<?php echo esc_attr( $service['id'] ); ?>"
@@ -249,7 +306,7 @@ function ste_leistungen_render( $atts ) {
 						        aria-label="<?php echo esc_attr( $service['title_plain'] ); ?>"
 						        type="button">
 							<span class="ste-leistungen__hotspot-bg"></span>
-							<img src="<?php echo esc_url( $icon_url ); ?>"
+							<img src="<?php echo esc_url( $hotspot_icon_url ); ?>"
 							     alt=""
 							     class="ste-leistungen__hotspot-icon"
 							     width="60"
