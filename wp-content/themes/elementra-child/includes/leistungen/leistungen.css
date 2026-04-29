@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.21.0
+   STE Leistungen – Interactive Services Section  v1.22.0
    Mirrored layout using pre-mirrored SVG asset (Zugspitze_hb_p_ss_b.svg).
    Per-service hotspot icons. Referenzen always renders the canonical 4
    vehicle icons; inactive ones are greyed out per active service.
@@ -39,7 +39,7 @@
 	flex: 0 0 280px;
 	max-width: 280px;
 	z-index: 6;
-	margin-top: 30px;
+	margin-top: 10px;
 	background: var(--ste-menu-bg);
 	border: 1px solid var(--ste-light-blue);
 	border-radius: 12px;
@@ -172,8 +172,8 @@
 .ste-leistungen__detail-main {
 	position: absolute;
 	top: 30%;
-	left: 13%;
-	width: 26%;
+	left: 3%;
+	width: 30%;
 	max-width: 300px;
 	pointer-events: auto;
 }
