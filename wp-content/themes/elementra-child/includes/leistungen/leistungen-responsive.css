@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.21.1
+   STE Leistungen – Responsive Styles  v1.21.2
    Description on the left, Tools + Referenzen stacked on its right inside
    the locomotive white interior (no card frames). Number badges removed.
    Referenzen always renders all 4 canonical vehicles; inactive icons are
@@ -308,5 +308,25 @@
 
 	.ste-leistungen__item-title {
 		font-size: 13px;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Very narrow mobile: <= 400 px
+
+   Disable automatic hyphenation on the detail heading and the sidebar
+   menu items so the browser only breaks at the explicit space before
+   the non-breaking hyphen in "Systemkonzepte & ‑integration" instead
+   of falling back to "integrati‑on" character-level hyphenation.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 400px) {
+
+	.ste-leistungen__detail-title,
+	.ste-leistungen__item-title {
+		-webkit-hyphens: manual;
+		hyphens: manual;
+		word-break: normal;
+		overflow-wrap: normal;
 	}
 }
