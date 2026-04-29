@@ -43,6 +43,9 @@
 			$detail.toggleClass('no-tools', !hasTools);
 
 			var html = '<div class="ste-leistungen__detail-main">';
+			if (s.icon) {
+				html += '<img class="ste-leistungen__detail-active-icon" src="' + escAttr(s.icon) + '" alt="" />';
+			}
 			html += '<h3 class="ste-leistungen__detail-title">' + escHtml(s.title) + '</h3>';
 			html += '<p class="ste-leistungen__detail-desc">' + escHtml(s.description) + '</p>';
 			html += '</div>';
