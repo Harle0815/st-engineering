@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.18.0
+   STE Leistungen – Responsive Styles  v1.20.0
    Description on the left, Tools + Referenzen stacked on its right inside
    the locomotive white interior (no card frames). Number badges removed.
    Referenzen always renders all 4 canonical vehicles; inactive icons are
@@ -7,10 +7,11 @@
    shift when Tools is hidden).
    Loaded with media="(max-width: 1440px)" – tablet two-column menu
    layout already kicks in below the desktop breakpoint.
+   Mobile breakpoint is 900 px (so 842 px renders as mobile).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Tablet: 769px – 1440px
+   Tablet: 901px – 1440px
    -------------------------------------------------------------------------- */
 
 .ste-leistungen {
@@ -103,7 +104,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Mobile: < 769px
+   Mobile: <= 900px
 
    Order on screen:
      1. Locomotive stage   (graphic with icons)
@@ -115,7 +116,7 @@
    stage to render before the sidebar via `order`.
    -------------------------------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
 	.ste-leistungen {
 		padding: 28px 16px;

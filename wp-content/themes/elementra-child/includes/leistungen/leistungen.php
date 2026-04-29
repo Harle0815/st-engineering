@@ -61,8 +61,10 @@ function ste_leistungen_get_services() {
 		),
 		array(
 			'id'          => 'systemkonzepte',
-			'title'       => 'Systemkonzepte & -integration',
-			'title_plain' => 'Systemkonzepte & -integration',
+			/* U+2011 non-breaking hyphen keeps "‑integration" together so the
+			   line breaks at the regular space before it instead of after the dash. */
+			'title'       => "Systemkonzepte & \u{2011}integration",
+			'title_plain' => "Systemkonzepte & \u{2011}integration",
 			'description' => 'Wir leiten ganzheitliche Systemkonzepte auf Basis des Fahrzeugkonzepts ab, bei denen besonders der Fokus auf die funktionale Integration von Zulieferteilen in das Gesamtfahrzeug liegt.',
 			'tools'       => array(),
 			'references'  => array( 'Lok', 'HRV', 'LRV' ),
@@ -192,7 +194,7 @@ function ste_leistungen_resolve_icon_url( $filename ) {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.19.0';
+	$version  = '1.20.0';
 
 	wp_register_style(
 		'ste-leistungen',
