@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.21.0
+   STE Leistungen – Responsive Styles  v1.21.1
    Description on the left, Tools + Referenzen stacked on its right inside
    the locomotive white interior (no card frames). Number badges removed.
    Referenzen always renders all 4 canonical vehicles; inactive icons are
@@ -151,6 +151,13 @@
 
 	.ste-leistungen__sidebar {
 		order: 1;
+		/* Take the full available content width so the menu doesn't sit as
+		   a narrow column with empty space to its right. max-width alone
+		   isn't enough since flex children only grow when explicitly
+		   asked to. */
+		width: 100%;
+		flex: 1 1 auto;
+		max-width: 100%;
 	}
 
 	.ste-leistungen__detail {
@@ -183,9 +190,9 @@
 		grid-column: 1;
 		grid-row: 1;
 		width: 100%;
-		max-width: 88px;
+		max-width: 100px;
 		height: auto;
-		justify-self: center;
+		justify-self: start;
 	}
 
 	.ste-leistungen__detail-title {
