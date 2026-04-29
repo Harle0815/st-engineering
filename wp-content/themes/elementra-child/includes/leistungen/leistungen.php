@@ -28,7 +28,7 @@ function ste_leistungen_get_services() {
 			'title_plain' => "Anforderungs\u{00AD}management",
 			'description' => 'Wir erfassen, strukturieren und priorisieren technische und funktionale Anforderungen – als Grundlage für erfolgreiche Entwicklungsprojekte.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
-			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Straßen- & Stadtbahnen' ),
+			'references'  => array( 'Lok', 'LRV' ),
 			'icon'        => '1-1--Anforderungsmanagement.svg',
 			/* Coordinates from Zugspitze_hb_p_ss_o.svg (manually mirrored master), viewBox 386.53×205.17 */
 			/* hotspot-1: cx=72.69 cy=17.45 → 72.69/386.53, 17.45/205.17 */
@@ -53,7 +53,7 @@ function ste_leistungen_get_services() {
 			'title_plain' => 'Risikoanalyse',
 			'description' => 'Wir führen fundierte Risikoanalysen zur frühzeitigen Identifikation und Bewertung potenzieller Risiken durch, egal ob nach MIL-STD, SIRF oder einem anderen Verfahren – Strukturiert, nachvollziehbar und sauber dokumentiert.',
 			'tools'       => array(),
-			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
+			'references'  => array( 'HRV', 'LRV' ),
 			'icon'        => '3-7--Risikoanalyse.svg',
 			/* hotspot-3: cx=252.72 cy=76.14 → 252.72/386.53, 76.14/205.17 */
 			'hotspot_x'   => 65.3817,
@@ -65,7 +65,7 @@ function ste_leistungen_get_services() {
 			'title_plain' => 'Systemkonzepte & -integration',
 			'description' => 'Wir leiten ganzheitliche Systemkonzepte auf Basis des Fahrzeugkonzepts ab, bei denen besonders der Fokus auf die funktionale Integration von Zulieferteilen in das Gesamtfahrzeug liegt.',
 			'tools'       => array(),
-			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
+			'references'  => array( 'Lok', 'HRV', 'LRV' ),
 			'icon'        => '4-2--Schnittstellenanalyse.svg',
 			/* hotspot-4: cx=319.81 cy=129.39 → 319.81/386.53, 129.39/205.17 */
 			'hotspot_x'   => 82.7387,
@@ -77,7 +77,7 @@ function ste_leistungen_get_services() {
 			'title_plain' => 'Analyse & Spezifikation der Schnittstellen',
 			'description' => 'Wir erstellen Anforderungsspezifikationen für Komponenten, elektrische Verschaltungen und Softwarefunktionalitäten, sodass Klarheit im Engineering herrscht und mögliche Projektrisiken minimiert werden können.',
 			'tools'       => array( 'IBM® Engineering Requirements Management DOORS', 'Jama Software', 'Redmine' ),
-			'references'  => array( 'Hybrid-Rangierlokomotiven', 'Triebzug' ),
+			'references'  => array( 'Lok', 'HGV' ),
 			'icon'        => '6-7--SpezifikationenKomponenten.svg',
 			/* Lower line (4 icons): hotspot-5: cx=335.16 cy=188.32 → 335.16/386.53, 188.32/205.17 */
 			'hotspot_x'   => 86.7100,
@@ -89,7 +89,7 @@ function ste_leistungen_get_services() {
 			'title_plain' => 'Schaltplanerstellung & Kabelsatzdesign',
 			'description' => 'Wir setzen die Anforderungen an die elektrische Verschaltung fachgerecht in Schaltplänen mit Zuken E3 oder Engineering Base um – inklusive Kabelsatz- und Schaltschrankplanung und leiten die für die Produktion erforderliche Dokumentation daraus ab.',
 			'tools'       => array( 'ZUKEN E3 (Schematic, Formboard, Panel)', 'AUCOTEC Engineering Base' ),
-			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen', 'Einzelkomponenten' ),
+			'references'  => array( 'HRV', 'LRV', 'Einzelkomponenten' ),
 			'icon'        => '7-2--Schaltplanerstellung.svg',
 			/* hotspot-6: cx=239.87 cy=188.32 → 239.87/386.53, 188.32/205.17 */
 			'hotspot_x'   => 62.0573,
@@ -101,7 +101,7 @@ function ste_leistungen_get_services() {
 			'title_plain' => 'Sicherheitsnachweis gemäß CSM',
 			'description' => 'Wir dokumentieren gemäß den Vorgaben der CSM-Verordnung, sodass das am Ende eine schlüssige Nachweisführung aller sicherheitsrelevanter Anforderungen existiert, welche die Basis für das Vertrauen in die Produktsicherheit ist.',
 			'tools'       => array( 'Office', 'Isograph Reliability Workbench' ),
-			'references'  => array( 'Doppelstock-Triebzug', 'Straßen- & Stadtbahnen' ),
+			'references'  => array( 'HRV', 'LRV' ),
 			'icon'        => '8-3--SicherheitsnachweisCSM.svg',
 			/* hotspot-7: cx=145.55 cy=188.32 → 145.55/386.53, 188.32/205.17 */
 			'hotspot_x'   => 37.6556,
@@ -113,7 +113,7 @@ function ste_leistungen_get_services() {
 			'title_plain' => "Änderungs\u{00AD}management & Baubetreuung",
 			'description' => 'Wir begleiten die Produktionsphase als Ansprechpartner aus dem Engineering und unterstützen somit effizient im Fehler- und Änderungsmanagement – für eine reibungslose Umsetzung der Planung in die Realität.',
 			'tools'       => array(),
-			'references'  => array( 'Doppelstock-Triebzug' ),
+			'references'  => array( 'HRV' ),
 			'icon'        => '9-5--Änderungsmanagement.svg',
 			/* hotspot-8: cx=46.56 cy=188.32 → 46.56/386.53, 188.32/205.17 */
 			'hotspot_x'   => 12.0456,
@@ -127,10 +127,10 @@ function ste_leistungen_get_services() {
  */
 function ste_leistungen_get_reference_icon_map() {
 	return array(
-		'Hybrid-Rangierlokomotiven' => 'Fahrzeuge-1--Lokomotive.svg',
-		'Doppelstock-Triebzug'      => 'Fahrzeuge-2--Doppelstock.svg',
-		'Triebzug'                  => 'Fahrzeuge-3--Highspeed.svg',
-		'Straßen- & Stadtbahnen'    => 'Fahrzeuge-4--LRV.svg',
+		'Lok' => 'Fahrzeuge-1--Lokomotive.svg',
+		'HRV'      => 'Fahrzeuge-2--Doppelstock.svg',
+		'HGV'                  => 'Fahrzeuge-3--Highspeed.svg',
+		'LRV'    => 'Fahrzeuge-4--LRV.svg',
 		'Einzelkomponenten'         => '6-5--SpezifikationenKomponenten.svg',
 	);
 }
@@ -142,10 +142,10 @@ function ste_leistungen_get_reference_icon_map() {
  */
 function ste_leistungen_get_canonical_references() {
 	return array(
-		'Hybrid-Rangierlokomotiven',
-		'Doppelstock-Triebzug',
-		'Straßen- & Stadtbahnen',
-		'Triebzug',
+		'Lok',
+		'HRV',
+		'LRV',
+		'HGV',
 	);
 }
 
@@ -192,7 +192,7 @@ function ste_leistungen_resolve_icon_url( $filename ) {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.18.3';
+	$version  = '1.19.0';
 
 	wp_register_style(
 		'ste-leistungen',
