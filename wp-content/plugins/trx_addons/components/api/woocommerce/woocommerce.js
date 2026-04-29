@@ -215,10 +215,10 @@
 							$attrib.siblings('.trx_addons_attrib_item[data-value=""]').addClass('trx_addons_attrib_selected');
 						}
 						var attrib_name = $attrib.parents('.trx_addons_attrib_extended').data('attrib');
-						// Old way: not compatible with non-latin attributes values
+						// Old way: not compatible with non-latin attribute names
 						// $attrib.parents('.trx_addons_attrib_extended').parent().find('#'+attrib_name).val(term).trigger('change');
-						// New way: compatible with non-latin attributes values
-						$attrib.parents('.trx_addons_attrib_extended').parent().find(document.getElementById(attrib_name.toLowerCase())).val(term).trigger('change');
+						// New way: compatible with non-latin attribute names
+						$attrib.parents('.trx_addons_attrib_extended').parent().find('[id="'+attrib_name+'"]').val(term).trigger('change');
 					}
 					return false;
 				} );

@@ -293,6 +293,51 @@
 			}
 		});
 
+		// Prevent blur focus from the menu_mobile
+		jQuery( '.menu_mobile:not(.inited_blur)'							// Old menu
+			+ ',.trx-addons-mobile-menu-outer-container:not(.inited_blur)'	// New mobile menu
+			)
+			.addClass( 'inited_blur' )
+			.on( 'keydown', function( e ) {
+
+				if ( e.key !== 'Tab' ) return;
+
+				const modal = document.querySelector('.menu_mobile.opened,.trx-addons-mobile-menu-outer-container.trx-addons-vertical-toggle-open');
+				if ( ! modal ) return;
+
+				// Collect all focusable-in-modal elements
+				const focusableElements = Array.from(
+					modal.querySelectorAll('a, [tabindex]')
+				).filter(el => {
+					// Filter out elements that are hidden, disabled, or not visible
+					return (
+						! el.closest('[hidden]') &&
+						! el.hasAttribute('disabled') &&
+						el.offsetParent !== null
+					);
+				} );
+
+				if ( focusableElements.length === 0 ) return;
+
+				const first = focusableElements[0];
+				const last = focusableElements[focusableElements.length - 1];
+				const focused = document.activeElement;
+
+				if ( e.shiftKey ) {
+					// Shift + Tab: if focus on first element — jump to last
+					if ( focused === first || ! modal.contains( focused ) ) {
+						e.preventDefault();
+						last.focus();
+					}
+				} else {
+					// Tab: if focus on last element — jump to first
+					if ( focused === last || ! modal.contains( focused ) ) {
+						e.preventDefault();
+						first.focus();
+					}
+				}
+			} );
+
 		// Keyboard navigation in the menus
 		jQuery( '.sc_layouts_menu:not(.inited_kbd)'						// Old menu
 			+ ',.menu_mobile_nav_area:not(.inited_kbd)'					// Old mobile menu
@@ -627,6 +672,7 @@
 					}
 					if ( w_all > w_max && cnt_visible >= visible ) {
 						cur_item
+							.addClass( 'sc_layouts_menu_collapsed_item' )
 							.attr( 'class', cur_item.attr( 'class' ).replace( 'trx_addons_stretch_', 'trx_addons_nostretch_' ) )
 							.find( '> ul' )
 								.attr( 'style', '' );
@@ -685,6 +731,9 @@
 						$item
 							.attr( 'class', $item.attr( 'class' ).replace( 'trx_addons_nostretch_', 'trx_addons_stretch_' ) )
 							.insertBefore( li_collapse );
+						if ( $item.hasClass( 'sc_layouts_menu_collapsed_item' ) ) {
+							$item.removeClass( 'sc_layouts_menu_collapsed_item' ).find( '>ul' ).removeAttr( 'style' );
+						}
 						cnt++;
 					} else {
 						move = false;
@@ -805,7 +854,7 @@
 			rtl = jQuery( 'body' ).hasClass( 'rtl' );
 
 		// Detect horizontal position (left | right)
-		if ( menu_item.parents("ul").length > 1 ) {
+		if ( menu_item.parents("ul").length > 1 && menu_item.parents( '.sc_layouts_menu_nav' ).length ) {
 			if ( ( ! rtl && (
 							( par_offset + par_width + ul_width > page_wrap_offset + page_wrap_width - 10 && par_offset - ul_width > page_wrap_offset )
 							||
@@ -832,7 +881,7 @@
 			var wide = trx_addons_stretch_submenu(menu_item);
 
 			// Shift horizontal
-			if ( ! wide ) {
+			if ( ! wide || menu_item.parents( '.trx-addons-nav-menu-collapse' ).length ) {
 				var ul_pos = menu_item.data('ul_pos'),
 					// submenu_left = menu_item.hasClass('submenu_left');
 					submenu_left = ( menu_item.hasClass('submenu_left') && ! rtl ) || ( ! menu_item.hasClass('submenu_left') && rtl ),

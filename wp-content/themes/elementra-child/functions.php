@@ -8,7 +8,7 @@ add_filter(  'ngettext',  'wps_translate_words_array'  );
 function wps_translate_words_array( $translated ) {
      $words = array(
                 // 'word to translate' = > 'translation'
-				'Close' => 'Schließen',
+				'This field is required.' => 'Dieses Feld ist erforderlich.',
      );
      $translated = str_ireplace(  array_keys($words),  $words,  $translated );
      return $translated;

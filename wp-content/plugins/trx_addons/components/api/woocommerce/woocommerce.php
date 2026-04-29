@@ -44,6 +44,21 @@ if ( ! function_exists( 'trx_addons_is_woocommerce_page' ) ) {
 	}
 }
 
+if ( ! function_exists( 'trx_addons_is_woocommerce_archive' ) ) {
+	/**
+	 * Return true, if current page is woocommerce archive: shop, category, tag or taxonomy page
+	 * 
+	 * @return boolean  	  True if page is WooCommerce archive page
+	 */
+	function trx_addons_is_woocommerce_archive() {
+		$rez = false;
+		if ( trx_addons_exists_woocommerce() ) {
+			$rez = is_shop() || is_product() || is_product_category() || is_product_tag() || is_product_taxonomy();
+		}
+		return $rez;
+	}
+}
+
 if ( ! function_exists( 'trx_addons_woocommerce_post_type_taxonomy' ) ) {
 	add_filter( 'trx_addons_filter_post_type_taxonomy',	'trx_addons_woocommerce_post_type_taxonomy', 10, 2 );
 	/**
@@ -814,13 +829,17 @@ if ( ! function_exists( 'trx_addons_woocommerce_filter_body_output' ) ) {
 
 
 // Load WooCommerce Extended Attributes
-require_once TRX_ADDONS_PLUGIN_DIR . TRX_ADDONS_PLUGIN_API . 'woocommerce/woocommerce-extended-attributes.php';
+if ( apply_filters( 'trx_addons_filter_woocommerce_load_extended_attributes', true ) ) {
+	require_once TRX_ADDONS_PLUGIN_DIR . TRX_ADDONS_PLUGIN_API . 'woocommerce/woocommerce-extended-attributes.php';
+}
 
 // Load WooCommerce Extended Shortcode 'Products'
 require_once TRX_ADDONS_PLUGIN_DIR . TRX_ADDONS_PLUGIN_API . 'woocommerce/woocommerce-extended-products.php';
 
 // Load WooCommerce Search Widget
-require_once TRX_ADDONS_PLUGIN_DIR . TRX_ADDONS_PLUGIN_API . 'woocommerce/widget.woocommerce_search.php';
+if ( apply_filters( 'trx_addons_filter_woocommerce_load_woocommerce_search', true ) ) {
+	require_once TRX_ADDONS_PLUGIN_DIR . TRX_ADDONS_PLUGIN_API . 'woocommerce/widget.woocommerce_search.php';
+}
 
 // Load WooCommerce Title Widget
 require_once TRX_ADDONS_PLUGIN_DIR . TRX_ADDONS_PLUGIN_API . 'woocommerce/woocommerce_title/widget.woocommerce_title.php';

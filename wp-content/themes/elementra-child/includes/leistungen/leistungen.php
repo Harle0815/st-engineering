@@ -101,7 +101,7 @@ function ste_leistungen_get_services() {
 			'id'          => 'sicherheitsnachweis',
 			'title'       => 'Sicherheits&shy;nachweis gemäß CSM',
 			'title_plain' => 'Sicherheitsnachweis gemäß CSM',
-			'description' => 'Wir dokumentieren gemäß den Vorgaben der CSM-Verordnung, sodass das am Ende eine schlüssige Nachweisführung aller sicherheitsrelevanter Anforderungen existiert, welche die Basis für das Vertrauen in die Produktsicherheit ist.',
+			'description' => 'Wir dokumentieren gemäß den Vorgaben der CSM-Verordnung, sodass am Ende eine schlüssige Nachweisführung aller sicherheitsrelevanter Anforderungen existiert, welche die Basis für das Vertrauen in die Produktsicherheit ist.',
 			'tools'       => array( 'Office', 'Isograph Reliability Workbench' ),
 			'references'  => array( 'HRV', 'LRV' ),
 			'icon'        => '8-3--SicherheitsnachweisCSM.svg',

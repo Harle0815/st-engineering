@@ -2068,7 +2068,7 @@ abstract class BaseSkin extends Elementor_Skin_Base {
 		$this->add_responsive_control(
 			'image_gap',
 			array(
-				'label'     => __( 'Spacing', 'trx_addons' ),
+				'label'     => __( 'Gap', 'trx_addons' ),
 				'type'      => Controls_Manager::SLIDER,
 				'range'     => array(
 					'em' => array(
@@ -2091,6 +2091,7 @@ abstract class BaseSkin extends Elementor_Skin_Base {
 					'{{WRAPPER}} .trx-addons-posts-skin-stripe .trx-addons-posts-item' => 'gap: {{SIZE}}{{UNIT}};',
 				),
 				'condition' => array(
+					$this->get_control_id( 'show_thumbnail' ) => 'yes',
 					'_skin' => [ 'list', 'stripe' ]
 				),
 			)
