@@ -194,7 +194,7 @@ function ste_leistungen_resolve_icon_url( $filename ) {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.21.2';
+	$version  = '1.22.0';
 
 	wp_register_style(
 		'ste-leistungen',
