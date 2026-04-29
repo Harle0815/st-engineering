@@ -194,7 +194,7 @@ function ste_leistungen_resolve_icon_url( $filename ) {
  */
 function ste_leistungen_register_assets() {
 	$base_url = get_stylesheet_directory_uri() . '/includes/leistungen';
-	$version  = '1.20.0';
+	$version  = '1.21.0';
 
 	wp_register_style(
 		'ste-leistungen',
@@ -284,6 +284,8 @@ function ste_leistungen_render( $atts ) {
 			?>
 			<div class="<?php echo esc_attr( implode( ' ', $detail_classes ) ); ?>" aria-live="polite">
 				<div class="ste-leistungen__detail-main">
+					<?php $active_icon_url = ste_leistungen_resolve_icon_url( $services[0]['icon'] ); ?>
+					<img class="ste-leistungen__detail-active-icon" src="<?php echo esc_url( $active_icon_url ); ?>" alt="" />
 					<h3 class="ste-leistungen__detail-title"><?php echo esc_html( $services[0]['title_plain'] ); ?></h3>
 					<p class="ste-leistungen__detail-desc"><?php echo esc_html( $services[0]['description'] ); ?></p>
 				</div>

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   STE Leistungen – Interactive Services Section  v1.20.0
+   STE Leistungen – Interactive Services Section  v1.21.0
    Mirrored layout using pre-mirrored SVG asset (Zugspitze_hb_p_ss_b.svg).
    Per-service hotspot icons. Referenzen always renders the canonical 4
    vehicle icons; inactive ones are greyed out per active service.
@@ -176,6 +176,12 @@
 	width: 26%;
 	max-width: 300px;
 	pointer-events: auto;
+}
+
+/* Active service icon — only shown in the mobile (<= 900 px) header.
+   Hidden by default so it doesn't appear on desktop / tablet layouts. */
+.ste-leistungen__detail-active-icon {
+	display: none;
 }
 
 .ste-leistungen__detail-title {

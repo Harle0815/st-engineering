@@ -1,13 +1,17 @@
 /* ==========================================================================
-   STE Leistungen – Responsive Styles  v1.20.0
+   STE Leistungen – Responsive Styles  v1.21.0
    Description on the left, Tools + Referenzen stacked on its right inside
    the locomotive white interior (no card frames). Number badges removed.
    Referenzen always renders all 4 canonical vehicles; inactive icons are
-   greyed out. Referenzen vertical position is fixed (no conditional
-   shift when Tools is hidden).
+   greyed out.
+
+   At <= 900 px (mobile) the locomotive stage is hidden entirely; the
+   detail panel becomes the primary visual, with an active-service icon
+   in a 1/4 + 3/4 header row, Tools + Referenzen stacked vertically, and
+   Referenzen rendered as a single horizontal row of 4 icon+label items.
+
    Loaded with media="(max-width: 1440px)" – tablet two-column menu
    layout already kicks in below the desktop breakpoint.
-   Mobile breakpoint is 900 px (so 842 px renders as mobile).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -48,11 +52,15 @@
 	margin-top: 0;
 }
 
+/* Detail-main pushed flush to the left edge of the graphic across the
+   entire 901–1440 px range so the description fills the available
+   white space rather than leaving a wide blank gutter. */
 .ste-leistungen__detail-main {
 	top: 28%;
-	left: 11%;
-	width: 28%;
-	max-width: 320px;
+	left: 0;
+	width: 32%;
+	max-width: 360px;
+	padding-left: 0;
 }
 
 .ste-leistungen__detail-tools {
@@ -85,8 +93,8 @@
 }
 
 /* --------------------------------------------------------------------------
-   Below 950px: pull the detail panel up and let the description use the
-   full available width on the left of the locomotive area.
+   Below 950px: pull the detail panel up so the description sits cleanly
+   against the locomotive curve at narrow tablet widths.
    -------------------------------------------------------------------------- */
 
 @media (max-width: 950px) {
@@ -96,24 +104,22 @@
 	}
 
 	.ste-leistungen__detail-main {
-		left: 0;
 		width: 38%;
-		max-width: none;
-		padding-left: 0;
 	}
 }
 
 /* --------------------------------------------------------------------------
    Mobile: <= 900px
 
-   Order on screen:
-     1. Locomotive stage   (graphic with icons)
-     2. Service menu       (sidebar)
-     3. Detail content     (title/desc/tools/refs)
+   The locomotive stage is hidden in this breakpoint. The detail panel
+   becomes the primary content with this structure:
 
-   The .ste-leistungen__graphic wrapper uses display:contents so its
-   children become direct flex items of .ste-leistungen, allowing the
-   stage to render before the sidebar via `order`.
+     [icon | title]            (detail-main, 2-col grid header)
+     [    description    ]    (full width)
+     [    Tools          ]    (stacked under, full width)
+     [    Referenzen     ]    (stacked under Tools, 4 icons in a row)
+
+   Order: service menu first (sidebar), detail second.
    -------------------------------------------------------------------------- */
 
 @media (max-width: 900px) {
@@ -132,22 +138,19 @@
 		padding: 8px 10px;
 	}
 
-	/* Flatten the graphic wrapper so its children participate in the outer
-	   flex layout. */
+	/* Flatten the graphic wrapper so the detail panel becomes a direct
+	   flex item of .ste-leistungen and the stage can be hidden cleanly. */
 	.ste-leistungen__graphic {
 		display: contents;
 	}
 
+	/* Hide the full locomotive/icon-path stage on mobile. */
 	.ste-leistungen__stage {
-		position: relative;
-		left: auto;
-		right: auto;
-		min-height: 240px;
-		order: 1;
+		display: none;
 	}
 
 	.ste-leistungen__sidebar {
-		order: 2;
+		order: 1;
 	}
 
 	.ste-leistungen__detail {
@@ -155,32 +158,56 @@
 		width: 100%;
 		min-height: auto;
 		margin-top: 0;
-		order: 3;
-		/* Two-column grid on mobile: description full width on top,
-		   Tools (left) + Referenzen (right) side-by-side below. */
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		column-gap: 16px;
-		row-gap: 14px;
+		order: 2;
+		display: block;
 	}
 
+	/* Header row: active service icon (1/4) + heading (3/4).
+	   Description spans full width below. */
 	.ste-leistungen__detail-main {
 		position: static;
 		top: auto;
 		left: auto;
 		width: 100%;
 		max-width: none;
-		grid-column: 1 / -1;
+		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		column-gap: 14px;
+		row-gap: 8px;
+		align-items: center;
 	}
 
-	/* Tools (left) + Referenzen (right) auto-flow side-by-side in row 2.
-	   When a service has no Tools, Referenzen falls back into the left
-	   column instead of leaving an empty cell. */
+	.ste-leistungen__detail-active-icon {
+		display: block;
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		max-width: 88px;
+		height: auto;
+		justify-self: center;
+	}
+
+	.ste-leistungen__detail-title {
+		grid-column: 2;
+		grid-row: 1;
+		font-size: 20px;
+		margin: 0;
+	}
+
+	.ste-leistungen__detail-desc {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		font-size: 14px;
+		margin: 4px 0 0;
+	}
+
+	/* Tools and Referenzen stacked vertically below the description. */
 	.ste-leistungen__detail-tools {
 		position: static;
 		width: 100%;
 		max-width: none;
-		margin-top: 0;
+		margin-top: 18px;
 		padding: 0;
 	}
 
@@ -188,22 +215,76 @@
 		position: static;
 		width: 100%;
 		max-width: none;
-		margin-top: 0;
+		margin-top: 14px;
 		padding: 0;
-		flex-direction: column;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		align-items: flex-start;
 		text-align: left;
-		gap: 8px;
+		gap: 14px;
 	}
 
-	.ste-leistungen__hotspot {
-		width: 56px !important;
-		height: 56px !important;
+	/* "REFERENZEN" label takes its own line above the row of icons. */
+	.ste-leistungen__detail-refs-label {
+		flex-basis: 100%;
+		text-align: left;
 	}
 
-	.ste-leistungen__hotspot-icon {
-		width: 48px;
-		height: 48px;
+	/* Each reference: icon on top of label OR icon + label inline.
+	   Default to inline (icon + label) for the 4-in-a-row layout. */
+	.ste-leistungen__ref {
+		flex-direction: row;
+		align-items: center;
+		gap: 6px;
+		align-self: flex-start;
+	}
+
+	.ste-leistungen__ref-icon-wrap {
+		width: 36px;
+		height: 36px;
+	}
+
+	.ste-leistungen__ref-icon {
+		width: 30px;
+		height: 30px;
+	}
+
+	/* Make the short reference label visible inline (no tooltip on touch). */
+	.ste-leistungen__ref-label {
+		position: static;
+		transform: none;
+		opacity: 1;
+		visibility: visible;
+		color: var(--ste-blue);
+		background: none;
+		padding: 0;
+		font-size: 13px;
+		font-weight: 600;
+		white-space: nowrap;
+	}
+
+	.ste-leistungen__ref-label::after {
+		display: none;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Small mobile: < 480px
+
+   On very narrow screens, allow the Referenzen row to wrap so the
+   4 items don't overflow horizontally.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+	.ste-leistungen__detail-main {
+		grid-template-columns: 1fr 2.4fr;
+		column-gap: 10px;
+	}
+
+	.ste-leistungen__detail-active-icon {
+		max-width: 64px;
 	}
 
 	.ste-leistungen__detail-title {
@@ -214,66 +295,8 @@
 		font-size: 13px;
 	}
 
-	/* Each ref is icon + name on one row, all left-aligned */
-	.ste-leistungen__ref {
-		flex-direction: row;
-		gap: 8px;
-		align-self: flex-start;
-	}
-
-	.ste-leistungen__ref-icon-wrap {
-		width: 36px;
-		height: 36px;
-	}
-
-	.ste-leistungen__ref-icon {
-		width: 26px;
-		height: 26px;
-	}
-
-	.ste-leistungen__ref-label {
-		position: static;
-		transform: none;
-		opacity: 1;
-		visibility: visible;
-		color: var(--ste-blue);
-		background: none;
-		padding: 0;
-		font-size: 13px;
-		white-space: normal;
-	}
-
-	.ste-leistungen__ref-label::after {
-		display: none;
-	}
-}
-
-/* --------------------------------------------------------------------------
-   Small mobile: < 480px – fall back to a single column if 2-col is too tight.
-   -------------------------------------------------------------------------- */
-
-@media (max-width: 480px) {
-
-	.ste-leistungen__detail {
-		grid-template-columns: 1fr;
-	}
-
-	.ste-leistungen__detail-main {
-		grid-column: 1;
-	}
-
-	.ste-leistungen__stage {
-		min-height: 180px;
-	}
-
-	.ste-leistungen__hotspot {
-		width: 42px !important;
-		height: 42px !important;
-	}
-
-	.ste-leistungen__hotspot-icon {
-		width: 36px;
-		height: 36px;
+	.ste-leistungen__detail-refs {
+		gap: 10px 12px;
 	}
 
 	.ste-leistungen__item-title {
