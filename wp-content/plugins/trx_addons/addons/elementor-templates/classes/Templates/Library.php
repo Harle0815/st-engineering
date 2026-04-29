@@ -706,7 +706,7 @@ class Library {
 					padding-bottom: 1px;
 				}
 			<?php
-			if ( trx_addons_get_value_gp( 'utm-source-type' ) != 'header' ) {
+			if ( ! in_array( trx_addons_get_value_gp( 'utm-source-type' ), array( 'header', 'mega menu' ) ) ) {
 				?>
 				header.top_panel {
 					display: none !important;
@@ -732,7 +732,7 @@ class Library {
 	function prepare_preview_html( $content ) {
 		if ( trx_addons_get_value_gp( 'utm-source' ) == 'elementor-templates-library-preview' ) {
 			// Remove the header from the page content (if current template if not a header template)
-			if ( trx_addons_get_value_gp( 'utm-source-type' ) != 'header' ) {
+			if ( ! in_array( trx_addons_get_value_gp( 'utm-source-type' ), array( 'header', 'mega menu' ) ) ) {
 				$content = preg_replace( '/<header class="top_panel[\s\S]*?<\/header>/i', '', $content );
 			}
 			// Remove the footer from the page content (if current template if not a footer template)

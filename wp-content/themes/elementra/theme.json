@@ -104,6 +104,11 @@
                     "fontFamily": "inherit",
                     "name": "inherit",
                     "slug": "post-font"
+                },
+                {
+                    "fontFamily": "Onest,sans-serif",
+                    "name": "Onest,sans-serif",
+                    "slug": "submenu-font"
                 }
             ]
         },

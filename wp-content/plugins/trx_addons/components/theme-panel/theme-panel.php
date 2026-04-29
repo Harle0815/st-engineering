@@ -502,7 +502,7 @@ if ( ! function_exists( 'trx_addons_theme_panel_expire_license_hide_admin_notice
 }
 
 // Activate theme
-if ( !function_exists( 'trx_addons_theme_panel_activate_theme' ) ) {
+if ( ! function_exists( 'trx_addons_theme_panel_activate_theme' ) ) {
 	add_action('init', 'trx_addons_theme_panel_activate_theme', 9);
 	function trx_addons_theme_panel_activate_theme( $force = false ) {
 
@@ -541,8 +541,15 @@ if ( !function_exists( 'trx_addons_theme_panel_activate_theme' ) ) {
 					trx_addons_remove_theme_activated();
 					// Get a theme info and prepare params
 					$theme_info = trx_addons_get_theme_info(false);
+					// Detect a source of the code and set a pro key for the request
 					if ( $source == 'token' ) {
 						$theme_info['theme_pro_key'] = 'env-elements';
+					} else if ( preg_match( '/^[a-f0-9]{8}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{4}\-[a-f0-9]{12}$/', $code ) ) {
+						$theme_info['theme_pro_key'] = 'env-' . substr( $theme_info['theme_pro_key'], 4 );
+					} else if ( preg_match( '/^[a-f0-9]{32}$/', $code ) ) {
+						$theme_info['theme_pro_key'] = 'loc-themerex';
+					} else if ( preg_match( '/^sk_.{29}$/', $code ) ) {
+						$theme_info['theme_pro_key'] = 'fms-themerex';
 					}
 					$params = array(
 						'action' => 'check',
@@ -1285,7 +1292,7 @@ if ( ! function_exists( 'trx_addons_theme_panel_activation_form' ) ) {
 									?>
 									<label>
 										<input type="radio" name="trx_addons_activate_theme_source" value="code" checked="checked">
-										<span class="trx_addons_theme_panel_section_form_field_caption"><?php esc_attr_e( 'I purchased the theme from ThemeForest and I have a purchase code', 'trx_addons' ); ?></span>
+										<span class="trx_addons_theme_panel_section_form_field_caption"><?php esc_attr_e( "I purchased the theme's license on the Market and I have a purchase code", 'trx_addons' ); ?></span>
 									</label>
 									<?php
 								}

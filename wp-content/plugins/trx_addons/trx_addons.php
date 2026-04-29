@@ -3,7 +3,7 @@
 Plugin Name: ThemeREX Addons
 Plugin URI: http://themerex.net
 Description: Add many widgets, shortcodes and custom post types for your theme
-Version: 2.38.6
+Version: 2.39.0
 Author: ThemeREX
 Author URI: http://themerex.net
 Text Domain: trx_addons
@@ -14,7 +14,7 @@ Domain Path: /languages
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Current version
-if ( ! defined( 'TRX_ADDONS_VERSION' ) ) define( 'TRX_ADDONS_VERSION', '2.38.6' );
+if ( ! defined( 'TRX_ADDONS_VERSION' ) ) define( 'TRX_ADDONS_VERSION', '2.39.0' );
 
 // Hooks order for the plugin and theme on action 'after_setup_theme'
 // 1 - plugin's components and/or theme register hooks for next filters

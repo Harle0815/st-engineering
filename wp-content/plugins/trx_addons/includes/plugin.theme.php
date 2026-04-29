@@ -314,7 +314,13 @@ if ( ! function_exists( 'trx_addons_get_theme_doc_url' ) ) {
 	 */
 	function trx_addons_get_theme_doc_url( $hash = '' ) {
 		$theme = get_template();
-		return apply_filters( 'trx_addons_filter_get_theme_doc_url', '//doc.themerex.net/' . $theme . '/' . ( ! empty( $hash ) ? $hash : '' ), $hash, $theme );
+		$theme_doc_url = trx_addons_get_theme_data( 'theme_doc_url' );
+		return apply_filters(
+					'trx_addons_filter_get_theme_doc_url',
+					( ! empty( $theme_doc_url ) ? $theme_doc_url : '//doc.themerex.net/' . $theme . '/' ) . ( ! empty( $hash ) ? $hash : '' ),
+					$hash,
+					$theme
+				);
 	}
 }
 
